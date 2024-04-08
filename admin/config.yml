@@ -694,10 +694,6 @@ collections:
             label: Text
             name: '-361a1933'
             widget: string
-          - hint: 'Original text: Investor, key: 294468b8'
-            label: Text
-            name: 294468b8
-            widget: string
           - hint: 'Original text: Partnership, key: -626f451c'
             label: Text
             name: '-626f451c'
@@ -716,14 +712,17 @@ collections:
             label: Text
             name: 82ad36d
             widget: string
-          - hint: 'Original text: Get an edge, key: -5f8cfd1a'
-            label: Text
-            name: '-5f8cfd1a'
-            widget: string
           - hint: 'Original text: Fill in the form, key: 37b460b1'
             label: Text
             name: 37b460b1
             widget: string
+          - hint: >-
+              Original text: Using our email form, you acknowledge and accept
+              that the information you submit will be used for the sole purpose
+              of processing your request., key: 79f294c
+            label: Text
+            name: 79f294c
+            widget: text
           - hint: >-
               Original text: Thank you! Your submission has been sent!, key:
               -36b8c0b6
@@ -733,6 +732,10 @@ collections:
           - hint: 'Original text: Oops, error., key: -6bd48d63'
             label: Text
             name: '-6bd48d63'
+            widget: string
+          - hint: 'Original text: Investor, key: 294468b8'
+            label: Text
+            name: 294468b8
             widget: string
           - hint: 'Original text: Success, key: -c12281d'
             label: Text
@@ -747,6 +750,169 @@ collections:
           - hint: 'Original text: Back, key: 1f7907'
             label: Text
             name: 1f7907
+            widget: string
+          - hint: >-
+              Original text: — Participate in the initial stage of our PPN
+              strategic investment round., key: 20b40258
+            label: Text
+            name: 20b40258
+            widget: string
+          - hint: 'Original text: Pitch Deck, key: 617181c9'
+            label: Text
+            name: 617181c9
+            widget: string
+          - hint: >-
+              Original text: Transform your idea into reality, share us your
+              pitch deck and we'll get back to you as soon as possible., key:
+              765a724
+            label: Text
+            name: 765a724
+            widget: text
+          - hint: 'Original text: Upload a PDF of your Pitch Deck, key: -5d5b62a7'
+            label: Text
+            name: '-5d5b62a7'
+            widget: string
+          - hint: >-
+              Original text: If you intend to upload your pitch deck as a PDF
+              file and it contains critical and/or confidential information,
+              please ensure that your PDF file is password-protected. Max PDF
+              size should be 10Mo., key: -853e4c
+            label: Text
+            name: '-853e4c'
+            widget: text
+          - hint: 'Original text: Investor and/or company name, key: 2966fcb'
+            label: Text
+            name: 2966fcb
+            widget: string
+          - hint: 'Original text: Name, key: 24eeab'
+            label: Text
+            name: 24eeab
+            widget: string
+          - hint: >-
+              Original text: Share a link to your Pitch Deck, — we recommend
+              using Slidebean., key: -448bd638
+            label: Text
+            name: '-448bd638'
+            widget: string
+          - hint: 'Original text: slidebean.com, key: -5001dd0c'
+            label: Text
+            name: '-5001dd0c'
+            widget: string
+          - hint: >-
+              Original text: Slidebean.com is a web-based platform that provides
+              tools for creating professional and visually appealing
+              presentation slides. It is designed to assist users, particularly
+              business professionals and entrepreneurs, in crafting effective
+              presentations with ease., key: 4bcd296c
+            label: Text
+            name: 4bcd296c
+            widget: text
+          - hint: 'Original text: Full Name, key: ff41d7c'
+            label: Text
+            name: ff41d7c
+            widget: string
+          - hint: 'Original text: & Email, key: 14c73b02'
+            label: Text
+            name: 14c73b02
+            widget: string
+          - hint: >-
+              Original text: Kindly provide us with your complete name and your
+              professional email address, please., key: 2c4541da
+            label: Text
+            name: 2c4541da
+            widget: string
+          - hint: >-
+              Original text: We value your identity and how you wish to be
+              addressed. When you share your full name with us, please also
+              include the pronoun you prefer., key: 93f3dfb
+            label: Text
+            name: 93f3dfb
+            widget: text
+          - hint: >-
+              Original text: Prior to sending your message, take a moment to
+              double-check and confirm the accuracy of your email address., key:
+              5928cf17
+            label: Text
+            name: 5928cf17
+            widget: text
+          - hint: 'Original text: Target fundraising amount in USD, key: 6aabaf28'
+            label: Text
+            name: 6aabaf28
+            widget: string
+          - hint: 'Original text: fundraising, key: 7c171f44'
+            label: Text
+            name: 7c171f44
+            widget: string
+          - hint: >-
+              Original text: Setting a target fundraising amount serves several
+              essential purposes. First and foremost, it provides clarity and
+              focus for the fundraising efforts., key: 16dc34b8
+            label: Text
+            name: 16dc34b8
+            widget: text
+          - hint: >-
+              Original text: Furthermore, a well-defined fundraising target
+              enables proper planning and allocation of resources. It guides
+              organizers in creating a fundraising strategy, setting timelines,
+              and identifying the most effective fundraising methods., key:
+              400e1d13
+            label: Text
+            name: 400e1d13
+            widget: text
+          - hint: 'Original text: One-liner Pitch, key: -467e7189'
+            label: Text
+            name: '-467e7189'
+            widget: string
+          - hint: 'Original text: — make it count, key: 1b4decc0'
+            label: Text
+            name: 1b4decc0
+            widget: string
+          - hint: 'Original text: Pitch, key: 498d320'
+            label: Text
+            name: 498d320
+            widget: string
+          - hint: 'Original text: noun, key: 33b01a'
+            label: Text
+            name: 33b01a
+            widget: string
+          - hint: 'Original text: /pɪtʃ/, key: 5778fc77'
+            label: Text
+            name: 5778fc77
+            widget: string
+          - hint: >-
+              Original text: In a world of information overload, a well-crafted
+              oneliner pitch is your key to grabbing someone's attention and
+              making a memorable impression in just a few seconds., key:
+              -53dbbe3e
+            label: Text
+            name: '-53dbbe3e'
+            widget: text
+          - hint: 'Original text: By clicking , key: 6ffc699d'
+            label: Text
+            name: 6ffc699d
+            widget: string
+          - hint: 'Original text: "Send us your proposal", key: -5474ea51'
+            label: Text
+            name: '-5474ea51'
+            widget: string
+          - hint: >-
+              Original text:  on this contact form, you acknowledge and agree to
+              the terms and conditions outlined in the privacy policy of W
+              Ventures., key: 6a58b3b9
+            label: Text
+            name: 6a58b3b9
+            widget: text
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
             widget: string
       - label: Links
         name: links
@@ -789,6 +955,10 @@ collections:
           - hint: 'Original link: #formular, key: 61a608ef'
             label: Link
             name: 61a608ef
+            widget: string
+          - hint: 'Original link: https://slidebean.com/, key: 185e504a'
+            label: Link
+            name: 185e504a
             widget: string
       - label: Images
         name: images
