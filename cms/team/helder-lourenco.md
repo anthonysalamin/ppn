@@ -4,11 +4,11 @@ title: Helder Lourenco
 slug: helder-lourenco
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/660677db928561e6fc26024d/661373537775f79d54bfe723_1.jpg
+    https://uploads-ssl.webflow.com/660677db928561e6fc26024d/66138531084bd6465508223c_helder-v2.jpg
   alt: null
-updated-on: '2024-04-08T04:32:22.723Z'
+updated-on: '2024-04-08T05:48:38.953Z'
 created-on: '2022-06-19T22:22:44.455Z'
-published-on: '2024-04-08T04:34:00.930Z'
+published-on: '2024-04-08T05:56:58.995Z'
 f_sorting-order: 2
 layout: '[team].html'
 tags: team

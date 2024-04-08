@@ -709,26 +709,24 @@ collections:
             name: 37b460b1
             widget: string
           - hint: >-
-              Original text: Thank you! Your submission has been received!, key:
-              5a0ea5a1
+              Original text: Thank you! Your submission has been sent!, key:
+              -36b8c0b6
             label: Text
-            name: 5a0ea5a1
+            name: '-36b8c0b6'
             widget: string
-          - hint: >-
-              Original text: Oops! Something went wrong while submitting the
-              form., key: -7c112e99
+          - hint: 'Original text: Oops, error., key: -6bd48d63'
             label: Text
-            name: '-7c112e99'
+            name: '-6bd48d63'
             widget: string
           - hint: 'Original text: Success, key: -c12281d'
             label: Text
             name: '-c12281d'
             widget: string
           - hint: >-
-              Original text: — Thank you for your message, it has been
-              successfully sent. We will respond promptly., key: 397f74
+              Original text: — Thank you for your message, we will respond
+              promptly., key: -3d533432
             label: Text
-            name: 397f74
+            name: '-3d533432'
             widget: string
           - hint: 'Original text: Back, key: 1f7907'
             label: Text
