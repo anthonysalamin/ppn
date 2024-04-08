@@ -324,9 +324,17 @@ collections:
             label: Text
             name: 117611a9
             widget: string
-          - hint: 'Original text: $1.09B, key: 40369a78'
+          - hint: 'Original text: $1.0, key: 111b0f'
             label: Text
-            name: 40369a78
+            name: 111b0f
+            widget: string
+          - hint: 'Original text: 0, key: 30'
+            label: Text
+            name: '30'
+            widget: string
+          - hint: 'Original text: B, key: 42'
+            label: Text
+            name: '42'
             widget: string
           - hint: 'Original text: Opportunity for yield extraction, key: 754d2c1e'
             label: Text
@@ -340,9 +348,13 @@ collections:
             label: Text
             name: '-f7bcbf9'
             widget: text
-          - hint: 'Original text: 876M, key: 1a4a16'
+          - hint: 'Original text: 000, key: ba30'
             label: Text
-            name: 1a4a16
+            name: ba30
+            widget: string
+          - hint: 'Original text: M, key: 4d'
+            label: Text
+            name: 4d
             widget: string
           - hint: "Original text: Wasted due to\Lmajor inefficiencies, key: 56407b9e"
             label: Text
@@ -360,9 +372,9 @@ collections:
             label: Text
             name: 4d083e65
             widget: text
-          - hint: 'Original text: 100%, key: 170054'
+          - hint: 'Original text: %, key: 25'
             label: Text
-            name: '170054'
+            name: '25'
             widget: string
           - hint: >-
               Original text: Opportunity to capture this lost value with PPN,
@@ -532,9 +544,17 @@ collections:
             label: Text
             name: '-1551ce77'
             widget: string
-          - hint: 'Original text: © 2024 Private Pools Network, key: -346d56a1'
+          - hint: 'Original text: © , key: 1497'
             label: Text
-            name: '-346d56a1'
+            name: '1497'
+            widget: string
+          - hint: 'Original text: YYYY, key: 29ce40'
+            label: Text
+            name: 29ce40
+            widget: string
+          - hint: 'Original text:  Private Pools Network, key: 3790fe88'
+            label: Text
+            name: 3790fe88
             widget: string
           - hint: 'Original text: Powered by D3, key: 5eb851fc'
             label: Text
@@ -673,10 +693,6 @@ collections:
           - hint: 'Original text: scroll, key: -361a1933'
             label: Text
             name: '-361a1933'
-            widget: string
-          - hint: "Original text: Wasted due to major\Linefficiencies, key: eec219e"
-            label: Text
-            name: eec219e
             widget: string
           - hint: 'Original text: Investor, key: 294468b8'
             label: Text

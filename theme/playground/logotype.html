@@ -119,8 +119,14 @@
           <a href="{{ links.23 }}" class="cta__wrap is-mobilehidden w-inline-block">
             <div class="pill cta transparent">{{ texts.-78ddacdd }}<br></div>
           </a>
-          <a href="{{ links.23 }}" class="cta__wrap w-inline-block">
-            <div class="pill cta">{{ texts.2e771d }}</div>
+          <a href="{{ links.23 }}" class="cta__link w-inline-block">
+            <div class="embed__icon-circle w-embed"><svg title="locked" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 466.67 666.67">
+                <g fill="currentColor">
+                  <path d="M233.33 333.33c-36.76 0-66.67 29.91-66.67 66.67 0 24.63 13.42 46.18 33.33 57.72V500c0 18.41 14.92 33.33 33.33 33.33s33.33-14.92 33.33-33.33v-42.28c19.91-11.54 33.33-33.09 33.33-57.72 0-36.76-29.91-66.67-66.67-66.67Z"></path>
+                  <path d="M399.85 269.88c.1-1.06.15-2.13.15-3.21v-100C400 74.77 325.23 0 233.33 0S66.67 74.77 66.67 166.67v100c0 1.08.05 2.15.15 3.21C23.71 313.77 0 371.73 0 433.33s24.27 120.92 68.34 164.99c44.07 44.07 102.67 68.34 164.99 68.34s120.92-24.27 164.99-68.34c44.07-44.07 68.34-102.67 68.34-164.99s-23.71-119.56-66.82-163.46ZM133.34 166.67c0-55.14 44.86-100 100-100s100 44.86 100 100v55.71c-30.85-14.65-64.83-22.38-100-22.38s-69.15 7.73-100 22.38v-55.71Zm100 433.33c-91.9 0-166.67-74.77-166.67-166.67s74.77-166.67 166.67-166.67 166.67 74.77 166.67 166.67S325.24 600 233.34 600Z"></path>
+                </g>
+              </svg></div>
+            <div>{{ texts.2e771d }}<br></div>
           </a>
         </div>
       </div>
@@ -213,7 +219,7 @@
             </a>
           </div>
           <div id="w-node-_399df6df-587e-0777-7367-b36ac0b99762-692231b1" class="footer__grid-item">
-            <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231d0-692231b1" class="small">{{ texts.-346d56a1 }}</div>
+            <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231d0-692231b1" class="small">{{ texts.1497 }}<span data-date="year" class="span">{{ texts.29ce40 }}</span>{{ texts.3790fe88 }}</div>
           </div>
           <div id="w-node-e5b78b3a-5778-3456-a08b-11d7d3943c9c-692231b1" class="footer__grid-item powered">
             <a href="{{ links.-2b511cb6 }}" target="_blank" class="link-block w-inline-block">
@@ -462,6 +468,14 @@ function showScrollProgress() {
     window.requestAnimationFrame(scrollStep);
   }
 }
+</script>
+  <script>
+/*
+ * PPN | timeline item reveal GSAP
+ * dependency: gsap.js
+ * build 04.04.24 @ 17:20
+*/
+document.addEventListener("DOMContentLoaded",()=>{handleMileStoneOpacity()});function handleMileStoneOpacity(){const duration=1;const delay=0.35;const startOpacityLeft=0.25;const startOpacityRight=0.15;const topOffset=0;const themes={light:{full:"#31a4ff",faded:"#f4f4f4"},dark:{full:"#00E0FF",faded:"#171836"}};const triggers=document.querySelectorAll(`.timeline__item`);if(triggers.length===0){return}triggers.forEach((trigger)=>{const timelineLeft=trigger.querySelector(`.timeline__left`);const timelineRight=trigger.querySelector(`.timeline__right`);const timelineCircle=trigger.querySelector(`.timeline__circle`);gsap.to(timelineLeft,{opacity:startOpacityLeft,duration:duration});gsap.to(timelineRight,{opacity:startOpacityRight,duration:duration});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.faded,duration:duration})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.faded,duration:duration})}else{console.log("error")}const timeline=gsap.timeline({scrollTrigger:{trigger:trigger,start:`top+=${ topOffset }px center`,end:"bottom top",markers:false,onEnter:()=>{gsap.to(timelineLeft,{opacity:1,duration:duration/2,delay:delay});gsap.to(timelineRight,{opacity:1,duration:duration/2,delay:delay});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.full,duration:duration/2})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.full,duration:duration/2})}else{console.log("error")}},onLeaveBack:()=>{gsap.to(timelineLeft,{opacity:startOpacityLeft,duration:duration/2,delay:delay});gsap.to(timelineRight,{opacity:startOpacityRight,duration:duration/2,delay:delay});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.faded,duration:duration/2})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.faded,duration:duration/2})}else{console.log("error")}}}});function restartTimeline(){timeline.restart();gsap.delayedCall(0.1,()=>ScrollTrigger.refresh())}function manageClicksHack(){const faqs=document.querySelectorAll(`.process_question`);faqs.forEach((faq)=>{faq.addEventListener("click",()=>{console.log("manageClicksHack");setTimeout(restartTimeline,500)})})}manageClicksHack()})}
 </script>
   <script>
 /*

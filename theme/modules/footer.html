@@ -297,7 +297,7 @@
             </a>
           </div>
           <div id="w-node-_399df6df-587e-0777-7367-b36ac0b99762-692231b1" class="footer__grid-item">
-            <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231d0-692231b1" class="small">{{ texts.-346d56a1 }}</div>
+            <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231d0-692231b1" class="small">{{ texts.1497 }}<span data-date="year" class="span">{{ texts.29ce40 }}</span>{{ texts.3790fe88 }}</div>
           </div>
           <div id="w-node-e5b78b3a-5778-3456-a08b-11d7d3943c9c-692231b1" class="footer__grid-item powered">
             <a href="{{ links.-2b511cb6 }}" target="_blank" class="link-block w-inline-block">
@@ -546,6 +546,14 @@ function showScrollProgress() {
     window.requestAnimationFrame(scrollStep);
   }
 }
+</script>
+  <script>
+/*
+ * PPN | timeline item reveal GSAP
+ * dependency: gsap.js
+ * build 04.04.24 @ 17:20
+*/
+document.addEventListener("DOMContentLoaded",()=>{handleMileStoneOpacity()});function handleMileStoneOpacity(){const duration=1;const delay=0.35;const startOpacityLeft=0.25;const startOpacityRight=0.15;const topOffset=0;const themes={light:{full:"#31a4ff",faded:"#f4f4f4"},dark:{full:"#00E0FF",faded:"#171836"}};const triggers=document.querySelectorAll(`.timeline__item`);if(triggers.length===0){return}triggers.forEach((trigger)=>{const timelineLeft=trigger.querySelector(`.timeline__left`);const timelineRight=trigger.querySelector(`.timeline__right`);const timelineCircle=trigger.querySelector(`.timeline__circle`);gsap.to(timelineLeft,{opacity:startOpacityLeft,duration:duration});gsap.to(timelineRight,{opacity:startOpacityRight,duration:duration});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.faded,duration:duration})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.faded,duration:duration})}else{console.log("error")}const timeline=gsap.timeline({scrollTrigger:{trigger:trigger,start:`top+=${ topOffset }px center`,end:"bottom top",markers:false,onEnter:()=>{gsap.to(timelineLeft,{opacity:1,duration:duration/2,delay:delay});gsap.to(timelineRight,{opacity:1,duration:duration/2,delay:delay});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.full,duration:duration/2})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.full,duration:duration/2})}else{console.log("error")}},onLeaveBack:()=>{gsap.to(timelineLeft,{opacity:startOpacityLeft,duration:duration/2,delay:delay});gsap.to(timelineRight,{opacity:startOpacityRight,duration:duration/2,delay:delay});if(timelineCircle.classList.contains("light")){gsap.to(timelineCircle,{backgroundColor:themes.light.faded,duration:duration/2})}else if(timelineCircle.classList.contains("dark")){gsap.to(timelineCircle,{backgroundColor:themes.dark.faded,duration:duration/2})}else{console.log("error")}}}});function restartTimeline(){timeline.restart();gsap.delayedCall(0.1,()=>ScrollTrigger.refresh())}function manageClicksHack(){const faqs=document.querySelectorAll(`.process_question`);faqs.forEach((faq)=>{faq.addEventListener("click",()=>{console.log("manageClicksHack");setTimeout(restartTimeline,500)})})}manageClicksHack()})}
 </script>
   <script>
 /*
