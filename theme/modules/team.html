@@ -155,8 +155,11 @@
   .swiper.is-team {
     overflow: visible;
   }
-  .team_link:hover .image {
+  .team_link .image {
     filter: saturate(0%);
+  }
+  .team_link:hover .image {
+    filter: saturate(100%);
   }
   .swiper-wrapper.is-team * {
     user-select: none;
@@ -245,7 +248,11 @@
             {%- unless collection.length == 0 -%}<div role="list" class="swiper-wrapper is-team w-dyn-items">
               {%- for item in collection -%}<div role="listitem" class="swiper-slide is-team w-dyn-item">
                 <div class="team_link">
-                  <div class="team_photo-height"><img height="1500" loading="lazy" width="1000" src="{{ item.data.f_photo.url }}" alt="{{ images.0.alt | escape }}" class="image"></div>
+                  <div class="team_photo-height"><img height="1500" loading="lazy" width="1000" src="{{ item.data.f_photo.url }}" alt="{{ images.0.alt | escape }}" class="image">
+                    <div class="icon-plus team w-embed"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12h12m-6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                  </div>
                   <div class="team_name-info">
                     <div class="wrap-title">
                       <div class="">{{ item.data.title }}</div>

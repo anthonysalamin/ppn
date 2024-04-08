@@ -6,9 +6,9 @@ slug: ''
 tags: pages
 seo:
   noindex: false
-  title: Private Pools Network
-  og:title: Private Pools Network
-  twitter:title: Private Pools Network
+  title: Private Pools Network | PPN
+  og:title: Private Pools Network | PPN
+  twitter:title: Private Pools Network | PPN
 ---
 
 
