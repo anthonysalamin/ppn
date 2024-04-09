@@ -166,6 +166,16 @@ collections:
         label: Sorting Order
         widget: number
         required: true
+      - hint: ''
+        name: f_linkedin
+        label: Linkedin
+        widget: string
+        required: false
+      - hint: ''
+        name: f_x-twitter
+        label: X (Twitter)
+        widget: string
+        required: false
       - label: Tags
         widget: hidden
         name: tags
@@ -284,13 +294,9 @@ collections:
             label: Text
             name: 90caa1b
             widget: string
-          - hint: 'Original text: Web3, key: 29137f'
+          - hint: 'Original text: Generating , key: -67b9e2b2'
             label: Text
-            name: 29137f
-            widget: string
-          - hint: 'Original text: — Generating , key: -6e7894be'
-            label: Text
-            name: '-6e7894be'
+            name: '-67b9e2b2'
             widget: string
           - hint: 'Original text: Yield, key: 5176f6d'
             label: Text
@@ -303,6 +309,16 @@ collections:
           - hint: 'Original text: via Arbitrage, key: -125aa929'
             label: Text
             name: '-125aa929'
+            widget: string
+          - hint: 'Original text: PPN , key: 259392'
+            label: Text
+            name: '259392'
+            widget: string
+          - hint: >-
+              Original text: pioneers new means of value extraction, key:
+              -49a3789a
+            label: Text
+            name: '-49a3789a'
             widget: string
           - hint: 'Original text: Opportunities, key: f7b7e91'
             label: Text
@@ -320,9 +336,9 @@ collections:
             label: Text
             name: '-7fdca9ed'
             widget: string
-          - hint: 'Original text: — Unseized yield opportunities., key: 117611a9'
+          - hint: 'Original text: Unseized yield opportunities., key: 40a8d8b5'
             label: Text
-            name: 117611a9
+            name: 40a8d8b5
             widget: string
           - hint: 'Original text: $1.0, key: 111b0f'
             label: Text
@@ -361,16 +377,12 @@ collections:
             name: 56407b9e
             widget: string
           - hint: >-
-              Original text: 876M Wasted due to major inefficiencies" - This
-              text is good, lets just update theNumber. Hover and the card flips
-              and reads : "The current approach to arbitrage is inefficient due
-              to the public nature of arbitrage opportunities. This leads to
+              Original text: The current approach to arbitrage is inefficient
+              due to the public nature of arbitrage opportunities. This leads to
               priority gas auctions resulting in up to 80% of arbitrage value
-              being lost to validators. Our private pools circumvent this
-              delivering a proprietary and optimised approach to arbitrage, key:
-              4d083e65
+              being lost to validators., key: 1c1de2d3
             label: Text
-            name: 4d083e65
+            name: 1c1de2d3
             widget: text
           - hint: 'Original text: %, key: 25'
             label: Text
@@ -383,23 +395,21 @@ collections:
             name: '-62c03091'
             widget: string
           - hint: >-
-              Original text: 100% opportunity to capture this untapped value
-              with PPN" - Please update this text with what I have written (made
-              a slight change) Hover and the card flips and reads : "PPN is a
-              first of its kind ecosystem, purpose built to extract value from
-              arbitrage rather than fees. Our novel "Private Index Pools" and
-              proprietary trading engine fuel and optimise the arbitrage
-              process, democratising access for all, key: -74e47823
+              Original text: PPN is a first of its kind ecosystem, purpose built
+              to extract value from arbitrage rather than fees. Our novel
+              "Private Index Pools" and proprietary trading engine fuel and
+              optimise the arbitrage process, empowering access for all., key:
+              -687da9da
             label: Text
-            name: '-74e47823'
+            name: '-687da9da'
             widget: text
           - hint: 'Original text: Solution, key: 5cc7b199'
             label: Text
             name: 5cc7b199
             widget: string
-          - hint: 'Original text: — What exactly is , key: -38c6adce'
+          - hint: 'Original text: What exactly is , key: 1a5407a6'
             label: Text
-            name: '-38c6adce'
+            name: 1a5407a6
             widget: string
           - hint: 'Original text: Private Pools Network, key: 66d9aaa8'
             label: Text
@@ -410,11 +420,11 @@ collections:
             name: '-f003419'
             widget: string
           - hint: >-
-              Original text: Private Pool Network faces the liquidity problem
-              head on by maximising value extracted from volatility and
-              optimising the arbitrage process., key: 61357dbe
+              Original text: Private Pools Network is an autonomous index system
+              enhancing liquidity by capitalizing on volatility. A novel
+              ecosystem challenging the status quo., key: -3b0a74a0
             label: Text
-            name: 61357dbe
+            name: '-3b0a74a0'
             widget: text
           - hint: 'Original text: Simplicity, key: 21bcdc41'
             label: Text
@@ -425,27 +435,17 @@ collections:
             name: '-24cbae70'
             widget: string
           - hint: >-
-              Original text: Select your financial strategy carefully, proceed
-              to deposit your assets into the chosen Index, and finally, relax
-              as you await your investments to flourish., key: -23742bdf
+              Original text: Select an Index Pool of your choice, proceed to
+              deposit your assets into the index of your choosing and relax
+              while our automated arbitrage engine goes to work for you., key:
+              17b85af
             label: Text
-            name: '-23742bdf'
+            name: 17b85af
             widget: text
           - hint: 'Original text: read the docs, key: -22cf202c'
             label: Text
             name: '-22cf202c'
             widget: string
-          - hint: 'Original text: Index Strategy, key: 1d8f5741'
-            label: Text
-            name: 1d8f5741
-            widget: string
-          - hint: >-
-              Original text: User chooses which index they want to participate
-              in based off the asset exposure and performance they are seeking.,
-              key: 3b272189
-            label: Text
-            name: 3b272189
-            widget: text
           - hint: 'Original text: Proprietary Strategy Logic, key: 70298012'
             label: Text
             name: '70298012'
@@ -455,12 +455,11 @@ collections:
             name: 5294cd19
             widget: string
           - hint: >-
-              Original text: After one year of development, thousands of
-              simulations, and six months of production testing, we perfected
-              our premium arbitrage strategy through countless iterations., key:
-              588b51e5
+              Original text: After a year of development, extensive simulations,
+              and six months of production testing, we have refined our premium
+              arbitrage strategy through numerous iterations., key: -efbfa12
             label: Text
-            name: 588b51e5
+            name: '-efbfa12'
             widget: text
           - hint: 'Original text: Private Index Pools, key: -53df9874'
             label: Text
@@ -471,11 +470,12 @@ collections:
             name: 6de10927
             widget: string
           - hint: >-
-              Original text: Our private Index pools optimize arbitrage,
-              eliminating competition. Unlike others, we avoid high validator
-              fees, maximizing returns efficiently., key: -45828655
+              Original text: Our private Index pools are designed to optimize
+              the arbitrage process, eliminating competition. Unlike others, we
+              avoid high validator fees, maximizing returns for our users., key:
+              10698d6e
             label: Text
-            name: '-45828655'
+            name: 10698d6e
             widget: text
           - hint: 'Original text: Pitch deck, key: 61800da9'
             label: Text
@@ -517,10 +517,10 @@ collections:
             name: 27b67d
             widget: string
           - hint: >-
-              Original text: — Our mission is to progress the Defi industry.,
-              key: -2dd008d
+              Original text: Our mission is to pioneer the Defi industry., key:
+              -623430e0
             label: Text
-            name: '-2dd008d'
+            name: '-623430e0'
             widget: string
           - hint: 'Original text: No items found., key: 3d503d2b'
             label: Text
@@ -543,22 +543,6 @@ collections:
           - hint: 'Original text: pitch deck, key: -1551ce77'
             label: Text
             name: '-1551ce77'
-            widget: string
-          - hint: 'Original text: © , key: 1497'
-            label: Text
-            name: '1497'
-            widget: string
-          - hint: 'Original text: YYYY, key: 29ce40'
-            label: Text
-            name: 29ce40
-            widget: string
-          - hint: 'Original text:  Private Pools Network, key: 3790fe88'
-            label: Text
-            name: 3790fe88
-            widget: string
-          - hint: 'Original text: Powered by D3, key: 5eb851fc'
-            label: Text
-            name: 5eb851fc
             widget: string
           - hint: 'Original text: first name family name, key: 6a1fdf22'
             label: Text
@@ -626,10 +610,6 @@ collections:
             label: Text
             name: '8e9'
             widget: string
-          - hint: 'Original text: Generating , key: -67b9e2b2'
-            label: Text
-            name: '-67b9e2b2'
-            widget: string
           - hint: 'Original text: From Market Volatility, key: 55ae77b3'
             label: Text
             name: 55ae77b3
@@ -642,6 +622,13 @@ collections:
             label: Text
             name: '-c1c19ec'
             widget: string
+          - hint: >-
+              Original text: Private Pool Network faces the liquidity problem
+              head on by maximising value extracted from volatility and
+              optimising the arbitrage process., key: 61357dbe
+            label: Text
+            name: 61357dbe
+            widget: text
           - hint: 'Original text: H2, key: 8ea'
             label: Text
             name: 8ea
@@ -666,6 +653,18 @@ collections:
             label: Text
             name: 742fc96e
             widget: string
+          - hint: >-
+              Original text: 876M Wasted due to major inefficiencies" - This
+              text is good, lets just update theNumber. Hover and the card flips
+              and reads : "The current approach to arbitrage is inefficient due
+              to the public nature of arbitrage opportunities. This leads to
+              priority gas auctions resulting in up to 80% of arbitrage value
+              being lost to validators. Our private pools circumvent this
+              delivering a proprietary and optimised approach to arbitrage, key:
+              4d083e65
+            label: Text
+            name: 4d083e65
+            widget: text
           - hint: 'Original text: paragraph dark, key: -73133518'
             label: Text
             name: '-73133518'
@@ -733,6 +732,18 @@ collections:
             label: Text
             name: '-6bd48d63'
             widget: string
+          - hint: 'Original text: scroll 1, key: -17f89462'
+            label: Text
+            name: '-17f89462'
+            widget: string
+          - hint: 'Original text: scroll 2, key: -17f89461'
+            label: Text
+            name: '-17f89461'
+            widget: string
+          - hint: 'Original text: scroll 3, key: -17f89460'
+            label: Text
+            name: '-17f89460'
+            widget: string
           - hint: 'Original text: Investor, key: 294468b8'
             label: Text
             name: 294468b8
@@ -751,168 +762,21 @@ collections:
             label: Text
             name: 1f7907
             widget: string
-          - hint: >-
-              Original text: — Participate in the initial stage of our PPN
-              strategic investment round., key: 20b40258
+          - hint: 'Original text: © , key: 1497'
             label: Text
-            name: 20b40258
+            name: '1497'
             widget: string
-          - hint: 'Original text: Pitch Deck, key: 617181c9'
+          - hint: 'Original text: YYYY, key: 29ce40'
             label: Text
-            name: 617181c9
+            name: 29ce40
             widget: string
-          - hint: >-
-              Original text: Transform your idea into reality, share us your
-              pitch deck and we'll get back to you as soon as possible., key:
-              765a724
+          - hint: 'Original text:  Private Pools Network, key: 3790fe88'
             label: Text
-            name: 765a724
-            widget: text
-          - hint: 'Original text: Upload a PDF of your Pitch Deck, key: -5d5b62a7'
-            label: Text
-            name: '-5d5b62a7'
+            name: 3790fe88
             widget: string
-          - hint: >-
-              Original text: If you intend to upload your pitch deck as a PDF
-              file and it contains critical and/or confidential information,
-              please ensure that your PDF file is password-protected. Max PDF
-              size should be 10Mo., key: -853e4c
+          - hint: 'Original text: Powered by D3, key: 5eb851fc'
             label: Text
-            name: '-853e4c'
-            widget: text
-          - hint: 'Original text: Investor and/or company name, key: 2966fcb'
-            label: Text
-            name: 2966fcb
-            widget: string
-          - hint: 'Original text: Name, key: 24eeab'
-            label: Text
-            name: 24eeab
-            widget: string
-          - hint: >-
-              Original text: Share a link to your Pitch Deck, — we recommend
-              using Slidebean., key: -448bd638
-            label: Text
-            name: '-448bd638'
-            widget: string
-          - hint: 'Original text: slidebean.com, key: -5001dd0c'
-            label: Text
-            name: '-5001dd0c'
-            widget: string
-          - hint: >-
-              Original text: Slidebean.com is a web-based platform that provides
-              tools for creating professional and visually appealing
-              presentation slides. It is designed to assist users, particularly
-              business professionals and entrepreneurs, in crafting effective
-              presentations with ease., key: 4bcd296c
-            label: Text
-            name: 4bcd296c
-            widget: text
-          - hint: 'Original text: Full Name, key: ff41d7c'
-            label: Text
-            name: ff41d7c
-            widget: string
-          - hint: 'Original text: & Email, key: 14c73b02'
-            label: Text
-            name: 14c73b02
-            widget: string
-          - hint: >-
-              Original text: Kindly provide us with your complete name and your
-              professional email address, please., key: 2c4541da
-            label: Text
-            name: 2c4541da
-            widget: string
-          - hint: >-
-              Original text: We value your identity and how you wish to be
-              addressed. When you share your full name with us, please also
-              include the pronoun you prefer., key: 93f3dfb
-            label: Text
-            name: 93f3dfb
-            widget: text
-          - hint: >-
-              Original text: Prior to sending your message, take a moment to
-              double-check and confirm the accuracy of your email address., key:
-              5928cf17
-            label: Text
-            name: 5928cf17
-            widget: text
-          - hint: 'Original text: Target fundraising amount in USD, key: 6aabaf28'
-            label: Text
-            name: 6aabaf28
-            widget: string
-          - hint: 'Original text: fundraising, key: 7c171f44'
-            label: Text
-            name: 7c171f44
-            widget: string
-          - hint: >-
-              Original text: Setting a target fundraising amount serves several
-              essential purposes. First and foremost, it provides clarity and
-              focus for the fundraising efforts., key: 16dc34b8
-            label: Text
-            name: 16dc34b8
-            widget: text
-          - hint: >-
-              Original text: Furthermore, a well-defined fundraising target
-              enables proper planning and allocation of resources. It guides
-              organizers in creating a fundraising strategy, setting timelines,
-              and identifying the most effective fundraising methods., key:
-              400e1d13
-            label: Text
-            name: 400e1d13
-            widget: text
-          - hint: 'Original text: One-liner Pitch, key: -467e7189'
-            label: Text
-            name: '-467e7189'
-            widget: string
-          - hint: 'Original text: — make it count, key: 1b4decc0'
-            label: Text
-            name: 1b4decc0
-            widget: string
-          - hint: 'Original text: Pitch, key: 498d320'
-            label: Text
-            name: 498d320
-            widget: string
-          - hint: 'Original text: noun, key: 33b01a'
-            label: Text
-            name: 33b01a
-            widget: string
-          - hint: 'Original text: /pɪtʃ/, key: 5778fc77'
-            label: Text
-            name: 5778fc77
-            widget: string
-          - hint: >-
-              Original text: In a world of information overload, a well-crafted
-              oneliner pitch is your key to grabbing someone's attention and
-              making a memorable impression in just a few seconds., key:
-              -53dbbe3e
-            label: Text
-            name: '-53dbbe3e'
-            widget: text
-          - hint: 'Original text: By clicking , key: 6ffc699d'
-            label: Text
-            name: 6ffc699d
-            widget: string
-          - hint: 'Original text: "Send us your proposal", key: -5474ea51'
-            label: Text
-            name: '-5474ea51'
-            widget: string
-          - hint: >-
-              Original text:  on this contact form, you acknowledge and agree to
-              the terms and conditions outlined in the privacy policy of W
-              Ventures., key: 6a58b3b9
-            label: Text
-            name: 6a58b3b9
-            widget: text
-          - hint: >-
-              Original text: Thank you! Your submission has been received!, key:
-              5a0ea5a1
-            label: Text
-            name: 5a0ea5a1
-            widget: string
-          - hint: >-
-              Original text: Oops! Something went wrong while submitting the
-              form., key: -7c112e99
-            label: Text
-            name: '-7c112e99'
+            name: 5eb851fc
             widget: string
       - label: Links
         name: links
@@ -944,10 +808,6 @@ collections:
             label: Link
             name: 68e15f9f
             widget: string
-          - hint: 'Original link: https://d3.dev/, key: -2b511cb6'
-            label: Link
-            name: '-2b511cb6'
-            widget: string
           - hint: 'Original link: https://typescale.com/, key: 68f0803b'
             label: Link
             name: 68f0803b
@@ -956,9 +816,9 @@ collections:
             label: Link
             name: 61a608ef
             widget: string
-          - hint: 'Original link: https://slidebean.com/, key: 185e504a'
+          - hint: 'Original link: https://d3.dev/, key: -2b511cb6'
             label: Link
-            name: 185e504a
+            name: '-2b511cb6'
             widget: string
       - label: Images
         name: images
@@ -982,7 +842,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-1fe8882e'
+            name: 317f733b
             widget: object
             fields:
               - name: url
@@ -995,7 +855,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 317f733b
+            name: '-1fe8882e'
             widget: object
             fields:
               - name: url

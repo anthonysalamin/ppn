@@ -116,42 +116,32 @@
   }
 </style>
         <style>
-  /* Loader */
-  .cursor {
-    pointer-events: none;
+  /* Team slider image size (desktop) */
+  .swiper-slide.is-team:nth-child(odd) {
+    width: 35%;
   }
-  /* Team Slider */
-  .swiper-slide.is-team:nth-child(3n + 1) {
-    width: 34.11%;
+  .swiper-slide.is-team:nth-child(even) {
+    width: 28%;
   }
-  .swiper-slide.is-team:nth-child(3n + 2) {
-    width: 19.96%;
-  }
-  .swiper-slide.is-team:nth-child(3n + 3) {
-    width: 27.01%;
-  }
+	/* Team slider image size (tablet) */
   @media screen and (max-width: 767px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
-      width: 50%;
+   .swiper-slide.is-team:nth-child(odd) {
+    width: 50%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 38%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 43%;
     }
   }
+  /* Team slider image size (mobile) */
   @media screen and (max-width: 479px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
+    .swiper-slide.is-team:nth-child(odd) {
       width: 80%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 68%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 73%;
     }
   }
+  /* other team slider styles */
   .swiper.is-team {
     overflow: visible;
   }
@@ -173,6 +163,7 @@
   }
   /* Cursor */
   .cursor {
+    pointer-events: none;
     display: none;
   }
   @media (pointer: fine) {
@@ -271,140 +262,15 @@
         </div>
       </div>
     </nav>
-    <header data-w-id="1c3c0df1-a66e-0560-39d1-a5e6d8c15392" class="section is-header">
-      <div class="container is-header">
-        <div class="punchline-wrap">
-          <div class="header__title-wrap">
-            <div class="pill">{{ texts.29137f }}</div>
-            <h1>{{ texts.-6e7894be }}<span class="heading-bold">{{ texts.5176f6d }}</span><br>{{ texts.2665cb93 }}<br>{{ texts.-125aa929 }}</h1>
-          </div>
-          <a href="{{ links.2b5d3bff }}" class="cta__wrap w-inline-block">
-            <div class="pill cta accent">{{ texts.f7b7e91 }}</div>
-            <div class="cta__circle accen">
-              <div class="lottie-arrow-right" data-w-id="201905d5-f451-7581-c738-500223300133" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/6565594186e587567235d089/6581c7e2eb8e6bafe68e692f_Animation%20-%201703003839505%20(1).json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2" data-duration="0"></div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <a href="{{ links.2b5d3bff }}" class="scrolldown w-inline-block">
-        <div class="small">{{ texts.-24f8f20b }}</div>
-        <div class="lottie-arrow-right inversed" data-w-id="d555aea7-c947-ab66-cc44-5b9af9c000a7" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/6565594186e587567235d089/6581c7e2eb8e6bafe68e692f_Animation%20-%201703003839505%20(1).json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2" data-duration="0"></div>
-      </a>
-      <div class="embed__logomark w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 104.74 131.43">
-          <defs>
-            <linearGradient id="a" x1="78.56" y1="84.24" x2="78.56" y2="0" gradientTransform="rotate(90 78.56 42.12)" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#02031c" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#00e0ff"></stop>
-            </linearGradient>
-            <linearGradient id="b" x1="-7259.19" y1="716.62" x2="-7127.75" y2="716.62" gradientTransform="translate(7219.65 -650.9)" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#02031c" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#00e0ff"></stop>
-            </linearGradient>
-          </defs>
-          <path d="M36.44 15.93h84.24v1.24c0 28.22-22.91 51.13-51.13 51.13H36.44V15.93Z" transform="rotate(-90 78.56 42.12)" style="fill:url(#a)"></path>
-          <path d="M-39.53 39.53H91.9v1.24c0 28.22-22.91 51.13-51.13 51.13h-80.3V39.53Z" transform="rotate(90 26.185 65.715)" style="fill:url(#b)"></path>
-        </svg></div>
-    </header>
     <div class="main">
-      <section id="oppourtunities" class="section">
-        <div class="container">
-          <div class="section__header">
-            <div class="heading__wrap">
-              <div class="pill">{{ texts.f7b7e91 }}</div>
-              <h1>{{ texts.117611a9 }}</h1>
-            </div>
-            <a href="{{ links.23 }}" class="cta__wrap w-inline-block">
-              <div class="pill cta">{{ texts.-78ddacdd }}<br></div>
-            </a>
-          </div>
-          <div id="w-node-a45257b0-b767-c84b-dbcc-70872afebc36-869402cf" class="faq__grid-item">
-            <div class="faq__items">
-              <div class="faq__item">
-                <div class="faq__question hover-x">
-                  <div class="icon-plus w-embed"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 12h12m-6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg></div>
-                  <div class="one-name">
-                    <div class="grid-item-header">
-                      <div class="wrap-opportunity-title">
-                        <div data-id="blinky-warning" class="blinky w-embed">
-                          <style>[data-id="blinky-warning"]:before{content:"";position:absolute;z-index:0;width:inherit;height:inherit;border:5px solid var(--warning);border-radius:inherit;opacity:0;animation:2s cubic-bezier(.29,0,0,1) infinite expand;animation-delay:1s;}@keyframes expand{0%{transform:scale(0);opacity:1;}100%{transform:scale(2.5);opacity:0;border-color:white;background-color:transparent;border-width:2px;}}</style>
-                        </div>
-                        <h1 class="bold">{{ texts.111b0f }}<span data-target-number="9" class="number-counter">{{ texts.30 }}</span>{{ texts.42 }}</h1>
-                      </div>
-                      <p class="paragraph mini dark">{{ texts.754d2c1e }}</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq__answer">
-                  <div class="one-item-list-wrap">
-                    <div class="one-item-list-image">
-                      <p class="faq__paragraph">{{ texts.-f7bcbf9 }}<br></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__question hover-x">
-                  <div class="icon-plus w-embed"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 12h12m-6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg></div>
-                  <div class="one-name">
-                    <div class="grid-item-header">
-                      <div class="wrap-opportunity-title">
-                        <div data-id="blinky-warning" class="blinky w-embed">
-                          <style>[data-id="blinky-warning"]:before{content:"";position:absolute;z-index:0;width:inherit;height:inherit;border:5px solid var(--warning);border-radius:inherit;opacity:0;animation:2s cubic-bezier(.29,0,0,1) infinite expand;animation-delay:1s;}@keyframes expand{0%{transform:scale(0);opacity:1;}100%{transform:scale(2.5);opacity:0;border-color:white;background-color:transparent;border-width:2px;}}</style>
-                        </div>
-                        <h1 class="bold"><span data-target-number="876" class="number-counter">{{ texts.ba30 }}</span>{{ texts.4d }}</h1>
-                      </div>
-                      <p class="paragraph mini dark">{{ texts.56407b9e }}</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq__answer">
-                  <div class="one-item-list-wrap">
-                    <div class="one-item-list-image">
-                      <p class="faq__paragraph">{{ texts.4d083e65 }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-a45257b0-b767-c84b-dbcc-70872afebc59-869402cf" class="faq__item accent">
-                <div class="faq__question hover-x">
-                  <div class="icon-plus w-embed"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 12h12m-6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg></div>
-                  <div class="one-name">
-                    <div class="grid-item-header">
-                      <div class="wrap-opportunity-title">
-                        <div data-id="blinky-accent" class="blinky accent w-embed">
-                          <style>[data-id="blinky-accent"]:before{content:"";position:absolute;z-index:0;width:inherit;height:inherit;border:5px solid var(--accent);border-radius:inherit;opacity:0;animation:2s cubic-bezier(.29,0,0,1) infinite expand;animation-delay:1s;}@keyframes expand{0%{transform:scale(0);opacity:1;}100%{transform:scale(2.5);opacity:0;border-color:white;background-color:transparent;border-width:2px;}}</style>
-                        </div>
-                        <h1 class="bold"><span data-target-number="100" class="number-counter">{{ texts.ba30 }}</span>{{ texts.25 }}</h1>
-                      </div>
-                      <p class="paragraph mini">{{ texts.-62c03091 }}</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="faq__answer">
-                  <div class="one-item-list-wrap">
-                    <div class="one-item-list-image">
-                      <p class="faq__paragraph">{{ texts.-74e47823 }}<br></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cta__dual-center">
-            <a href="{{ links.61525348 }}" class="cta__wrap w-inline-block">
-              <div class="pill cta accent">{{ texts.90caa1b }}</div>
-              <div class="cta__circle accen">
-                <div class="lottie-arrow-right" data-w-id="201905d5-f451-7581-c738-500223300133" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/6565594186e587567235d089/6581c7e2eb8e6bafe68e692f_Animation%20-%201703003839505%20(1).json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2" data-duration="0"></div>
-              </div>
-            </a>
-          </div>
-        </div>
+      <section class="fake">
+        <div>{{ texts.-17f89462 }}</div>
+      </section>
+      <section class="fake">
+        <div>{{ texts.-17f89461 }}</div>
+      </section>
+      <section class="fake">
+        <div>{{ texts.-17f89460 }}</div>
       </section>
     </div>
   </div>
@@ -420,6 +286,108 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type  -->
   <script src="https://unpkg.com/split-type"></script>
+  <script>
+/*
+ * PPN | subline animation
+ * dependency: none (redo with GSAP)
+ * build 09.04.24 @14:37
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const shouldBlink = true;
+  initTyping("[data-id='subline']", shouldBlink, [
+    "pioneers new means of value extraction",
+    "empowers access to automated arbitrage",
+    "offers a new DeFi ecosystem for users"
+  ]);
+});
+function addBlink(shouldBlink, selector) {
+  if (!shouldBlink) return;
+  const styleElement = document.createElement("style");
+  const cssRules = `${selector}::after { content:"_"; animation: typingBlink linear 1.15s infinite; } @keyframes typingBlink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }`;
+  styleElement.textContent = cssRules;
+  document.head.appendChild(styleElement);
+}
+function initTyping(selector, shouldBlink, words) {
+  const toBeTyped = document.querySelector(selector);
+  if (!toBeTyped) return;
+  addBlink(shouldBlink, selector);
+  const LETTER_TYPE_DELAY = 20;
+  const WORD_STAY_DELAY = 1500;
+  const DIRECTION_FORWARDS = 0;
+  const DIRECTION_BACKWARDS = 1;
+  let direction = DIRECTION_FORWARDS;
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let wordTypeInterval;
+  function startTyping() {
+    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+  }
+  function typeLetter() {
+    const word = words[wordIndex];
+    if (direction === DIRECTION_FORWARDS) {
+      letterIndex++;
+      if (letterIndex === word.length) {
+        direction = DIRECTION_BACKWARDS;
+        clearInterval(wordTypeInterval);
+        setTimeout(startTyping, WORD_STAY_DELAY);
+      }
+    } else if (direction === DIRECTION_BACKWARDS) {
+      letterIndex--;
+      if (letterIndex === 0) {
+        nextWord();
+      }
+    }
+    const textToType = word.substring(0, letterIndex);
+    toBeTyped.textContent = textToType;
+  }
+  function nextWord() {
+    letterIndex = 0;
+    direction = DIRECTION_FORWARDS;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+  // Initialize typer
+  startTyping();
+}
+</script>
+  <script>
+/*
+ * PPN | manage navigation display
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 09.04.24 @12:25
+*/
+gsap.registerPlugin(ScrollTrigger);
+function setupNavAnimation() {
+  const nav = document.querySelector('.nav');
+  gsap.to(nav, {
+    y: "-100%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: nav,
+      start: "top top",
+      end: "bottom top",
+      scrub: false,
+      onUpdate: (self) => {
+        // Check the scroll direction
+        const scrollDirection = self.direction;
+        // Get the scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        // Move the nav up when scrolling down and back down when scrolling up after scrolling X px
+        if (scrollDirection === 1 && scrollPosition > 60) {
+          // Scroll down and after scrolling X px
+          gsap.to(nav, { y: "-100%", duration: 0.5 });
+        } else if (scrollDirection === -1) {
+          // Scroll up
+          gsap.to(nav, { y: "0%", duration: 0.5 });
+        }
+      }
+    }
+  });
+}
+setupNavAnimation();
+</script>
   <script>
 /*
  * PPN | shrink investor CTA

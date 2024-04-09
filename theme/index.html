@@ -138,42 +138,32 @@
   }
 </style>
         <style>
-  /* Loader */
-  .cursor {
-    pointer-events: none;
+  /* Team slider image size (desktop) */
+  .swiper-slide.is-team:nth-child(odd) {
+    width: 35%;
   }
-  /* Team Slider */
-  .swiper-slide.is-team:nth-child(3n + 1) {
-    width: 34.11%;
+  .swiper-slide.is-team:nth-child(even) {
+    width: 28%;
   }
-  .swiper-slide.is-team:nth-child(3n + 2) {
-    width: 19.96%;
-  }
-  .swiper-slide.is-team:nth-child(3n + 3) {
-    width: 27.01%;
-  }
+	/* Team slider image size (tablet) */
   @media screen and (max-width: 767px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
-      width: 50%;
+   .swiper-slide.is-team:nth-child(odd) {
+    width: 50%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 38%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 43%;
     }
   }
+  /* Team slider image size (mobile) */
   @media screen and (max-width: 479px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
+    .swiper-slide.is-team:nth-child(odd) {
       width: 80%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 68%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 73%;
     }
   }
+  /* other team slider styles */
   .swiper.is-team {
     overflow: visible;
   }
@@ -195,6 +185,7 @@
   }
   /* Cursor */
   .cursor {
+    pointer-events: none;
     display: none;
   }
   @media (pointer: fine) {
@@ -302,10 +293,10 @@
     <main class="main">
       <header data-w-id="1c3c0df1-a66e-0560-39d1-a5e6d8c15392" class="section is-header">
         <div class="container is-header">
-          <div class="punchline-wrap">
+          <div class="punchline-wrap is-header">
             <div class="header__title-wrap">
-              <div class="pill">{{ texts.29137f }}</div>
-              <h1>{{ texts.-6e7894be }}<span class="heading-bold">{{ texts.5176f6d }}</span><br>{{ texts.2665cb93 }}<br>{{ texts.-125aa929 }}</h1>
+              <h1>{{ texts.-67b9e2b2 }}<span class="heading-bold">{{ texts.5176f6d }}</span><br>{{ texts.2665cb93 }}<br>{{ texts.-125aa929 }}</h1>
+              <p class="subline animated">{{ texts.259392 }}<span data-id="subline" class="span">{{ texts.-49a3789a }}</span></p>
             </div>
             <a href="{{ links.2b5d3bff }}" class="cta__wrap w-inline-block">
               <div class="pill cta accent">{{ texts.f7b7e91 }}</div>
@@ -344,7 +335,7 @@
           <div class="section__header">
             <div class="heading__wrap">
               <div class="pill">{{ texts.f7b7e91 }}</div>
-              <h1>{{ texts.117611a9 }}</h1>
+              <h1>{{ texts.40a8d8b5 }}</h1>
             </div>
             <a href="{{ links.23 }}" class="cta__wrap w-inline-block">
               <div class="pill cta">{{ texts.-78ddacdd }}<br></div>
@@ -397,7 +388,7 @@
                 <div class="faq__answer">
                   <div class="one-item-list-wrap">
                     <div class="one-item-list-image">
-                      <p class="faq__paragraph">{{ texts.4d083e65 }}</p>
+                      <p class="faq__paragraph">{{ texts.1c1de2d3 }}</p>
                     </div>
                   </div>
                 </div>
@@ -422,7 +413,7 @@
                 <div class="faq__answer">
                   <div class="one-item-list-wrap">
                     <div class="one-item-list-image">
-                      <p class="faq__paragraph">{{ texts.-74e47823 }}<br></p>
+                      <p class="faq__paragraph">{{ texts.-687da9da }}<br></p>
                     </div>
                   </div>
                 </div>
@@ -445,8 +436,8 @@
             <div class="timeline__padding-vertical">
               <div data-w-id="580ed13e-af5d-d2a7-face-4094805e2404" class="timeline-main_heading-wrapper">
                 <div class="pill">{{ texts.5cc7b199 }}</div>
-                <h1>{{ texts.-38c6adce }}<span class="heading-bold">{{ texts.66d9aaa8 }}</span>{{ texts.-f003419 }}</h1>
-                <p class="subline">{{ texts.61357dbe }}</p>
+                <h1>{{ texts.1a5407a6 }}<span class="heading-bold">{{ texts.66d9aaa8 }}</span>{{ texts.-f003419 }}</h1>
+                <p class="subline">{{ texts.-3b0a74a0 }}</p>
               </div>
             </div>
           </div>
@@ -466,7 +457,7 @@
                 </div>
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.-24cbae70 }}</p>
-                  <p class="subline light">{{ texts.-23742bdf }}</p>
+                  <p class="subline light">{{ texts.17b85af }}</p>
                   <div class="margin-bottom-xlarge">
                     <div class="inline-block">
                       <a href="{{ links.23 }}" target="_blank" class="timeline__link w-inline-block">
@@ -476,10 +467,6 @@
                           </svg></div>
                       </a>
                     </div>
-                  </div>
-                  <div class="timeline_definition-wrapper margin-bottom">
-                    <p class="text-colour-white">{{ texts.1d8f5741 }}<br></p>
-                    <p class="text-colour-lightgrey">{{ texts.3b272189 }}</p>
                   </div>
                 </div>
               </div>
@@ -493,7 +480,7 @@
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.5294cd19 }}</p>
                   <div class="margin-bottom-medium">
-                    <p class="subline light">{{ texts.588b51e5 }}</p>
+                    <p class="subline light">{{ texts.-efbfa12 }}</p>
                     <a href="{{ links.23 }}" class="cta__wrap w-inline-block">
                       <div class="pill cta">{{ texts.-78ddacdd }}</div>
                       <div class="cta__circle">
@@ -513,7 +500,7 @@
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.6de10927 }}</p>
                   <div class="margin-bottom-medium">
-                    <p class="subline light">{{ texts.-45828655 }}</p>
+                    <p class="subline light">{{ texts.10698d6e }}</p>
                     <a href="{{ links.23 }}" target="_blank" class="timeline__link w-inline-block">
                       <div>{{ texts.61800da9 }}</div>
                       <div class="link-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
@@ -576,7 +563,7 @@
           <div class="section__header">
             <div class="heading__wrap">
               <div class="pill">{{ texts.27b67d }}<br></div>
-              <h1 class="headline">{{ texts.-2dd008d }}</h1>
+              <h1 class="headline">{{ texts.-623430e0 }}</h1>
             </div>
           </div>
           {%- assign collection = collections.team | sort: "f_sorting-order" -%}<div class="swiper is-team w-dyn-list">
@@ -626,6 +613,20 @@
                       <div class="popup_name-wrap">
                         <p class="headline is-team-name">{{ item.data.title }}</p>
                         <p class="text-position">{{ item.data.f_title }}</p>
+                        <div class="footer__icons-wrap">
+                          {%- if item.data.f_x-twitter -%}<a href="{{ item.data.f_x-twitter }}" class="footer__icon-link w-inline-block">
+                            <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 28.79 26">
+                                <path d="M22.74 0h4.41l-9.69 11.03L28.78 26H19.9l-6.95-9.1L4.99 26H.58l10.26-11.8L0 0h9.1l6.28 8.31L22.74 0ZM21.2 23.41h2.45L7.82 2.49H5.19L21.2 23.41Z" style="fill:currentColor"></path>
+                              </svg></div>
+                          </a>{%- endif -%}
+                          {%- if item.data.f_linkedin -%}<a href="{{ item.data.f_linkedin }}" class="footer__icon-link w-inline-block">
+                            <div class="embed__icon w-embed"><svg title="linkedin" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 798.44 763.19">
+                                <g fill="currentColor">
+                                  <path d="M181.26 763.19V248.24H10.12v514.94h171.14ZM95.7 177.96c59.66 0 96.82-39.57 96.82-88.99C191.4 38.46 155.37 0 96.82 0 38.27 0 0 38.46 0 88.97s37.14 88.99 94.58 88.99h1.13Zm180.27 585.23s2.25-466.63 0-514.94h171.17v74.68H446c22.51-35.14 63.05-86.77 155.38-86.77 112.63 0 197.06 73.6 197.06 231.77V763.2H627.3V487.72c0-69.22-24.76-116.45-86.71-116.45-47.27 0-75.44 31.84-87.82 62.63-4.53 10.96-5.63 26.35-5.63 41.74v287.57H275.97Z" style="fill-rule:evenodd"></path>
+                                </g>
+                              </svg></div>
+                          </a>{%- endif -%}
+                        </div>
                       </div>
                       <div class="rich w-richtext">{{ item.templateContent | markdown }}</div>
                     </div>
@@ -649,7 +650,7 @@
     </main>
     <footer class="section is-footer">
       <div class="container is-footer">
-        <div class="footer__grid">
+        <div class="footer__grid v1">
           <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231b4-692231b1" class="footer__grid-item">
             <a href="{{ links.2f }}" aria-label="logo" aria-current="page" class="nav__logomark-link w-nav-brand w--current">
               <div class="embed__logo w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" heigh="100%" viewBox="0 0 982.76 131.43">
@@ -673,40 +674,6 @@
               <p class="small mini-pil">{{ texts.36617d }}</p>
             </a>
             <p class="paragraph dark footer">{{ texts.25f735d8 }}</p>
-            <div class="footer__icons-wrap">
-              <a href="{{ links.23 }}" target="_blank" class="footer__icon-link w-inline-block">
-                <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 28.79 26">
-                    <path d="M22.74 0h4.41l-9.69 11.03L28.78 26H19.9l-6.95-9.1L4.99 26H.58l10.26-11.8L0 0h9.1l6.28 8.31L22.74 0ZM21.2 23.41h2.45L7.82 2.49H5.19L21.2 23.41Z" style="fill:currentColor"></path>
-                  </svg></div>
-              </a>
-              <a href="{{ links.23 }}" target="_blank" class="footer__icon-link w-inline-block">
-                <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
-                    <g>
-                      <path style="fill:none" d="M0 0h32v32H0z"></path>
-                      <path d="M9.03 6.91c4.98 0 9.02 4.07 9.02 9.09s-4.04 9.09-9.02 9.09S0 21.02 0 16s4.04-9.09 9.03-9.09Zm14.41.53c2.49 0 4.51 3.83 4.51 8.55s-2.02 8.55-4.51 8.55-4.51-3.83-4.51-8.55 2.02-8.55 4.51-8.55Zm6.98.89c.88 0 1.59 3.43 1.59 7.66s-.71 7.66-1.59 7.66-1.59-3.43-1.59-7.66.71-7.66 1.59-7.66Z" style="fill:currentColor"></path>
-                    </g>
-                  </svg></div>
-              </a>
-              <a href="{{ links.23 }}" target="_blank" class="footer__icon-link w-inline-block">
-                <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
-                    <path style="fill:none" d="M0 0h32v32H0z"></path>
-                    <path d="M27.14 6.03s-.02-.03-.04-.04c-2.04-.92-4.23-1.6-6.51-1.99-.04 0-.08 0-.1.05-.28.49-.59 1.13-.81 1.64-2.46-.36-4.91-.36-7.32 0-.22-.52-.54-1.15-.82-1.64-.02-.04-.06-.05-.1-.05-2.29.39-4.47 1.07-6.51 1.99-.02 0-.03.02-.04.04C.72 12.12-.42 18.07.14 23.95c0 .03.02.06.04.07C2.92 26 5.57 27.2 8.17 27.99c.04 0 .09 0 .11-.04.62-.83 1.16-1.7 1.63-2.62.03-.05 0-.12-.06-.14-.87-.32-1.7-.72-2.5-1.17-.06-.04-.07-.12-.01-.17.17-.12.34-.25.5-.38.03-.02.07-.03.1-.01 5.24 2.35 10.91 2.35 16.08 0 .03-.02.07-.01.1.01.16.13.33.26.5.38.06.04.05.13 0 .17-.8.46-1.63.85-2.5 1.17-.06.02-.08.09-.05.14.48.92 1.03 1.79 1.63 2.61.03.03.07.05.11.04 2.61-.8 5.27-2 8-3.97.02-.02.04-.04.04-.07.67-6.79-1.12-12.69-4.73-17.92h.02ZM10.7 20.37c-1.58 0-2.88-1.42-2.88-3.17s1.27-3.17 2.88-3.17 2.9 1.44 2.88 3.17c0 1.75-1.27 3.17-2.88 3.17Zm10.63 0c-1.58 0-2.88-1.42-2.88-3.17s1.27-3.17 2.88-3.17 2.9 1.44 2.88 3.17c0 1.75-1.26 3.17-2.88 3.17Z" style="fill:currentColor"></path>
-                  </svg></div>
-              </a>
-              <a href="{{ links.23 }}" target="_blank" class="footer__icon-link w-inline-block">
-                <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32">
-                    <g>
-                      <path style="fill:none" d="M0 0h32v32H0z"></path>
-                      <path d="M2.2 14.19c8.59-3.67 14.32-6.09 17.18-7.26 8.18-3.34 9.88-3.92 10.99-3.94.24 0 .79.06 1.14.34.3.24.38.56.42.78.04.22.09.74.05 1.14-.44 4.57-2.36 15.65-3.34 20.77-.41 2.16-1.23 2.89-2.01 2.96-1.71.15-3.01-1.11-4.67-2.17-2.59-1.67-4.06-2.7-6.58-4.33-2.91-1.88-1.02-2.91.63-4.6.43-.44 7.97-7.17 8.12-7.78.02-.08.04-.36-.14-.51-.17-.15-.43-.1-.61-.06-.26.06-4.4 2.74-12.43 8.05-1.18.79-2.24 1.18-3.2 1.16-1.05-.02-3.08-.58-4.58-1.06-1.82-.58-3.29-.89-3.17-1.89.07-.52.8-1.05 2.19-1.6Z" style="fill:currentColor;fill-rule:evenodd"></path>
-                    </g>
-                  </svg></div>
-              </a>
-              <a href="{{ links.23 }}" target="_blank" class="footer__icon-link w-inline-block">
-                <div class="embed__icon w-embed"><svg title="github" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1280 1258.54">
-                    <path d="M640.4 0C286.4 0 0 288.4 0 644.8c0 285.2 183.6 526.8 438 612 32 6.4 43.6-14 43.6-30.8 0-14.8-1.2-66.4-1.2-119.6-178 38.4-215.2-76.8-215.2-76.8-28.8-74.8-71.2-94-71.2-94-58.4-39.6 4.4-39.6 4.4-39.6 64.8 4.4 98.8 66.4 98.8 66.4 57.2 98.4 149.6 70.4 186.8 53.6 5.2-41.6 22.4-70.4 40.4-86.4-142-14.8-291.6-70.4-291.6-318.4 0-70.4 25.6-128.4 65.6-173.2-6.4-16-28.8-82.4 6.4-170.8 0 0 54-17.2 176 66.4 52.4-14 106-21.2 160-21.2s109.2 7.6 160 21.2c122-83.2 176-66.4 176-66.4C1012 356 989.6 422 983.2 438c41.2 44.8 65.6 102.4 65.6 173.2 0 248-149.6 302.4-292.8 318.4 23.2 20.4 43.6 58.8 43.6 119.6 0 86.4-1.2 156-1.2 177.2 0 17.2 11.6 37.6 43.6 30.8 262.23-88.83 438.5-335.13 438-612C1281.2 288.4 993.6 0 640.4 0Z" style="fill:currentColor;fill-rule:evenodd"></path>
-                  </svg></div>
-              </a>
-            </div>
           </div>
           <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231c3-692231b1" class="footer__grid-item links">
             <a href="{{ links.23 }}" target="_blank" class="timeline__link w-inline-block">
@@ -728,14 +695,6 @@
                 </svg></div>
             </a>
           </div>
-          <div id="w-node-_399df6df-587e-0777-7367-b36ac0b99762-692231b1" class="footer__grid-item">
-            <div id="w-node-d927503e-1734-fd0f-4a2a-e60b692231d0-692231b1" class="small">{{ texts.1497 }}<span data-date="year" class="span">{{ texts.29ce40 }}</span>{{ texts.3790fe88 }}</div>
-          </div>
-          <div id="w-node-e5b78b3a-5778-3456-a08b-11d7d3943c9c-692231b1" class="footer__grid-item powered">
-            <a href="{{ links.-2b511cb6 }}" target="_blank" class="link-block w-inline-block">
-              <div class="small">{{ texts.5eb851fc }}</div><img src="{{ images.-1fe8882e.url }}" loading="lazy" alt="{{ images.-1fe8882e.alt | escape }}" class="image-2">
-            </a>
-          </div>
         </div>
       </div>
     </footer>
@@ -753,6 +712,108 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type  -->
   <script src="https://unpkg.com/split-type"></script>
+  <script>
+/*
+ * PPN | subline animation
+ * dependency: none (redo with GSAP)
+ * build 09.04.24 @14:37
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const shouldBlink = true;
+  initTyping("[data-id='subline']", shouldBlink, [
+    "pioneers new means of value extraction",
+    "empowers access to automated arbitrage",
+    "offers a new DeFi ecosystem for users"
+  ]);
+});
+function addBlink(shouldBlink, selector) {
+  if (!shouldBlink) return;
+  const styleElement = document.createElement("style");
+  const cssRules = `${selector}::after { content:"_"; animation: typingBlink linear 1.15s infinite; } @keyframes typingBlink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }`;
+  styleElement.textContent = cssRules;
+  document.head.appendChild(styleElement);
+}
+function initTyping(selector, shouldBlink, words) {
+  const toBeTyped = document.querySelector(selector);
+  if (!toBeTyped) return;
+  addBlink(shouldBlink, selector);
+  const LETTER_TYPE_DELAY = 20;
+  const WORD_STAY_DELAY = 1500;
+  const DIRECTION_FORWARDS = 0;
+  const DIRECTION_BACKWARDS = 1;
+  let direction = DIRECTION_FORWARDS;
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let wordTypeInterval;
+  function startTyping() {
+    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+  }
+  function typeLetter() {
+    const word = words[wordIndex];
+    if (direction === DIRECTION_FORWARDS) {
+      letterIndex++;
+      if (letterIndex === word.length) {
+        direction = DIRECTION_BACKWARDS;
+        clearInterval(wordTypeInterval);
+        setTimeout(startTyping, WORD_STAY_DELAY);
+      }
+    } else if (direction === DIRECTION_BACKWARDS) {
+      letterIndex--;
+      if (letterIndex === 0) {
+        nextWord();
+      }
+    }
+    const textToType = word.substring(0, letterIndex);
+    toBeTyped.textContent = textToType;
+  }
+  function nextWord() {
+    letterIndex = 0;
+    direction = DIRECTION_FORWARDS;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+  // Initialize typer
+  startTyping();
+}
+</script>
+  <script>
+/*
+ * PPN | manage navigation display
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 09.04.24 @12:25
+*/
+gsap.registerPlugin(ScrollTrigger);
+function setupNavAnimation() {
+  const nav = document.querySelector('.nav');
+  gsap.to(nav, {
+    y: "-100%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: nav,
+      start: "top top",
+      end: "bottom top",
+      scrub: false,
+      onUpdate: (self) => {
+        // Check the scroll direction
+        const scrollDirection = self.direction;
+        // Get the scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        // Move the nav up when scrolling down and back down when scrolling up after scrolling X px
+        if (scrollDirection === 1 && scrollPosition > 60) {
+          // Scroll down and after scrolling X px
+          gsap.to(nav, { y: "-100%", duration: 0.5 });
+        } else if (scrollDirection === -1) {
+          // Scroll up
+          gsap.to(nav, { y: "0%", duration: 0.5 });
+        }
+      }
+    }
+  });
+}
+setupNavAnimation();
+</script>
   <script>
 /*
  * PPN | shrink investor CTA
@@ -1043,8 +1104,9 @@ function initNumberAnimation() {
  * dependency: gsap.js
  * build 08.04.2024 @20:20
  */
+ /*
 document.addEventListener("DOMContentLoaded", () => {
-  // hideScrollBtnOnScroll();
+  hideScrollBtnOnScroll();
 });
 function hideScrollBtnOnScroll() {
 	console.log("hideScrollBtnOnScroll started");
@@ -1060,6 +1122,7 @@ function hideScrollBtnOnScroll() {
     }
   });
 }
+*/
 </script>
   <script>
 /*

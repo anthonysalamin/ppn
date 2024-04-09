@@ -116,42 +116,32 @@
   }
 </style>
         <style>
-  /* Loader */
-  .cursor {
-    pointer-events: none;
+  /* Team slider image size (desktop) */
+  .swiper-slide.is-team:nth-child(odd) {
+    width: 35%;
   }
-  /* Team Slider */
-  .swiper-slide.is-team:nth-child(3n + 1) {
-    width: 34.11%;
+  .swiper-slide.is-team:nth-child(even) {
+    width: 28%;
   }
-  .swiper-slide.is-team:nth-child(3n + 2) {
-    width: 19.96%;
-  }
-  .swiper-slide.is-team:nth-child(3n + 3) {
-    width: 27.01%;
-  }
+	/* Team slider image size (tablet) */
   @media screen and (max-width: 767px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
-      width: 50%;
+   .swiper-slide.is-team:nth-child(odd) {
+    width: 50%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 38%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 43%;
     }
   }
+  /* Team slider image size (mobile) */
   @media screen and (max-width: 479px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
+    .swiper-slide.is-team:nth-child(odd) {
       width: 80%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 68%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 73%;
     }
   }
+  /* other team slider styles */
   .swiper.is-team {
     overflow: visible;
   }
@@ -173,6 +163,7 @@
   }
   /* Cursor */
   .cursor {
+    pointer-events: none;
     display: none;
   }
   @media (pointer: fine) {
@@ -242,8 +233,8 @@
             <div class="timeline__padding-vertical">
               <div data-w-id="580ed13e-af5d-d2a7-face-4094805e2404" class="timeline-main_heading-wrapper">
                 <div class="pill">{{ texts.5cc7b199 }}</div>
-                <h1>{{ texts.-38c6adce }}<span class="heading-bold">{{ texts.66d9aaa8 }}</span>{{ texts.-f003419 }}</h1>
-                <p class="subline">{{ texts.61357dbe }}</p>
+                <h1>{{ texts.1a5407a6 }}<span class="heading-bold">{{ texts.66d9aaa8 }}</span>{{ texts.-f003419 }}</h1>
+                <p class="subline">{{ texts.-3b0a74a0 }}</p>
               </div>
             </div>
           </div>
@@ -263,7 +254,7 @@
                 </div>
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.-24cbae70 }}</p>
-                  <p class="subline light">{{ texts.-23742bdf }}</p>
+                  <p class="subline light">{{ texts.17b85af }}</p>
                   <div class="margin-bottom-xlarge">
                     <div class="inline-block">
                       <a href="{{ links.23 }}" target="_blank" class="timeline__link w-inline-block">
@@ -273,10 +264,6 @@
                           </svg></div>
                       </a>
                     </div>
-                  </div>
-                  <div class="timeline_definition-wrapper margin-bottom">
-                    <p class="text-colour-white">{{ texts.1d8f5741 }}<br></p>
-                    <p class="text-colour-lightgrey">{{ texts.3b272189 }}</p>
                   </div>
                 </div>
               </div>
@@ -290,7 +277,7 @@
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.5294cd19 }}</p>
                   <div class="margin-bottom-medium">
-                    <p class="subline light">{{ texts.588b51e5 }}</p>
+                    <p class="subline light">{{ texts.-efbfa12 }}</p>
                     <a href="{{ links.23 }}" class="cta__wrap w-inline-block">
                       <div class="pill cta">{{ texts.-78ddacdd }}</div>
                       <div class="cta__circle">
@@ -310,7 +297,7 @@
                 <div class="timeline__right dark">
                   <p class="small mini-pill">{{ texts.6de10927 }}</p>
                   <div class="margin-bottom-medium">
-                    <p class="subline light">{{ texts.-45828655 }}</p>
+                    <p class="subline light">{{ texts.10698d6e }}</p>
                     <a href="{{ links.23 }}" target="_blank" class="timeline__link w-inline-block">
                       <div>{{ texts.61800da9 }}</div>
                       <div class="link-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
@@ -367,6 +354,108 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type  -->
   <script src="https://unpkg.com/split-type"></script>
+  <script>
+/*
+ * PPN | subline animation
+ * dependency: none (redo with GSAP)
+ * build 09.04.24 @14:37
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const shouldBlink = true;
+  initTyping("[data-id='subline']", shouldBlink, [
+    "pioneers new means of value extraction",
+    "empowers access to automated arbitrage",
+    "offers a new DeFi ecosystem for users"
+  ]);
+});
+function addBlink(shouldBlink, selector) {
+  if (!shouldBlink) return;
+  const styleElement = document.createElement("style");
+  const cssRules = `${selector}::after { content:"_"; animation: typingBlink linear 1.15s infinite; } @keyframes typingBlink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }`;
+  styleElement.textContent = cssRules;
+  document.head.appendChild(styleElement);
+}
+function initTyping(selector, shouldBlink, words) {
+  const toBeTyped = document.querySelector(selector);
+  if (!toBeTyped) return;
+  addBlink(shouldBlink, selector);
+  const LETTER_TYPE_DELAY = 20;
+  const WORD_STAY_DELAY = 1500;
+  const DIRECTION_FORWARDS = 0;
+  const DIRECTION_BACKWARDS = 1;
+  let direction = DIRECTION_FORWARDS;
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let wordTypeInterval;
+  function startTyping() {
+    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+  }
+  function typeLetter() {
+    const word = words[wordIndex];
+    if (direction === DIRECTION_FORWARDS) {
+      letterIndex++;
+      if (letterIndex === word.length) {
+        direction = DIRECTION_BACKWARDS;
+        clearInterval(wordTypeInterval);
+        setTimeout(startTyping, WORD_STAY_DELAY);
+      }
+    } else if (direction === DIRECTION_BACKWARDS) {
+      letterIndex--;
+      if (letterIndex === 0) {
+        nextWord();
+      }
+    }
+    const textToType = word.substring(0, letterIndex);
+    toBeTyped.textContent = textToType;
+  }
+  function nextWord() {
+    letterIndex = 0;
+    direction = DIRECTION_FORWARDS;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+  // Initialize typer
+  startTyping();
+}
+</script>
+  <script>
+/*
+ * PPN | manage navigation display
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 09.04.24 @12:25
+*/
+gsap.registerPlugin(ScrollTrigger);
+function setupNavAnimation() {
+  const nav = document.querySelector('.nav');
+  gsap.to(nav, {
+    y: "-100%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: nav,
+      start: "top top",
+      end: "bottom top",
+      scrub: false,
+      onUpdate: (self) => {
+        // Check the scroll direction
+        const scrollDirection = self.direction;
+        // Get the scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        // Move the nav up when scrolling down and back down when scrolling up after scrolling X px
+        if (scrollDirection === 1 && scrollPosition > 60) {
+          // Scroll down and after scrolling X px
+          gsap.to(nav, { y: "-100%", duration: 0.5 });
+        } else if (scrollDirection === -1) {
+          // Scroll up
+          gsap.to(nav, { y: "0%", duration: 0.5 });
+        }
+      }
+    }
+  });
+}
+setupNavAnimation();
+</script>
   <script>
 /*
  * PPN | shrink investor CTA

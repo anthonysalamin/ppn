@@ -116,42 +116,32 @@
   }
 </style>
         <style>
-  /* Loader */
-  .cursor {
-    pointer-events: none;
+  /* Team slider image size (desktop) */
+  .swiper-slide.is-team:nth-child(odd) {
+    width: 35%;
   }
-  /* Team Slider */
-  .swiper-slide.is-team:nth-child(3n + 1) {
-    width: 34.11%;
+  .swiper-slide.is-team:nth-child(even) {
+    width: 28%;
   }
-  .swiper-slide.is-team:nth-child(3n + 2) {
-    width: 19.96%;
-  }
-  .swiper-slide.is-team:nth-child(3n + 3) {
-    width: 27.01%;
-  }
+	/* Team slider image size (tablet) */
   @media screen and (max-width: 767px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
-      width: 50%;
+   .swiper-slide.is-team:nth-child(odd) {
+    width: 50%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 38%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 43%;
     }
   }
+  /* Team slider image size (mobile) */
   @media screen and (max-width: 479px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
+    .swiper-slide.is-team:nth-child(odd) {
       width: 80%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 68%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 73%;
     }
   }
+  /* other team slider styles */
   .swiper.is-team {
     overflow: visible;
   }
@@ -173,6 +163,7 @@
   }
   /* Cursor */
   .cursor {
+    pointer-events: none;
     display: none;
   }
   @media (pointer: fine) {
@@ -219,7 +210,7 @@
       <section id="formular" class="section">
         <div class="container">
           <div class="form-block w-form">
-            <form id="wf-form-Benefits" name="wf-form-Benefits" data-name="benefits" action="https://usebasin.com/f/2e19a115305d" method="post" data-basin-form="true" class="form" data-wf-page-id="6610bec8f81149b488923a1d" data-wf-element-id="02ea9711-eefb-90e0-b857-91ce6b0d4433" data-ajax="true"><input class="input w-input" maxlength="256" name="Investor-Name" data-name="Investor Name" placeholder="Investor Name *" type="text" id="Name" required=""><input class="input w-input" maxlength="256" name="Company-or-VC-firm-name" data-name="Company or VC firm name" placeholder="Company or VC firm name *" type="text" id="Company" required=""><input class="input w-input" maxlength="256" name="Country-of-company-registration" data-name="Country of company registration" placeholder="Country of company registration *" type="text" id="Country" required=""><input class="input w-input" maxlength="256" name="Are-you-an-accredited-investor" data-name="Are you an accredited investor" placeholder="Are you an accredited investor ? *" type="text" id="Accreditation" required=""><input class="input w-input" maxlength="256" name="Maximum-investment-size-for-this-project" data-name="Maximum investment size for this project" placeholder="Maximum investment size for this project ? *" type="text" id="Maximum-investment-size-for-this-project" required=""><input class="input w-input" maxlength="256" name="What-time-zone-are-you" data-name="What time-zone are you" placeholder="What time-zone are you ? *" type="text" id="Zone" required=""><textarea id="Benefits" name="Message" maxlength="5000" data-name="Message" placeholder="Are there any indirect benefits you can offer PPN as part of this investment?" class="input textarea w-input"></textarea><textarea id="Information" name="Information" maxlength="5000" data-name="Information" placeholder="Any other information you would like to share?" class="input textarea w-input"></textarea><input class="input w-input" maxlength="256" name="email" data-name="Email" placeholder="Your email" type="email" id="Email" required=""><input type="submit" data-wait="Please wait..." class="submit-btn w-button" value="Submit">
+            <form id="wf-form-Benefits" name="wf-form-Benefits" data-name="benefits" action="https://usebasin.com/f/2e19a115305d" method="post" data-basin-form="true" class="form" data-wf-page-id="6610bec8f81149b488923a1d" data-wf-element-id="02ea9711-eefb-90e0-b857-91ce6b0d4433" data-ajax="true"><input class="input w-input" maxlength="256" name="Investor-Name" data-name="Investor Name" placeholder="Investor Name *" type="text" id="Name" required=""><input class="input w-input" maxlength="256" name="Company-or-VC-firm-name" data-name="Company or VC firm name" placeholder="Company or VC firm name *" type="text" id="Company" required=""><input class="input w-input" maxlength="256" name="Country-of-company-registration" data-name="Country of company registration" placeholder="Country of company registration *" type="text" id="Country" required=""><input class="input w-input" maxlength="256" name="Are-you-an-accredited-investor" data-name="Are you an accredited investor" placeholder="Are you an accredited investor ? *" type="text" id="Accreditation" required=""><input class="input w-input" maxlength="256" name="Maximum-investment-size-for-this-project" data-name="Maximum investment size for this project" placeholder="Maximum investment size for this project ? *" type="text" id="Maximum-investment-size-for-this-project" required=""><input class="input w-input" maxlength="256" name="What-time-zone-are-you" data-name="What time-zone are you" placeholder="What time-zone are you ? *" type="text" id="Zone" required=""><textarea id="Benefits" name="Message" maxlength="5000" data-name="Message" placeholder="Are there any indirect benefits you can offer PPN as part of this investment ?" class="input textarea w-input"></textarea><textarea id="Information" name="Information" maxlength="5000" data-name="Information" placeholder="Any other information you would like to share ?" class="input textarea w-input"></textarea><input class="input w-input" maxlength="256" name="email" data-name="Email" placeholder="Your email *" type="email" id="Email" required=""><input type="submit" data-wait="Please wait..." class="submit-btn w-button" value="Submit">
               <div id="w-node-_6a1e5d54-5a54-7592-0163-fdc04b8231e8-6514af42" class="legend dark">{{ texts.79f294c }}</div>
             </form>
             <div class="success-message w-form-done">
@@ -245,6 +236,108 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type  -->
   <script src="https://unpkg.com/split-type"></script>
+  <script>
+/*
+ * PPN | subline animation
+ * dependency: none (redo with GSAP)
+ * build 09.04.24 @14:37
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const shouldBlink = true;
+  initTyping("[data-id='subline']", shouldBlink, [
+    "pioneers new means of value extraction",
+    "empowers access to automated arbitrage",
+    "offers a new DeFi ecosystem for users"
+  ]);
+});
+function addBlink(shouldBlink, selector) {
+  if (!shouldBlink) return;
+  const styleElement = document.createElement("style");
+  const cssRules = `${selector}::after { content:"_"; animation: typingBlink linear 1.15s infinite; } @keyframes typingBlink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }`;
+  styleElement.textContent = cssRules;
+  document.head.appendChild(styleElement);
+}
+function initTyping(selector, shouldBlink, words) {
+  const toBeTyped = document.querySelector(selector);
+  if (!toBeTyped) return;
+  addBlink(shouldBlink, selector);
+  const LETTER_TYPE_DELAY = 20;
+  const WORD_STAY_DELAY = 1500;
+  const DIRECTION_FORWARDS = 0;
+  const DIRECTION_BACKWARDS = 1;
+  let direction = DIRECTION_FORWARDS;
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let wordTypeInterval;
+  function startTyping() {
+    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+  }
+  function typeLetter() {
+    const word = words[wordIndex];
+    if (direction === DIRECTION_FORWARDS) {
+      letterIndex++;
+      if (letterIndex === word.length) {
+        direction = DIRECTION_BACKWARDS;
+        clearInterval(wordTypeInterval);
+        setTimeout(startTyping, WORD_STAY_DELAY);
+      }
+    } else if (direction === DIRECTION_BACKWARDS) {
+      letterIndex--;
+      if (letterIndex === 0) {
+        nextWord();
+      }
+    }
+    const textToType = word.substring(0, letterIndex);
+    toBeTyped.textContent = textToType;
+  }
+  function nextWord() {
+    letterIndex = 0;
+    direction = DIRECTION_FORWARDS;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+  // Initialize typer
+  startTyping();
+}
+</script>
+  <script>
+/*
+ * PPN | manage navigation display
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 09.04.24 @12:25
+*/
+gsap.registerPlugin(ScrollTrigger);
+function setupNavAnimation() {
+  const nav = document.querySelector('.nav');
+  gsap.to(nav, {
+    y: "-100%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: nav,
+      start: "top top",
+      end: "bottom top",
+      scrub: false,
+      onUpdate: (self) => {
+        // Check the scroll direction
+        const scrollDirection = self.direction;
+        // Get the scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        // Move the nav up when scrolling down and back down when scrolling up after scrolling X px
+        if (scrollDirection === 1 && scrollPosition > 60) {
+          // Scroll down and after scrolling X px
+          gsap.to(nav, { y: "-100%", duration: 0.5 });
+        } else if (scrollDirection === -1) {
+          // Scroll up
+          gsap.to(nav, { y: "0%", duration: 0.5 });
+        }
+      }
+    }
+  });
+}
+setupNavAnimation();
+</script>
   <script>
 /*
  * PPN | shrink investor CTA

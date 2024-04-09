@@ -86,6 +86,21 @@
   -ms-overflow-style: none;
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--dark);
+</style><!--  swiper.css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+	/* onload hide popups */
+  .popup_bg,
+  .popup_content,
+  .popup_close {
+    opacity: 0;
+  }
+  .popup_item {
+    display: none;
+  }
+  .popup_item.active {
+    display: block;
+  }
 </style>
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
@@ -116,42 +131,32 @@
   }
 </style>
         <style>
-  /* Loader */
-  .cursor {
-    pointer-events: none;
+  /* Team slider image size (desktop) */
+  .swiper-slide.is-team:nth-child(odd) {
+    width: 35%;
   }
-  /* Team Slider */
-  .swiper-slide.is-team:nth-child(3n + 1) {
-    width: 34.11%;
+  .swiper-slide.is-team:nth-child(even) {
+    width: 28%;
   }
-  .swiper-slide.is-team:nth-child(3n + 2) {
-    width: 19.96%;
-  }
-  .swiper-slide.is-team:nth-child(3n + 3) {
-    width: 27.01%;
-  }
+	/* Team slider image size (tablet) */
   @media screen and (max-width: 767px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
-      width: 50%;
+   .swiper-slide.is-team:nth-child(odd) {
+    width: 50%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 38%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 43%;
     }
   }
+  /* Team slider image size (mobile) */
   @media screen and (max-width: 479px) {
-    .swiper-slide.is-team:nth-child(3n + 1) {
+    .swiper-slide.is-team:nth-child(odd) {
       width: 80%;
     }
-    .swiper-slide.is-team:nth-child(3n + 2) {
-      width: 68%;
-    }
-    .swiper-slide.is-team:nth-child(3n + 3) {
+    .swiper-slide.is-team:nth-child(even) {
       width: 73%;
     }
   }
+  /* other team slider styles */
   .swiper.is-team {
     overflow: visible;
   }
@@ -173,6 +178,7 @@
   }
   /* Cursor */
   .cursor {
+    pointer-events: none;
     display: none;
   }
   @media (pointer: fine) {
@@ -241,7 +247,7 @@
           <div class="section__header">
             <div class="heading__wrap">
               <div class="pill">{{ texts.27b67d }}<br></div>
-              <h1 class="headline">{{ texts.-2dd008d }}</h1>
+              <h1 class="headline">{{ texts.-623430e0 }}</h1>
             </div>
           </div>
           {%- assign collection = collections.team | sort: "f_sorting-order" -%}<div class="swiper is-team w-dyn-list">
@@ -291,6 +297,20 @@
                       <div class="popup_name-wrap">
                         <p class="headline is-team-name">{{ item.data.title }}</p>
                         <p class="text-position">{{ item.data.f_title }}</p>
+                        <div class="footer__icons-wrap">
+                          {%- if item.data.f_x-twitter -%}<a href="{{ item.data.f_x-twitter }}" class="footer__icon-link w-inline-block">
+                            <div class="embed__icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 28.79 26">
+                                <path d="M22.74 0h4.41l-9.69 11.03L28.78 26H19.9l-6.95-9.1L4.99 26H.58l10.26-11.8L0 0h9.1l6.28 8.31L22.74 0ZM21.2 23.41h2.45L7.82 2.49H5.19L21.2 23.41Z" style="fill:currentColor"></path>
+                              </svg></div>
+                          </a>{%- endif -%}
+                          {%- if item.data.f_linkedin -%}<a href="{{ item.data.f_linkedin }}" class="footer__icon-link w-inline-block">
+                            <div class="embed__icon w-embed"><svg title="linkedin" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 798.44 763.19">
+                                <g fill="currentColor">
+                                  <path d="M181.26 763.19V248.24H10.12v514.94h171.14ZM95.7 177.96c59.66 0 96.82-39.57 96.82-88.99C191.4 38.46 155.37 0 96.82 0 38.27 0 0 38.46 0 88.97s37.14 88.99 94.58 88.99h1.13Zm180.27 585.23s2.25-466.63 0-514.94h171.17v74.68H446c22.51-35.14 63.05-86.77 155.38-86.77 112.63 0 197.06 73.6 197.06 231.77V763.2H627.3V487.72c0-69.22-24.76-116.45-86.71-116.45-47.27 0-75.44 31.84-87.82 62.63-4.53 10.96-5.63 26.35-5.63 41.74v287.57H275.97Z" style="fill-rule:evenodd"></path>
+                                </g>
+                              </svg></div>
+                          </a>{%- endif -%}
+                        </div>
                       </div>
                       <div class="rich w-richtext">{{ item.templateContent | markdown }}</div>
                     </div>
@@ -328,6 +348,108 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type  -->
   <script src="https://unpkg.com/split-type"></script>
+  <script>
+/*
+ * PPN | subline animation
+ * dependency: none (redo with GSAP)
+ * build 09.04.24 @14:37
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const shouldBlink = true;
+  initTyping("[data-id='subline']", shouldBlink, [
+    "pioneers new means of value extraction",
+    "empowers access to automated arbitrage",
+    "offers a new DeFi ecosystem for users"
+  ]);
+});
+function addBlink(shouldBlink, selector) {
+  if (!shouldBlink) return;
+  const styleElement = document.createElement("style");
+  const cssRules = `${selector}::after { content:"_"; animation: typingBlink linear 1.15s infinite; } @keyframes typingBlink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }`;
+  styleElement.textContent = cssRules;
+  document.head.appendChild(styleElement);
+}
+function initTyping(selector, shouldBlink, words) {
+  const toBeTyped = document.querySelector(selector);
+  if (!toBeTyped) return;
+  addBlink(shouldBlink, selector);
+  const LETTER_TYPE_DELAY = 20;
+  const WORD_STAY_DELAY = 1500;
+  const DIRECTION_FORWARDS = 0;
+  const DIRECTION_BACKWARDS = 1;
+  let direction = DIRECTION_FORWARDS;
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let wordTypeInterval;
+  function startTyping() {
+    wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+  }
+  function typeLetter() {
+    const word = words[wordIndex];
+    if (direction === DIRECTION_FORWARDS) {
+      letterIndex++;
+      if (letterIndex === word.length) {
+        direction = DIRECTION_BACKWARDS;
+        clearInterval(wordTypeInterval);
+        setTimeout(startTyping, WORD_STAY_DELAY);
+      }
+    } else if (direction === DIRECTION_BACKWARDS) {
+      letterIndex--;
+      if (letterIndex === 0) {
+        nextWord();
+      }
+    }
+    const textToType = word.substring(0, letterIndex);
+    toBeTyped.textContent = textToType;
+  }
+  function nextWord() {
+    letterIndex = 0;
+    direction = DIRECTION_FORWARDS;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+  // Initialize typer
+  startTyping();
+}
+</script>
+  <script>
+/*
+ * PPN | manage navigation display
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 09.04.24 @12:25
+*/
+gsap.registerPlugin(ScrollTrigger);
+function setupNavAnimation() {
+  const nav = document.querySelector('.nav');
+  gsap.to(nav, {
+    y: "-100%",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: nav,
+      start: "top top",
+      end: "bottom top",
+      scrub: false,
+      onUpdate: (self) => {
+        // Check the scroll direction
+        const scrollDirection = self.direction;
+        // Get the scroll position
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        // Move the nav up when scrolling down and back down when scrolling up after scrolling X px
+        if (scrollDirection === 1 && scrollPosition > 60) {
+          // Scroll down and after scrolling X px
+          gsap.to(nav, { y: "-100%", duration: 0.5 });
+        } else if (scrollDirection === -1) {
+          // Scroll up
+          gsap.to(nav, { y: "0%", duration: 0.5 });
+        }
+      }
+    }
+  });
+}
+setupNavAnimation();
+</script>
   <script>
 /*
  * PPN | shrink investor CTA
@@ -572,6 +694,153 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyrightYear = document.querySelector(`[data-date="year"]`);
   if (!copyrightYear) return;
   copyrightYear.textContent = new Date().getFullYear();
+});
+</script><!--  swiper.js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+/*
+ * PPN | team slider
+ * dependencies: GSAP 3.12.5
+ * build 04.04.2024
+*/
+const teamSwiper = new Swiper(".swiper.is-team", {
+  // Optional parameters
+  slidesPerView: "auto",
+  keyboard: true,
+  direction: "horizontal",
+  loop: false,
+  speed: 800,
+  mousewheel: {
+    forceToAxis: true
+  },
+  touchEventsTarget: "container",
+  freeMode: true
+});
+let myTimeout;
+teamSwiper.on("progress", function (e) {
+  clearTimeout(myTimeout);
+  $(".team_photo-height").addClass("scaled");
+  $(".cursor_dot").addClass("hide");
+  myTimeout = setTimeout(function () {
+    // $(".cursor_dot").removeClass("hide");
+    $(".team_photo-height").removeClass("scaled");
+  }, 100);
+});
+////////////////////////////////////////////////////////////
+// Cursor
+$(document).on("mousemove", function () {
+  $(".cursor_dot").removeClass("hide");
+});
+$(".swiper.is-team")
+  .on("mouseenter", function () {
+    $(".cursor_dot").addClass("show");
+  })
+  .on("mouseleave", function () {
+    $(".cursor_dot").removeClass("show");
+  });
+$(".team_link")
+  .on("mouseenter", function () {
+    $(".cursor_dot").addClass("small");
+  })
+  .on("mouseleave", function () {
+    $(".cursor_dot").removeClass("small");
+  });
+////////////////////////////////////////////////////////////
+// POPUP
+// get the relative size & position values to apply to an image
+function getDifference(cardImg, popupImg) {
+  let cardWidth = cardImg.innerWidth();
+  let cardHeight = cardImg.innerHeight();
+  let offsetLeft = cardImg.offset().left - popupImg.offset().left;
+  let offsetTop = cardImg.offset().top - popupImg.offset().top;
+  // return transformValue
+  return [offsetLeft, offsetTop, cardWidth, cardHeight];
+}
+// OPEN POPUP
+$(".team_link").on("click", function () {
+  $('html, body').css('overflow', 'hidden');
+  // get images to animate to & from
+  let myIndex = $(this).parent().index();
+  let cardImg = $(this).find(".image");
+  let popupImg = $(".popup_item").eq(myIndex).find(".image");
+  // set initial display states
+  $(".popup_item").removeClass("active");
+  $(".popup_item").eq(myIndex).addClass("active");
+  $(".popup").css("display", "block");
+  cardImg.css("opacity", "0");
+  $("body").addClass("no-scroll");
+  $("body").addClass("popup-open");
+  let transformValue = getDifference(cardImg, popupImg);
+  // animations
+  gsap.fromTo(
+    popupImg,
+    {
+      x: transformValue[0],
+      y: transformValue[1],
+      width: transformValue[2],
+      height: transformValue[3]
+    },
+    {
+      x: 0,
+      y: 0,
+      width: "100%",
+      height: "100%",
+      duration: 0.6,
+      ease: "power2.inOut"
+    }
+  );
+  gsap.to(".popup_bg, .popup_close", {
+    opacity: 1,
+    duration: 0.3,
+    delay: 0.3,
+    ease: "power2.inOut"
+  });
+  gsap.to(".popup_content", {
+    opacity: 1,
+    duration: 0.3,
+    delay: 0.3,
+    ease: "power2.inOut"
+  });
+});
+// CLOSE POPUP
+$(".popup_close").on("click", function () {
+  // get images to animate to & from
+  let myIndex = $(".popup_item.active").index();
+  let popupImg = $(".popup_item.active .image");
+  let cardImg = $(".team_link").eq(myIndex).find(".image");
+  let transformValue = getDifference(cardImg, popupImg);
+  $("body").removeClass("popup-open");
+  function closePopup() {
+    $('html, body').css('overflow', 'visible');
+    cardImg.css("opacity", "1");
+    $(".popup").css("display", "none");
+    popupImg.removeAttr("style");
+    $("body").removeClass("no-scroll");
+  }
+  // animations
+  gsap.fromTo(
+    popupImg,
+    {
+      x: 0,
+      y: 0,
+      width: "100%",
+      height: "100%"
+    },
+    {
+      x: transformValue[0],
+      y: transformValue[1],
+      width: transformValue[2],
+      height: transformValue[3],
+      onComplete: closePopup,
+      duration: 0.6,
+      ease: "power3.inOut"
+    }
+  );
+  gsap.to(".popup_bg, .popup_content, .popup_close", {
+    opacity: 0,
+    duration: 0.3,
+    ease: "power3.inOut"
+  });
 });
 </script>
 
