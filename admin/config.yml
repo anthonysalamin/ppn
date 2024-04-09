@@ -442,9 +442,9 @@ collections:
             label: Text
             name: 17b85af
             widget: text
-          - hint: 'Original text: read the docs, key: -22cf202c'
+          - hint: 'Original text: get in touch, key: -5bfbfdf2'
             label: Text
-            name: '-22cf202c'
+            name: '-5bfbfdf2'
             widget: string
           - hint: 'Original text: Proprietary Strategy Logic, key: 70298012'
             label: Text
@@ -477,10 +477,6 @@ collections:
             label: Text
             name: 10698d6e
             widget: text
-          - hint: 'Original text: Pitch deck, key: 61800da9'
-            label: Text
-            name: 61800da9
-            widget: string
           - hint: 'Original text: Indexes, key: -28f31f20'
             label: Text
             name: '-28f31f20'
@@ -496,10 +492,6 @@ collections:
             label: Text
             name: '749803e3'
             widget: text
-          - hint: 'Original text: get in touch , key: -2383c02e'
-            label: Text
-            name: '-2383c02e'
-            widget: string
           - hint: 'Original text: a new ecosystem is born, key: f2d860'
             label: Text
             name: f2d860
@@ -743,10 +735,6 @@ collections:
           - hint: 'Original text: scroll 3, key: -17f89460'
             label: Text
             name: '-17f89460'
-            widget: string
-          - hint: 'Original text: Investor, key: 294468b8'
-            label: Text
-            name: 294468b8
             widget: string
           - hint: 'Original text: Success, key: -c12281d'
             label: Text
