@@ -294,9 +294,9 @@ collections:
             label: Text
             name: 90caa1b
             widget: string
-          - hint: 'Original text: Generating , key: -67b9e2b2'
+          - hint: 'Original text: Generate Real , key: -126dcc29'
             label: Text
-            name: '-67b9e2b2'
+            name: '-126dcc29'
             widget: string
           - hint: 'Original text: Yield, key: 5176f6d'
             label: Text
@@ -305,10 +305,6 @@ collections:
           - hint: 'Original text: from Market Volatility, key: 2665cb93'
             label: Text
             name: 2665cb93
-            widget: string
-          - hint: 'Original text: via Arbitrage, key: -125aa929'
-            label: Text
-            name: '-125aa929'
             widget: string
           - hint: 'Original text: PPN , key: 259392'
             label: Text
@@ -328,9 +324,9 @@ collections:
             label: Text
             name: '-24f8f20b'
             widget: string
-          - hint: 'Original text: It is arbirtrage or be arbitraged., key: 2491295b'
+          - hint: 'Original text: Smarter Liquidity Provision, key: -991bb23'
             label: Text
-            name: 2491295b
+            name: '-991bb23'
             widget: string
           - hint: 'Original text: Opportunities, key: f7b7e91'
             label: Text
@@ -524,9 +520,9 @@ collections:
             widget: string
           - hint: >-
               Original text: A new ecosystem, purpose built to generate yield
-              from Arbitrage opportunities., key: 25f735d8
+              from arbitrage opportunities., key: -59d6ee48
             label: Text
-            name: 25f735d8
+            name: '-59d6ee48'
             widget: string
           - hint: 'Original text: first name family name, key: 6a1fdf22'
             label: Text
@@ -593,6 +589,10 @@ collections:
           - hint: 'Original text: H1, key: 8e9'
             label: Text
             name: '8e9'
+            widget: string
+          - hint: 'Original text: Generating , key: -67b9e2b2'
+            label: Text
+            name: '-67b9e2b2'
             widget: string
           - hint: 'Original text: From Market Volatility, key: 55ae77b3'
             label: Text
@@ -742,6 +742,12 @@ collections:
             label: Text
             name: 1f7907
             widget: string
+          - hint: >-
+              Original text: A new ecosystem, purpose built to generate yield
+              from Arbitrage opportunities., key: 25f735d8
+            label: Text
+            name: 25f735d8
+            widget: string
           - hint: 'Original text: Docs, key: 20965b'
             label: Text
             name: 20965b
@@ -765,6 +771,10 @@ collections:
           - hint: 'Original text: Powered by D3, key: 5eb851fc'
             label: Text
             name: 5eb851fc
+            widget: string
+          - hint: 'Original text: via Arbitrage, key: -125aa929'
+            label: Text
+            name: '-125aa929'
             widget: string
       - label: Links
         name: links

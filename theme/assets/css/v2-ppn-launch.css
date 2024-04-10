@@ -1520,6 +1520,10 @@ blockquote {
     font-size: 1.3rem;
   }
 
+  .subline.animated {
+    margin-top: 16px;
+  }
+
   .heading__wrap, .paragraph.dark.footer {
     max-width: none;
   }
