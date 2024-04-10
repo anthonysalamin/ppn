@@ -4,11 +4,11 @@ title: Helder Lourenco
 slug: helder-lourenco
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/660677db928561e6fc26024d/66138531084bd6465508223c_helder-v2.jpg
+    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089a_helder-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:51:43.365Z'
 created-on: '2022-06-19T22:22:44.455Z'
-published-on: '2024-04-10T03:54:31.530Z'
+published-on: '2024-04-10T05:42:27.242Z'
 f_sorting-order: 2
 f_linkedin: https://www.linkedin.com/in/helder-lou-34ba18267/
 f_x-twitter: https://twitter.com/H3lD3x

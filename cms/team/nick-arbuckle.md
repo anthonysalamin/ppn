@@ -4,11 +4,11 @@ title: Nick Arbuckle
 slug: nick-arbuckle
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/660677db928561e6fc26024d/6613855e6588b169679c2ae1_nick-v2.jpg
+    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089b_nick-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:50:10.146Z'
 created-on: '2022-06-19T22:22:44.388Z'
-published-on: '2024-04-10T03:54:31.530Z'
+published-on: '2024-04-10T05:42:27.242Z'
 f_sorting-order: 4
 f_linkedin: https://www.linkedin.com/in/nicholasarbuckle/
 f_x-twitter: https://twitter.com/Deg3ntrades

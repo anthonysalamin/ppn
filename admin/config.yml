@@ -328,13 +328,9 @@ collections:
             label: Text
             name: '-24f8f20b'
             widget: string
-          - hint: 'Original text: It is arbitrage, key: -39abbe38'
+          - hint: 'Original text: It is arbirtrage or be arbitraged., key: 2491295b'
             label: Text
-            name: '-39abbe38'
-            widget: string
-          - hint: 'Original text: or be arbitraged., key: -7fdca9ed'
-            label: Text
-            name: '-7fdca9ed'
+            name: 2491295b
             widget: string
           - hint: 'Original text: Opportunities, key: f7b7e91'
             label: Text

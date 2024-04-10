@@ -4,11 +4,11 @@ title: Igor Zelenko
 slug: igor-zelenko
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/660677db928561e6fc26024d/661386fc565b0c68e641892d_igor-v2.jpg
+    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089c_igor-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:53:26.777Z'
 created-on: '2022-06-19T22:22:44.340Z'
-published-on: '2024-04-10T03:54:31.530Z'
+published-on: '2024-04-10T05:42:27.242Z'
 f_sorting-order: 5
 f_x-twitter: https://twitter.com/DeFiMountain
 layout: '[team].html'
