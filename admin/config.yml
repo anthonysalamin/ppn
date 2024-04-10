@@ -320,9 +320,9 @@ collections:
             label: Text
             name: '-49a3789a'
             widget: string
-          - hint: 'Original text: Opportunities, key: f7b7e91'
+          - hint: 'Original text: Investor Collateral, key: 7cccd2bf'
             label: Text
-            name: f7b7e91
+            name: 7cccd2bf
             widget: string
           - hint: 'Original text: Scroll down, key: -24f8f20b'
             label: Text
@@ -335,6 +335,10 @@ collections:
           - hint: 'Original text: or be arbitraged., key: -7fdca9ed'
             label: Text
             name: '-7fdca9ed'
+            widget: string
+          - hint: 'Original text: Opportunities, key: f7b7e91'
+            label: Text
+            name: f7b7e91
             widget: string
           - hint: 'Original text: Unseized yield opportunities., key: 40a8d8b5'
             label: Text
@@ -527,14 +531,6 @@ collections:
               from Arbitrage opportunities., key: 25f735d8
             label: Text
             name: 25f735d8
-            widget: string
-          - hint: 'Original text: Docs, key: 20965b'
-            label: Text
-            name: 20965b
-            widget: string
-          - hint: 'Original text: pitch deck, key: -1551ce77'
-            label: Text
-            name: '-1551ce77'
             widget: string
           - hint: 'Original text: first name family name, key: 6a1fdf22'
             label: Text
@@ -750,6 +746,14 @@ collections:
             label: Text
             name: 1f7907
             widget: string
+          - hint: 'Original text: Docs, key: 20965b'
+            label: Text
+            name: 20965b
+            widget: string
+          - hint: 'Original text: pitch deck, key: -1551ce77'
+            label: Text
+            name: '-1551ce77'
+            widget: string
           - hint: 'Original text: © , key: 1497'
             label: Text
             name: '1497'
@@ -778,6 +782,13 @@ collections:
             label: Link
             name: 2f
             widget: string
+          - hint: >-
+              Original link:
+              https://privatepoolsnetwork.docsend.com/view/y7mfypipz654xd2u,
+              key: -1610b1f6
+            label: Link
+            name: '-1610b1f6'
+            widget: string
           - hint: 'Original link: #, key: 23'
             label: Link
             name: '23'
@@ -785,6 +796,12 @@ collections:
           - hint: 'Original link: /investor/, key: 61525348'
             label: Link
             name: '61525348'
+            widget: string
+          - hint: >-
+              Original link: https://linktr.ee/privatepoolsnetwork, key:
+              -77fd2a2e
+            label: Link
+            name: '-77fd2a2e'
             widget: string
           - hint: 'Original link: #oppourtunities, key: 2b5d3bff'
             label: Link
