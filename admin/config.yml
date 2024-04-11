@@ -368,9 +368,9 @@ collections:
             label: Text
             name: 4d
             widget: string
-          - hint: "Original text: Wasted due to\Lmajor inefficiencies, key: 56407b9e"
+          - hint: 'Original text: Wasted due to major inefficiencies, key: -2d37506a'
             label: Text
-            name: 56407b9e
+            name: '-2d37506a'
             widget: string
           - hint: >-
               Original text: The current approach to arbitrage is inefficient
@@ -672,6 +672,10 @@ collections:
           - hint: 'Original text: List, key: 2424be'
             label: Text
             name: 2424be
+            widget: string
+          - hint: "Original text: Wasted due to\Lmajor inefficiencies, key: 56407b9e"
+            label: Text
+            name: 56407b9e
             widget: string
           - hint: 'Original text: scroll, key: -361a1933'
             label: Text
