@@ -1,14 +1,14 @@
 ---
-title: Team
+title: Actions
 permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/team.html
-slug: team
+layout: modules/actions.html
+slug: actions
 tags: pages
 seo:
   noindex: false
-  title: Team
+  title: Actions
   og:title: Private Pools Network | PPN
-  twitter:title: Team
+  twitter:title: Actions
   additional_tags: >-
     <meta property="og:description" content="A new ecosystem, purpose built to
     generate yield from Arbitrage opportunities."><meta property="og:url"

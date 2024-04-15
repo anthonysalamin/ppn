@@ -13,14 +13,11 @@ seo:
   og:title: Private Pools Network | PPN
   additional_tags: >-
     <meta property="og:description" content="A new ecosystem, purpose built to
-    generate yield from Arbitrage opportunities."><meta property="og:type"
-    content="website"><meta property="twitter:description" content="A new
-    ecosystem, purpose built to generate yield from Arbitrage
-    opportunities."><meta property="twitter:image"
-    content="https://uploads-ssl.webflow.com/66162235ccb46588aa690877/66175c42ebc0ce580e5b9283_opengraph.jpg">
+    generate yield from Arbitrage opportunities."><meta property="og:url"
+    content="https://privatepools.network/"><meta property="og:type"
+    content="website">
   og:image: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690877/66175c42ebc0ce580e5b9283_opengraph.jpg
-  twitter:title: Private Pools Network | PPN
+    https://assets-global.website-files.com/660677db928561e6fc26023d/6613df3c53686dbf21ed7d3d_opengraph.jpg
 ---
 
 

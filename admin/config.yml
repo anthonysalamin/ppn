@@ -399,28 +399,135 @@ collections:
             label: Text
             name: '-687da9da'
             widget: text
-          - hint: 'Original text: Solution, key: 5cc7b199'
+          - hint: 'Original text: Select , deposit, deploy and profit., key: 21366d82'
             label: Text
-            name: 5cc7b199
+            name: 21366d82
             widget: string
-          - hint: 'Original text: What exactly is , key: 1a5407a6'
+          - hint: 'Original text: How it works, key: -5f2415c3'
             label: Text
-            name: 1a5407a6
+            name: '-5f2415c3'
             widget: string
-          - hint: 'Original text: Private Pools Network, key: 66d9aaa8'
+          - hint: 'Original text: Simplified user flow explanation., key: 4a649b7a'
             label: Text
-            name: 66d9aaa8
+            name: 4a649b7a
             widget: string
-          - hint: 'Original text:  and how does it work?, key: -f003419'
+          - hint: 'Original text: Get in touch, key: -5230a9d2'
             label: Text
-            name: '-f003419'
+            name: '-5230a9d2'
+            widget: string
+          - hint: 'Original text: 01, key: 601'
+            label: Text
+            name: '601'
+            widget: string
+          - hint: 'Original text: User Action step 1 of 2, key: -165db5e9'
+            label: Text
+            name: '-165db5e9'
+            widget: string
+          - hint: 'Original text: Select Index Strategy, key: -75595d3b'
+            label: Text
+            name: '-75595d3b'
             widget: string
           - hint: >-
-              Original text: Private Pools Network is an autonomous index system
-              enhancing liquidity by capitalizing on volatility. A novel
-              ecosystem challenging the status quo., key: -3b0a74a0
+              Original text: User chooses which index they want to participate
+              in based off the asset exposure and performance they are seeking.,
+              key: 3b272189
             label: Text
-            name: '-3b0a74a0'
+            name: 3b272189
+            widget: text
+          - hint: 'Original text: 02, key: 602'
+            label: Text
+            name: '602'
+            widget: string
+          - hint: 'Original text: User Action step 2 of 2, key: -14a8dd4a'
+            label: Text
+            name: '-14a8dd4a'
+            widget: string
+          - hint: 'Original text: Deposit Liquidity, key: -40b97d50'
+            label: Text
+            name: '-40b97d50'
+            widget: string
+          - hint: >-
+              Original text: Our matching engine calculates the weight of the
+              required assets and the user deposits them into the index pool.,
+              key: 6f2b1ac
+            label: Text
+            name: 6f2b1ac
+            widget: text
+          - hint: 'Original text: 03, key: 603'
+            label: Text
+            name: '603'
+            widget: string
+          - hint: 'Original text: Automated Process step 1 of 3, key: 2991dbac'
+            label: Text
+            name: 2991dbac
+            widget: string
+          - hint: 'Original text: Find Opportunity, key: -320a5914'
+            label: Text
+            name: '-320a5914'
+            widget: string
+          - hint: >-
+              Original text: Private Pool Network's bespoke trading engine goes
+              to work seeking price deviation opportunities across CEX & DEX
+              liquidity., key: 7b5afab6
+            label: Text
+            name: 7b5afab6
+            widget: text
+          - hint: 'Original text: 04, key: 604'
+            label: Text
+            name: '604'
+            widget: string
+          - hint: 'Original text: Automated Process step 2 of 3, key: 2b46b44b'
+            label: Text
+            name: 2b46b44b
+            widget: string
+          - hint: 'Original text: Check Profitability, key: -342baf2'
+            label: Text
+            name: '-342baf2'
+            widget: string
+          - hint: >-
+              Original text: Trading engine locates arbitrage opportunity and
+              runs profitability checks. If profitability checks are passed the
+              arbitrage is executed., key: -5eae6de9
+            label: Text
+            name: '-5eae6de9'
+            widget: text
+          - hint: 'Original text: 05, key: 605'
+            label: Text
+            name: '605'
+            widget: string
+          - hint: 'Original text: Automated Process step 3 of 3, key: 2cfb8cea'
+            label: Text
+            name: 2cfb8cea
+            widget: string
+          - hint: 'Original text: Distributed Yield, key: -442f6c70'
+            label: Text
+            name: '-442f6c70'
+            widget: string
+          - hint: >-
+              Original text: Arbitrage rebalancing logic rebalances the Index
+              pool and yield from the trade is distributed in accordance with
+              our yield distribution model., key: -fc803f8
+            label: Text
+            name: '-fc803f8'
+            widget: text
+          - hint: 'Original text: What is , key: 770730fa'
+            label: Text
+            name: 770730fa
+            widget: string
+          - hint: 'Original text: PPN Network, key: -277b69c4'
+            label: Text
+            name: '-277b69c4'
+            widget: string
+          - hint: 'Original text:  ?, key: 41f'
+            label: Text
+            name: 41f
+            widget: string
+          - hint: >-
+              Original text: Private Pools Network (PPN) is an autonomous index
+              system enhancing liquidity by capitalizing on volatility. A novel
+              ecosystem challenging the status quo., key: 4c26455d
+            label: Text
+            name: 4c26455d
             widget: text
           - hint: 'Original text: Simplicity, key: 21bcdc41'
             label: Text
@@ -513,10 +620,6 @@ collections:
           - hint: 'Original text: No items found., key: 3d503d2b'
             label: Text
             name: 3d503d2b
-            widget: string
-          - hint: 'Original text: Get in touch, key: -5230a9d2'
-            label: Text
-            name: '-5230a9d2'
             widget: string
           - hint: >-
               Original text: A new ecosystem, purpose built to generate yield
@@ -720,18 +823,6 @@ collections:
             label: Text
             name: '-6bd48d63'
             widget: string
-          - hint: 'Original text: scroll 1, key: -17f89462'
-            label: Text
-            name: '-17f89462'
-            widget: string
-          - hint: 'Original text: scroll 2, key: -17f89461'
-            label: Text
-            name: '-17f89461'
-            widget: string
-          - hint: 'Original text: scroll 3, key: -17f89460'
-            label: Text
-            name: '-17f89460'
-            widget: string
           - hint: 'Original text: Success, key: -c12281d'
             label: Text
             name: '-c12281d'
@@ -779,6 +870,26 @@ collections:
           - hint: 'Original text: via Arbitrage, key: -125aa929'
             label: Text
             name: '-125aa929'
+            widget: string
+          - hint: 'Original text: User Action 1 — 2, key: -113b97e'
+            label: Text
+            name: '-113b97e'
+            widget: string
+          - hint: 'Original text: User Action 2 — 2, key: -105a1fd'
+            label: Text
+            name: '-105a1fd'
+            widget: string
+          - hint: 'Original text: Automated Process 1 — 3, key: -780268e9'
+            label: Text
+            name: '-780268e9'
+            widget: string
+          - hint: 'Original text: Automated Process 2 — 3, key: -77f45168'
+            label: Text
+            name: '-77f45168'
+            widget: string
+          - hint: 'Original text: Automated Process 3 — 3, key: -77e639e7'
+            label: Text
+            name: '-77e639e7'
             widget: string
       - label: Links
         name: links
