@@ -12,6 +12,7 @@
   <link href="{{ settings.site.favicon | default: "/assets/images/favicon.png" }}" rel="shortcut icon" type="image/x-icon">
   <link href="{{ settings.site.apple_touch_icon | default: "/assets/images/webclip.png" }}" rel="apple-touch-icon">
   <meta name="theme-color" content="#00E0FF">
+  <meta name="author" content="D3">
   <!--  Open Graph meta tags  -->
   
   
@@ -126,6 +127,38 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type 0.3.4  -->
   <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <!--  particles 2.2.3  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+/*
+ * PPN | particles v.2
+ * dependency: particles.js
+ * build 15.04.24
+ */
+document.addEventListener("DOMContentLoaded", () => {
+	if (!document.querySelector(".background-particles")) return;
+  initParticles();
+});
+function initParticles() {
+  const color = ["#02031c", "#00e0ff", "#02031c"];
+  Particles.init({
+    selector: ".background-particles",
+    color: color,
+    maxParticles: 80,
+    connectParticles: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        options: {
+          color: color,
+          maxParticles: 40,
+          connectParticles: true
+        }
+      }
+    ]
+  });
+} // end initParticles
+</script>
   <script>
 /*
  * PPN | reveal on scroll

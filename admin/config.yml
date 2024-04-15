@@ -784,10 +784,6 @@ collections:
             label: Text
             name: '-361a1933'
             widget: string
-          - hint: 'Original text: Partnership, key: -626f451c'
-            label: Text
-            name: '-626f451c'
-            widget: string
           - hint: >-
               Original text: — Participate in the initial stage of our , key:
               -394159fd
@@ -822,10 +818,6 @@ collections:
           - hint: 'Original text: Oops, error., key: -6bd48d63'
             label: Text
             name: '-6bd48d63'
-            widget: string
-          - hint: 'Original text: Success, key: -c12281d'
-            label: Text
-            name: '-c12281d'
             widget: string
           - hint: >-
               Original text: — Thank you for your message, we will respond
