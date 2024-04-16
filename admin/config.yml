@@ -352,6 +352,10 @@ collections:
             label: Text
             name: 754d2c1e
             widget: string
+          - hint: 'Original text: Learn more, key: -52aefc2f'
+            label: Text
+            name: '-52aefc2f'
+            widget: string
           - hint: >-
               Original text: Flashbots data suggests the arbitrage marketexpands
               beyond $1.09B in yield potential, however the void of a purpose
@@ -805,9 +809,11 @@ collections:
           - hint: >-
               Original text: Using our email form, you acknowledge and accept
               that the information you submit will be used for the sole purpose
-              of processing your request., key: 79f294c
+              of processing your request. Rest assured, we handle all
+              information with the utmost confidentiality, ensuring your data
+              remains secure and protected at all times., key: 6f7046a4
             label: Text
-            name: 79f294c
+            name: 6f7046a4
             widget: text
           - hint: >-
               Original text: Thank you! Your submission has been sent!, key:
@@ -858,10 +864,6 @@ collections:
           - hint: 'Original text: Powered by D3, key: 5eb851fc'
             label: Text
             name: 5eb851fc
-            widget: string
-          - hint: 'Original text: via Arbitrage, key: -125aa929'
-            label: Text
-            name: '-125aa929'
             widget: string
           - hint: 'Original text: User Action 1 — 2, key: -113b97e'
             label: Text

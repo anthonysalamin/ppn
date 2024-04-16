@@ -1,14 +1,14 @@
 ---
-title: logotype
+title: indicator
 permalink: playground/{{ page.fileSlug }}/index.html
-layout: playground/logotype.html
-slug: logotype
+layout: playground/indicator.html
+slug: indicator
 tags: pages
 seo:
   noindex: false
-  title: logotype
+  title: indicator
   og:title: Private Pools Network | PPN
-  twitter:title: logotype
+  twitter:title: indicator
   additional_tags: >-
     <meta property="og:description" content="A new ecosystem, purpose built to
     generate yield from Arbitrage opportunities."><meta property="og:url"
