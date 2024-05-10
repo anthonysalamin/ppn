@@ -1,21 +1,21 @@
 ---
-title: Header
+title: Header v3
 permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/header.html
-slug: header
+layout: modules/header-v3.html
+slug: header-v3
 tags: pages
 seo:
   noindex: false
-  title: Header
+  title: Header v3
   og:title: Private Pools Network | PPN
-  twitter:title: Header
+  twitter:title: Header v3
   additional_tags: >-
     <meta property="og:description" content="A new ecosystem, purpose built to
     generate yield from Arbitrage opportunities."><meta property="og:url"
     content="https://privatepools.network/"><meta property="og:type"
     content="website">
   og:image: >-
-    https://assets-global.website-files.com/660677db928561e6fc26023d/6613df3c53686dbf21ed7d3d_opengraph.jpg
+    https://uploads-ssl.webflow.com/66162235ccb46588aa690877/66175c42ebc0ce580e5b9283_opengraph.jpg
 ---
 
 

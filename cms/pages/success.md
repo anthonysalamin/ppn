@@ -18,7 +18,7 @@ seo:
     content="https://privatepools.network/"><meta property="og:type"
     content="website">
   og:image: >-
-    https://assets-global.website-files.com/660677db928561e6fc26023d/6613df3c53686dbf21ed7d3d_opengraph.jpg
+    https://uploads-ssl.webflow.com/66162235ccb46588aa690877/66175c42ebc0ce580e5b9283_opengraph.jpg
 ---
 
 
