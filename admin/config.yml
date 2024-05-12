@@ -897,9 +897,9 @@ collections:
             label: Text
             name: '-62c03091'
             widget: string
-          - hint: 'Original text: Placeholder, key: -78edd2ad'
+          - hint: 'Original text: Scroll, key: -6cb52d13'
             label: Text
-            name: '-78edd2ad'
+            name: '-6cb52d13'
             widget: string
           - hint: 'Original text: Step 1, key: -6bcb8c03'
             label: Text

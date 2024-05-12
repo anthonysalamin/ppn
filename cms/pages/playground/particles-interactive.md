@@ -1,8 +1,8 @@
 ---
-title: Particles background V2 interactive
+title: Particles interactive
 permalink: playground/{{ page.fileSlug }}/index.html
-layout: playground/particles-background-v2-interactive.html
-slug: particles-background-v2-interactive
+layout: playground/particles-interactive.html
+slug: particles-interactive
 tags: pages
 seo:
   noindex: false

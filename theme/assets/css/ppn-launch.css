@@ -720,8 +720,8 @@ blockquote {
   font-weight: 600;
 }
 
-.fake {
-  z-index: 2;
+.placeholder {
+  z-index: 1;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -1448,6 +1448,7 @@ blockquote {
 
 .background {
   z-index: -2;
+  background-image: radial-gradient(circle farthest-corner at 100% 0%, var(--accent), var(--dark) 60%, black);
   pointer-events: none;
   position: fixed;
   top: 0%;
@@ -1457,12 +1458,7 @@ blockquote {
 }
 
 .background.gradient {
-  background-image: linear-gradient(50deg, var(--dark), #02031c 40%, var(--accent));
-}
-
-.background.gradient.interactive {
-  z-index: -1;
-  pointer-events: auto;
+  background-image: radial-gradient(circle farthest-corner at 100% 0%, var(--accent), #02031c 60%, var(--dark));
 }
 
 .embed__icon-circle {
@@ -1664,11 +1660,6 @@ blockquote {
   bottom: 0%;
   left: 0%;
   right: 0%;
-}
-
-.particles.interactive {
-  opacity: .2;
-  pointer-events: auto;
 }
 
 .progress-bar {
@@ -3357,6 +3348,17 @@ blockquote {
   font-weight: 500;
 }
 
+.particles-interactive {
+  opacity: .25;
+  width: 100%;
+  height: 100svh;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
 @media screen and (max-width: 991px) {
   body {
     font-size: 16px;
@@ -3801,6 +3803,10 @@ blockquote {
     left: 5%;
   }
 
+  .background.gradient {
+    background-image: radial-gradient(circle farthest-corner at 100% 50%, var(--accent), #02031c 60%, var(--dark));
+  }
+
   .bold.stat {
     padding-bottom: 16px;
   }
@@ -4186,6 +4192,10 @@ blockquote {
 
   .footer__grid {
     grid-template-rows: auto auto auto auto;
+  }
+
+  .background.gradient {
+    background-image: radial-gradient(circle farthest-corner at 100% 0%, var(--accent), #02031c 60%, var(--dark));
   }
 
   .form {
