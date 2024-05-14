@@ -387,12 +387,6 @@ collections:
             label: Text
             name: '259392'
             widget: string
-          - hint: >-
-              Original text: offers a new DeFi ecosystem for users, key:
-              2054d57d
-            label: Text
-            name: 2054d57d
-            widget: string
           - hint: 'Original text: Investor Waitlist, key: 90caa1b'
             label: Text
             name: 90caa1b
@@ -1020,6 +1014,12 @@ collections:
           - hint: "Original text: Select, deposit, deploy &\_profit, key: 1cc12fd5"
             label: Text
             name: 1cc12fd5
+            widget: string
+          - hint: >-
+              Original text: offers a new DeFi ecosystem for users, key:
+              2054d57d
+            label: Text
+            name: 2054d57d
             widget: string
           - hint: 'Original text: Scroll down, key: -24f8f20b'
             label: Text

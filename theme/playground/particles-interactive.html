@@ -312,6 +312,8 @@ build 13.04.24
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type 0.3.4  -->
   <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <!--  typed.js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  d3.js 4.9.0  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.0/d3.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  d3-sankey.js 0.4.2  -->
@@ -324,7 +326,7 @@ build 13.04.24
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
 /*
- * PPN | particles
+ * PP | particles
  * dependency: particlesjs.js
  * build 15.04.24
  */
@@ -332,7 +334,7 @@ document.addEventListener("DOMContentLoaded",()=>{if(!document.querySelector(".b
 </script>
   <script>
 /*
- * PP | tvl animation v1
+ * P | tvl animation v1
  * dependency: gsap.js
  * build 30.04.24
  */
@@ -342,7 +344,7 @@ document.addEventListener("DOMContentLoaded",()=>{const targetElement=document.q
 </script>
   <script>
 /*
- * PP | logo animation v.2
+ * P | logo animation v.2
  * dependency: gsap.js
  * build 27.04.24 @16:23
  */
@@ -350,14 +352,14 @@ document.addEventListener("DOMContentLoaded",()=>{const options={delay:1000,colo
 </script>
   <script>
 /*
- * PP | schemas v.2
+ * P | schemas v.2
  * build: 27.04.24 @13:29
  */
 document.addEventListener("DOMContentLoaded",animateShapes);function animateShapes(){gsap.registerPlugin(ScrollTrigger);const svgs=document.querySelectorAll("#social .schema");svgs.forEach((svg)=>{const shapes=svg.querySelectorAll("rect, circle");shapes.forEach((shape,index)=>{animateShape(shape,index*0.1)})})}function animateShape(shape,stagger){const svg=shape.closest(".schema");if(window.getComputedStyle(svg).getPropertyValue("visibility")==="hidden"){return;}shape.style.strokeDashoffset=0;const length=shape.getTotalLength();shape.style.strokeDasharray=length;shape.style.strokeDashoffset=length;gsap.to(shape,{strokeDashoffset:0,duration:2,ease:"back.inOut",scrollTrigger:{trigger:svg,start:"top center",once:true},delay:stagger})}
 </script>
   <script>
 /*
- * PPN | opportunities stagger reveal
+ * P | opportunities stagger reveal
  * dependencies: gsap.js + ScrollTrigger.js
  * build 26.04.2024 @12:11
  */
@@ -365,14 +367,14 @@ document.addEventListener("DOMContentLoaded",()=>{const trigger=document.querySe
 </script>
   <script>
 /*
- * PPN | numbers animation
+ * P | numbers animation
  * build 08.04.24 @20:46
  */
 document.addEventListener("DOMContentLoaded",initNumberAnimation);function initNumberAnimation(){const elements=document.querySelectorAll(".number-counter:not(.animated)");if(!elements.length>0){return}elements.forEach((element)=>{animateNumberOnce(element);element.classList.add("animated")});function animateNumberOnce(element){const easing="slow(0.7,0.7,false)";const target= +element.getAttribute("data-target-number");let current=0;const duration=4;gsap.registerPlugin(ScrollTrigger);ScrollTrigger.create({trigger:element,start:"top bottom",onEnter:()=>{gsap.to(element,{duration:duration,innerText:target,roundProps:"innerText",ease:easing })},once:true })}}
 </script>
   <script>
 /*
- * PPN | FAQ expand/collapse
+ * P | FAQ expand/collapse
  * dependency: gsap.JS
  * build 05.04.2024 @15:19
  */
@@ -380,7 +382,7 @@ document.addEventListener("DOMContentLoaded",initFAQ);function initFAQ(){const Q
 </script>
   <script>
 /*
- * PPN | team reveal stagger
+ * P | team reveal stagger
  * dependencies: gsap.js + ScrollTrigger.js
  * build 04.04.2024 @15:37
 */
@@ -388,7 +390,7 @@ const swiper=document.querySelector(".swiper");const slides=swiper.querySelector
 </script>
   <script>
 /*
- * PPN | team slider
+ * P | team slider
  * dependencies: GSAP 3.12.5
  * build 04.04.2024
 */
@@ -396,7 +398,7 @@ const teamSwiper=new Swiper(".swiper.is-team",{slidesPerView:"auto",keyboard:tru
 </script>
   <script>
 /*
- * PP | particle sankey v.2.9.1
+ * P | particle sankey v.2.9.1
  * dependency: d3.js & d3-sankey.js & gsap.js & ScrollTrigger.js
  * build 22.04.24 @20:45
  */
@@ -404,7 +406,7 @@ document.addEventListener("DOMContentLoaded",()=>{const color={light:"#dceef6",d
 </script>
   <script>
 /*
- * PPN | word reveal on scroll
+ * P | word reveal on scroll
  * dependencies: gsap.js scrolltrigger.js split-type.js
  * build 10.04.24 @13:33
  */
@@ -412,11 +414,11 @@ document.addEventListener("DOMContentLoaded",()=>{const target=`[data-id="reveal
 </script>
   <script>
 /*
- * PPN | typed
- * dependency: gsap.js
- * build: 17.04.24 @16:52
- */
-document.addEventListener("DOMContentLoaded",()=>{if(!document.querySelector('[data-id="tobetyped"]')){return}setState();addBlink();addBlinkingText();animateTextSentences(sentences)});const sentences=["pioneers new means of value extraction","empowers access to automated arbitrage","offers a new DeFi ecosystem for users"];const typingSpeed=0.025;const eraseSpeed=0.0035;const pauseBetweenSentences=1;function setState(){const tobetyped=document.querySelector('[data-id="tobetyped"]');tobetyped.textContent=""}const addBlink=()=>{const cssRules=`@keyframes typingBlink{0%,100%{opacity:0}50%{opacity:1}}#blinking-text::after{content:"_";animation:typingBlink linear 1s infinite}`;const styleElement=document.createElement("style");styleElement.textContent=cssRules;document.head.appendChild(styleElement)};const addBlinkingText=()=>{const typingTextElement=document.querySelector('[data-id="tobetyped"]');if(!typingTextElement){console.error("Element with id 'typing-text' not found.");return}const blinkingTextElement=document.createElement("span");blinkingTextElement.setAttribute("id","blinking-text");typingTextElement.insertAdjacentElement("afterend",blinkingTextElement)};const typeWriterAnimation=(element,text,onComplete)=>{let currentIndex=0;const typeNextCharacter=()=>{if(currentIndex<text.length){element.textContent+=text[currentIndex++];gsap.delayedCall(typingSpeed,typeNextCharacter)}else{gsap.delayedCall(pauseBetweenSentences,eraseText)}};const eraseText=()=>{if(element.textContent.length>0){element.textContent=element.textContent.slice(0,-1);gsap.delayedCall(eraseSpeed,eraseText)}else{onComplete()}};typeNextCharacter()};const animateTextSentences=(sentences)=>{let currentIndex=0;const animateNextSentence=()=>{const sentence=sentences[currentIndex];const textElement=document.querySelector('[data-id="tobetyped"]');typeWriterAnimation(textElement,sentence,()=>{currentIndex=(currentIndex+1)%sentences.length;animateNextSentence()})};animateNextSentence()};
+ * P | typed v3
+ * dependency: typed.js @ 2.0.12
+ * build: 13.05.24 @23:35
+*/
+document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-id="tobetyped"]`,strings:["pioneers new means of value extraction","pioneers new means of value extraction","empowers access to automated arbitrage","offers a new DeFi ecosystem for users"]};if(!document.querySelector(options.target)){return}initTyped(options);injectCSStyping("_")});function initTyped(options){const config={startDelay:1000,typeSpeed:15,shuffle:false,smartBackspace:true,backDelay:1000,backSpeed:2,loop:true,showCursor:false};const typed=new Typed(options.target,{...config,...options})}function injectCSStyping(symbol){const styleElement=document.createElement("style");const cssCode=`[data-id="tobetyped"]::after{content:"${ symbol }";display:inline;-webkit-animation:blink 0.7s infinite;-moz-animation:blink 0.7s infinite;animation:blink 0.7s infinite}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-moz-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}`;styleElement.textContent=cssCode;document.head.appendChild(styleElement)}
 </script>
   <script>
 /*
@@ -429,17 +431,7 @@ document.addEventListener("DOMContentLoaded",()=>{const options={navigation:".na
   <!-- 
 <script>
 /*
- * PPN | shrink investor CTA
- * dependency: gsap.js scrolltrigger.js
- * build 05.04.2024 @17:32
-*/
-function shrinkElementOnScroll(){const elementsFixed=document.querySelectorAll('[data-cta="fixed"]');if(!elementsFixed){return}const elementText=document.querySelector('[data-cta="text"]');const elementBlinky=document.querySelector('[data-cta="blinky"]');const duration=2;const ease='power2.out';elementsFixed.forEach(element=>{const tl=gsap.timeline({scrollTrigger:{trigger:element,start:'top center',end:'bottom center+=30vh',scrub:true,markers:false }});tl.to(element,{width:44,duration:duration,ease:ease});tl.to(element,{paddingLeft:15,duration:duration,ease:ease},0);tl.to(elementText,{opacity:0,duration:duration,ease:ease},0);tl.to(elementBlinky,{marginRight:0,duration:2,ease:ease},0)})}shrinkElementOnScroll();
-</script>
- -->
-  <!-- 
-<script>
-/*
- * PPN | timeline item reveal GSAP
+ * P | timeline item reveal GSAP
  * dependency: gsap.js
  * build 04.04.24 @ 17:20
 */
@@ -448,14 +440,14 @@ document.addEventListener("DOMContentLoaded",()=>{handleMileStoneOpacity()});fun
  -->
   <script>
 /*
- * PPN | inject target _blank
+ * P | inject target _blank
  * build 10.04.24 @21:27
  */
 document.addEventListener("DOMContentLoaded",()=>{const footerLinks=document.querySelectorAll(".footer__icon-link");footerLinks.forEach(link=>{if(!link.getAttribute("target")){link.setAttribute("target","_blank")}})});
 </script>
   <script>
 /*
- * PPN | scroll progress
+ * P | scroll progress
  * build 04.04.24 @11:21
 */ 
 document.addEventListener("DOMContentLoaded",()=>{const position="left";const distance="1.5rem";const rgb="220, 236, 248";progressInjectCSS(position,distance,rgb);progressInjectHTML();showScrollProgress()});function progressInjectCSS(position,distance,rgb){const css=`.progress-wrap{--indicator-progress-color:rgba(${ rgb },1);--indicator-slide-color:rgba(${ rgb },0.1);--indicator-font:"Unicons";--indicator-content:"\\e84b";--indicator-hover:white --indicator-position:1.25rem}@font-face{font-family:"Unicons";src:url("https://assets-global.website-files.com/61a0f086f2b1f289503a4957/6329d8e0a1790e3283ae2504_unicons.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}.progress-wrap{position:fixed;mix-blend-mode:difference;${ position }:${ distance };bottom:${ distance };height:46px;width:46px;cursor:pointer;display:none;border-radius:50px;box-shadow:inset 0 0 0 2px var(--indicator-slide-color);z-index:10000;opacity:0;visibility:hidden;transform:translateY(15px);transition:all 200ms linear}.progress-wrap.active-progress{display:block;opacity:1;visibility:visible;transform:translateY(0)}.progress-wrap::after,.progress-wrap::before{position:absolute;font-family:var(--indicator-font);content:var(--indicator-content);text-align:center;line-height:46px;font-size:24px;left:0;top:0;height:46px;width:46px;cursor:pointer;display:block;transition:all 200ms linear}.progress-wrap::after{color:var(--indicator-progress-color);z-index:1}.progress-wrap:hover::before{color:var(--indicator-hover);transform:scale(1.0);transform-origin:center}.progress-wrap:hover::after{transform:scale(1.15);transform-origin:center}.progress-wrap svg path{fill:none}.progress-wrap svg.progress-circle path{stroke:var(--indicator-progress-color);stroke-width:4;box-sizing:border-box;transition:all 200ms linear}`;const style=document.createElement("style");style.innerHTML=css;document.head.appendChild(style)}function progressInjectHTML(){const scrollProgressHTML=`<div class="progress-wrap"><svg class="progress-circle svg-content"height="100%"viewBox="-1 -1 102 102"width="100%"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div>`;const div=document.createElement("div");div.innerHTML=scrollProgressHTML;document.body.prepend(div)}function showScrollProgress(){if(!document.querySelector(".progress-wrap")){return}const progressPath=document.querySelector(".progress-wrap path");const pathLength=progressPath.getTotalLength();progressPath.style.transition="none";progressPath.style.strokeDasharray=`${ pathLength } ${ pathLength }`;progressPath.style.strokeDashoffset=pathLength;progressPath.getBoundingClientRect();progressPath.style.transition="stroke-dashoffset 10ms linear";const updateProgress=()=>{const scroll=window.pageYOffset||document.documentElement.scrollTop;const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;const progress=pathLength-(scroll*pathLength)/height;progressPath.style.strokeDashoffset=progress};updateProgress();window.addEventListener("scroll",updateProgress,{passive:true});const offset=50;const duration=550;window.addEventListener("scroll",()=>{if(window.pageYOffset>offset){document.querySelector(".progress-wrap").classList.add("active-progress")}else{document.querySelector(".progress-wrap").classList.remove("active-progress")}},{passive:true});document.querySelector(".progress-wrap").addEventListener("click",(event)=>{event.preventDefault();scrollToTop(duration);return false});function scrollToTop(duration){const start=window.pageYOffset||document.documentElement.scrollTop;const startTime=performance.now();function scrollStep(timestamp){const currentTime=timestamp||performance.now();const elapsedTime=currentTime-startTime;const scrollTo=Math.max(start-(start*elapsedTime)/duration,0);window.scrollTo(0,scrollTo);if(elapsedTime<duration){window.requestAnimationFrame(scrollStep)}}window.requestAnimationFrame(scrollStep)}}
