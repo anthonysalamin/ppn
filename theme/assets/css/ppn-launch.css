@@ -3291,11 +3291,13 @@ blockquote {
 }
 
 .getstarted__change {
+  filter: blur(4px);
   color: var(--accent);
   font-size: .8rem;
 }
 
 .getstarted__stats {
+  filter: blur(6px);
   font-size: 1.4rem;
   font-weight: 500;
 }

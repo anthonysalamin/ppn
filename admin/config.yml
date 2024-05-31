@@ -1388,37 +1388,37 @@ collections:
             label: Text
             name: '-3b90023'
             widget: string
-          - hint: 'Original text: $4.21, key: 213a45d'
+          - hint: 'Original text: $X.XX, key: 224067a'
             label: Text
-            name: 213a45d
+            name: 224067a
             widget: string
-          - hint: 'Original text: 3.74%, key: 2e46cad'
+          - hint: 'Original text: X.XX%, key: 4ee528f'
             label: Text
-            name: 2e46cad
+            name: 4ee528f
             widget: string
           - hint: 'Original text: PPN Price, key: 251e98d7'
             label: Text
             name: 251e98d7
             widget: string
-          - hint: 'Original text: $210M, key: 212c6c0'
+          - hint: 'Original text: $XXXM, key: 224a419'
             label: Text
-            name: 212c6c0
+            name: 224a419
             widget: string
           - hint: 'Original text: mkt.cap, key: 4316d47a'
             label: Text
             name: 4316d47a
             widget: string
-          - hint: 'Original text: $12M, key: 111ba8'
+          - hint: 'Original text: $XXM, key: 11b2a9'
             label: Text
-            name: 111ba8
+            name: 11b2a9
             widget: string
           - hint: 'Original text: 24h volume, key: 742b2e14'
             label: Text
             name: 742b2e14
             widget: string
-          - hint: 'Original text: $7.99K, key: 408b4950'
+          - hint: 'Original text: $X.XXK, key: 425cc911'
             label: Text
-            name: 408b4950
+            name: 425cc911
             widget: string
           - hint: 'Original text: Holders, key: -5bb47fd9'
             label: Text
