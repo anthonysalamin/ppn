@@ -1,0 +1,1726 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: main
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor: &ref_0
+      preview: false
+    folder: cms/pages
+    fields: &ref_1
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_2
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Twitter Image
+            name: twitter:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: pages-playground
+    label: Pages playground
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor: *ref_0
+    folder: cms/pages/playground
+    fields: *ref_1
+  - name: steps
+    label: Steps
+    folder: cms/steps
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Step name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_step-description
+        label: Step description
+        widget: text
+        required: false
+      - hint: ''
+        name: f_step-number
+        label: Step number
+        widget: string
+        required: false
+      - hint: ''
+        name: f_step-image
+        label: Step image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_to-display
+        label: To display ?
+        widget: boolean
+        required: false
+        default: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: steps
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[steps].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_2
+  - name: team
+    label: Team
+    folder: cms/team
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Bio
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_photo
+        label: Photo
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_title
+        label: Title
+        widget: string
+        required: true
+      - hint: Items will be sorted from smallest to largest number
+        name: f_sorting-order
+        label: Sorting Order
+        widget: number
+        required: true
+      - hint: ''
+        name: f_linkedin
+        label: Linkedin
+        widget: string
+        required: false
+      - hint: ''
+        name: f_x-twitter
+        label: X (Twitter)
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: team
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[team].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_2
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: first name family name, key: 6a1fdf22'
+            label: Text
+            name: 6a1fdf22
+            widget: string
+          - hint: 'Original text: position, key: 2c929929'
+            label: Text
+            name: 2c929929
+            widget: string
+          - hint: >-
+              Original text: This is some text inside of a div block., key:
+              7635fb4f
+            label: Text
+            name: 7635fb4f
+            widget: string
+          - hint: 'Original text: https://typescale.com/, key: 68f0803b'
+            label: Text
+            name: 68f0803b
+            widget: string
+          - hint: 'Original text: 1.200 - Minor third, key: 3b1c8b3e'
+            label: Text
+            name: 3b1c8b3e
+            widget: string
+          - hint: 'Original text: blinky / warning, key: -5115318'
+            label: Text
+            name: '-5115318'
+            widget: string
+          - hint: 'Original text: CTA / circle, key: -343815ef'
+            label: Text
+            name: '-343815ef'
+            widget: string
+          - hint: 'Original text: blinky / light, key: 56831562'
+            label: Text
+            name: '56831562'
+            widget: string
+          - hint: 'Original text: blinky / accent, key: 66c3ddfe'
+            label: Text
+            name: 66c3ddfe
+            widget: string
+          - hint: 'Original text: Pill / mini, key: 866464f'
+            label: Text
+            name: 866464f
+            widget: string
+          - hint: 'Original text: v1.0, key: 36617d'
+            label: Text
+            name: 36617d
+            widget: string
+          - hint: 'Original text: CTA / magnet / solo / light, key: 4be8700a'
+            label: Text
+            name: 4be8700a
+            widget: string
+          - hint: 'Original text: Whitepaper, key: -78ddacdd'
+            label: Text
+            name: '-78ddacdd'
+            widget: string
+          - hint: 'Original text: CTA / magnet / dual / light, key: 19e6c6a7'
+            label: Text
+            name: 19e6c6a7
+            widget: string
+          - hint: 'Original text: CTA light, key: -7100e51a'
+            label: Text
+            name: '-7100e51a'
+            widget: string
+          - hint: 'Original text: CTA / magnet / dual / dark, key: 21da67c5'
+            label: Text
+            name: 21da67c5
+            widget: string
+          - hint: 'Original text: CTA dark, key: -3a8f05a'
+            label: Text
+            name: '-3a8f05a'
+            widget: string
+          - hint: 'Original text: CTA / solo / light / outline, key: 5236e316'
+            label: Text
+            name: '5236e316'
+            widget: string
+          - hint: 'Original text: Get started, key: 667a5d97'
+            label: Text
+            name: 667a5d97
+            widget: string
+          - hint: 'Original text: CTA / solo / light, key: -be1bdb'
+            label: Text
+            name: '-be1bdb'
+            widget: string
+          - hint: 'Original text: dApp, key: 2e771d'
+            label: Text
+            name: 2e771d
+            widget: string
+          - hint: 'Original text: CTA / solo / transparent, key: 3fb94521'
+            label: Text
+            name: 3fb94521
+            widget: string
+          - hint: 'Original text: Litepaper, key: 4ab0bd7e'
+            label: Text
+            name: 4ab0bd7e
+            widget: string
+          - hint: 'Original text: Investor Waitlist, key: 90caa1b'
+            label: Text
+            name: 90caa1b
+            widget: string
+          - hint: 'Original text: pre heading, key: -68b0867b'
+            label: Text
+            name: '-68b0867b'
+            widget: string
+          - hint: 'Original text: Web3, key: 29137f'
+            label: Text
+            name: 29137f
+            widget: string
+          - hint: 'Original text: H1, key: 8e9'
+            label: Text
+            name: '8e9'
+            widget: string
+          - hint: 'Original text: Generating , key: -67b9e2b2'
+            label: Text
+            name: '-67b9e2b2'
+            widget: string
+          - hint: 'Original text: Yield, key: 5176f6d'
+            label: Text
+            name: 5176f6d
+            widget: string
+          - hint: 'Original text: From Market Volatility, key: 55ae77b3'
+            label: Text
+            name: 55ae77b3
+            widget: string
+          - hint: 'Original text: Via Arbitrage, key: 1d4486b7'
+            label: Text
+            name: 1d4486b7
+            widget: string
+          - hint: 'Original text: Subline, key: -c1c19ec'
+            label: Text
+            name: '-c1c19ec'
+            widget: string
+          - hint: >-
+              Original text: Private Pool Network faces the liquidity problem
+              head on by maximising value extracted from volatility and
+              optimising the arbitrage process., key: 61357dbe
+            label: Text
+            name: 61357dbe
+            widget: text
+          - hint: 'Original text: H2, key: 8ea'
+            label: Text
+            name: 8ea
+            widget: string
+          - hint: 'Original text: H3, key: 8eb'
+            label: Text
+            name: 8eb
+            widget: string
+          - hint: 'Original text: H4, key: 8ec'
+            label: Text
+            name: 8ec
+            widget: string
+          - hint: 'Original text: H5, key: 8ed'
+            label: Text
+            name: 8ed
+            widget: string
+          - hint: 'Original text: H6, key: 8ee'
+            label: Text
+            name: 8ee
+            widget: string
+          - hint: 'Original text: paragraph, key: 742fc96e'
+            label: Text
+            name: 742fc96e
+            widget: string
+          - hint: >-
+              Original text: 876M Wasted due to major inefficiencies" - This
+              text is good, lets just update theNumber. Hover and the card flips
+              and reads : "The current approach to arbitrage is inefficient due
+              to the public nature of arbitrage opportunities. This leads to
+              priority gas auctions resulting in up to 80% of arbitrage value
+              being lost to validators. Our private pools circumvent this
+              delivering a proprietary and optimised approach to arbitrage, key:
+              4d083e65
+            label: Text
+            name: 4d083e65
+            widget: text
+          - hint: 'Original text: paragraph dark, key: -73133518'
+            label: Text
+            name: '-73133518'
+            widget: string
+          - hint: 'Original text: Small, key: 4c4a4e7'
+            label: Text
+            name: 4c4a4e7
+            widget: string
+          - hint: 'Original text: Mini pill, key: -5bfd74be'
+            label: Text
+            name: '-5bfd74be'
+            widget: string
+          - hint: 'Original text: Automated, key: -24cbae70'
+            label: Text
+            name: '-24cbae70'
+            widget: string
+          - hint: 'Original text: Legend, key: -78900fd3'
+            label: Text
+            name: '-78900fd3'
+            widget: string
+          - hint: 'Original text: Quote, key: 4ac4e5c'
+            label: Text
+            name: 4ac4e5c
+            widget: string
+          - hint: 'Original text: List, key: 2424be'
+            label: Text
+            name: 2424be
+            widget: string
+          - hint: 'Original text: Opportunity for yield extraction, key: 754d2c1e'
+            label: Text
+            name: 754d2c1e
+            widget: string
+          - hint: "Original text: Wasted due to\Lmajor inefficiencies, key: 56407b9e"
+            label: Text
+            name: 56407b9e
+            widget: string
+          - hint: >-
+              Original text: Opportunity to capture this lost value with PPN,
+              key: -62c03091
+            label: Text
+            name: '-62c03091'
+            widget: string
+          - hint: 'Original text: Drag, key: 20a154'
+            label: Text
+            name: 20a154
+            widget: string
+          - hint: 'Original text: Scroll, key: -6cb52d13'
+            label: Text
+            name: '-6cb52d13'
+            widget: string
+          - hint: 'Original text: Step 1, key: -6bcb8c03'
+            label: Text
+            name: '-6bcb8c03'
+            widget: string
+          - hint: 'Original text: Select, key: -6c9bdee4'
+            label: Text
+            name: '-6c9bdee4'
+            widget: string
+          - hint: 'Original text: User action 1 — 2, key: -adf0d9e'
+            label: Text
+            name: '-adf0d9e'
+            widget: string
+          - hint: 'Original text: Index Strategy, key: 1d8f5741'
+            label: Text
+            name: 1d8f5741
+            widget: string
+          - hint: >-
+              Original text: Select an Index Pool of your choice, proceed to
+              deposit your assets into the index of your choosing and relax
+              while our automated arbitrage engine goes to work for you., key:
+              17b85af
+            label: Text
+            name: 17b85af
+            widget: text
+          - hint: 'Original text: Step 2, key: -6bcb8c02'
+            label: Text
+            name: '-6bcb8c02'
+            widget: string
+          - hint: 'Original text: Deposit, key: -40205182'
+            label: Text
+            name: '-40205182'
+            widget: string
+          - hint: 'Original text: User action 2 — 2, key: -ad0f61d'
+            label: Text
+            name: '-ad0f61d'
+            widget: string
+          - hint: 'Original text: Liquidity Deposit , key: -425bc810'
+            label: Text
+            name: '-425bc810'
+            widget: string
+          - hint: >-
+              Original text: Our matching engine calculates the weight of the
+              required assets and the user deposits them into the index pool.,
+              key: 6f2b1ac
+            label: Text
+            name: 6f2b1ac
+            widget: text
+          - hint: 'Original text: get in touch, key: -5bfbfdf2'
+            label: Text
+            name: '-5bfbfdf2'
+            widget: string
+          - hint: 'Original text: Step 3, key: -6bcb8c01'
+            label: Text
+            name: '-6bcb8c01'
+            widget: string
+          - hint: 'Original text: Deploy, key: 79cd5d07'
+            label: Text
+            name: 79cd5d07
+            widget: string
+          - hint: 'Original text: Find Opportunity, key: -320a5914'
+            label: Text
+            name: '-320a5914'
+            widget: string
+          - hint: >-
+              Original text: Private Pool Network's bespoke trading engine goes
+              to work seeking price deviation opportunities across CEX & DEX
+              liquidity., key: 7b5afab6
+            label: Text
+            name: 7b5afab6
+            widget: text
+          - hint: 'Original text: Step 4, key: -6bcb8c00'
+            label: Text
+            name: '-6bcb8c00'
+            widget: string
+          - hint: 'Original text: Profit, key: -7101d59c'
+            label: Text
+            name: '-7101d59c'
+            widget: string
+          - hint: 'Original text: Check Profitability, key: -342baf2'
+            label: Text
+            name: '-342baf2'
+            widget: string
+          - hint: >-
+              Original text: Trading engine locates arbitrage opportunity and
+              runs profitability checks. If profitability checks are passed the
+              arbitrage is executed., key: -5eae6de9
+            label: Text
+            name: '-5eae6de9'
+            widget: text
+          - hint: 'Original text: Step 5, key: -6bcb8bff'
+            label: Text
+            name: '-6bcb8bff'
+            widget: string
+          - hint: 'Original text: Real Yield, key: -58547575'
+            label: Text
+            name: '-58547575'
+            widget: string
+          - hint: 'Original text: Distributed Yield, key: -442f6c70'
+            label: Text
+            name: '-442f6c70'
+            widget: string
+          - hint: >-
+              Original text: Arbitrage rebalancing logic rebalances the Index
+              pool and yield from the trade is distributed in accordance with
+              our yield distribution model., key: -fc803f8
+            label: Text
+            name: '-fc803f8'
+            widget: text
+          - hint: 'Original text: Opportunities, key: f7b7e91'
+            label: Text
+            name: f7b7e91
+            widget: string
+          - hint: 'Original text: Unseized yield opportunities, key: 44267a99'
+            label: Text
+            name: 44267a99
+            widget: string
+          - hint: 'Original text: $1.0, key: 111b0f'
+            label: Text
+            name: 111b0f
+            widget: string
+          - hint: 'Original text: 0, key: 30'
+            label: Text
+            name: '30'
+            widget: string
+          - hint: 'Original text: B, key: 42'
+            label: Text
+            name: '42'
+            widget: string
+          - hint: 'Original text: Learn more, key: -52aefc2f'
+            label: Text
+            name: '-52aefc2f'
+            widget: string
+          - hint: >-
+              Original text: Flashbots data suggests the arbitrage marketexpands
+              beyond $1.09B in yield potential, however the void of a purpose
+              built ecosystem to extract this value means web3 users are missing
+              out. Were here to change that., key: -f7bcbf9
+            label: Text
+            name: '-f7bcbf9'
+            widget: text
+          - hint: 'Original text: 000, key: ba30'
+            label: Text
+            name: ba30
+            widget: string
+          - hint: 'Original text: M, key: 4d'
+            label: Text
+            name: 4d
+            widget: string
+          - hint: 'Original text: Wasted due to major inefficiencies, key: -2d37506a'
+            label: Text
+            name: '-2d37506a'
+            widget: string
+          - hint: >-
+              Original text: The current approach to arbitrage is inefficient
+              due to the public nature of arbitrage opportunities. This leads to
+              priority gas auctions resulting in up to 80% of arbitrage value
+              being lost to validators., key: 1c1de2d3
+            label: Text
+            name: 1c1de2d3
+            widget: text
+          - hint: 'Original text: %, key: 25'
+            label: Text
+            name: '25'
+            widget: string
+          - hint: >-
+              Original text: Opportunity to capture this lost value with , key:
+              -69a81d81
+            label: Text
+            name: '-69a81d81'
+            widget: string
+          - hint: 'Original text: PPN, key: 1364e'
+            label: Text
+            name: 1364e
+            widget: string
+          - hint: >-
+              Original text: PPN is a first of its kind ecosystem, purpose built
+              to extract value from arbitrage rather than fees. Our novel
+              "Private Index Pools" and proprietary trading engine fuel and
+              optimise the arbitrage process, empowering access for all., key:
+              -687da9da
+            label: Text
+            name: '-687da9da'
+            widget: text
+          - hint: 'Original text: Investor Collateral, key: 7cccd2bf'
+            label: Text
+            name: 7cccd2bf
+            widget: string
+          - hint: 'Original text: Team, key: 27b67d'
+            label: Text
+            name: 27b67d
+            widget: string
+          - hint: >-
+              Original text: Our mission is to pioneer the Defi industry, key:
+              3ee58ace
+            label: Text
+            name: 3ee58ace
+            widget: string
+          - hint: 'Original text: Click, key: 3e2d568'
+            label: Text
+            name: 3e2d568
+            widget: string
+          - hint: 'Original text:  + , key: 7d75'
+            label: Text
+            name: 7d75
+            widget: string
+          - hint: 'Original text: Drag left, key: 6168a353'
+            label: Text
+            name: 6168a353
+            widget: string
+          - hint: 'Original text: Get in touch, key: -5230a9d2'
+            label: Text
+            name: '-5230a9d2'
+            widget: string
+          - hint: 'Original text: a new ecosystem is born, key: f2d860'
+            label: Text
+            name: f2d860
+            widget: string
+          - hint: 'Original text: a new way to maximize yield, key: 20f3b50e'
+            label: Text
+            name: 20f3b50e
+            widget: string
+          - hint: 'Original text: v.2, key: 1c0ba'
+            label: Text
+            name: 1c0ba
+            widget: string
+          - hint: >-
+              Original text: Participate in the initial stage of our , key:
+              -7d2c089
+            label: Text
+            name: '-7d2c089'
+            widget: string
+          - hint: 'Original text: PrivatePools, key: 449fa434'
+            label: Text
+            name: 449fa434
+            widget: string
+          - hint: 'Original text:  strategic investment round, key: 6b9e48e1'
+            label: Text
+            name: 6b9e48e1
+            widget: string
+          - hint: 'Original text: Fill in the form, key: 37b460b1'
+            label: Text
+            name: 37b460b1
+            widget: string
+          - hint: 'Original text: Scroll down, key: -24f8f20b'
+            label: Text
+            name: '-24f8f20b'
+            widget: string
+          - hint: >-
+              Original text: Using our email form, you acknowledge and accept
+              that the information you submit will be used for the sole purpose
+              of processing your request. Rest assured, we handle all
+              information with the utmost confidentiality, ensuring your data
+              remains secure and protected at all times., key: 6f7046a4
+            label: Text
+            name: 6f7046a4
+            widget: text
+          - hint: >-
+              Original text: Thank you! Your submission has been sent!, key:
+              -36b8c0b6
+            label: Text
+            name: '-36b8c0b6'
+            widget: string
+          - hint: 'Original text: Oops, error., key: -6bd48d63'
+            label: Text
+            name: '-6bd48d63'
+            widget: string
+          - hint: 'Original text: Social, key: -6c12fc73'
+            label: Text
+            name: '-6c12fc73'
+            widget: string
+          - hint: 'Original text: Follow us, key: -5ae7feb3'
+            label: Text
+            name: '-5ae7feb3'
+            widget: string
+          - hint: 'Original text: We are on X, key: 1c692195'
+            label: Text
+            name: 1c692195
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: 'Original text: email us, key: 2d5d45a2'
+            label: Text
+            name: 2d5d45a2
+            widget: string
+          - hint: 'Original text: team@privatepools.network, key: -1bf19f89'
+            label: Text
+            name: '-1bf19f89'
+            widget: string
+          - hint: 'Original text: about 4 hours ago , key: -187f9439'
+            label: Text
+            name: '-187f9439'
+            widget: string
+          - hint: 'Original text: via Medium, key: -13d77019'
+            label: Text
+            name: '-13d77019'
+            widget: string
+          - hint: >-
+              Original text: The Rise Of Points Farming in Crypto, key:
+              -21adcdb4
+            label: Text
+            name: '-21adcdb4'
+            widget: string
+          - hint: "Original text: In this weeks thought leadership article, we take a deep dive into the \_emergence of the points farming system. We assess its origins, review \_its pros & cons, and dissect its effectiveness over predecessors., key: -5c8e68c2"
+            label: Text
+            name: '-5c8e68c2'
+            widget: text
+          - hint: >-
+              Original text: A new ecosystem, purpose built to generate yield
+              from arbitrage opportunities., key: -59d6ee48
+            label: Text
+            name: '-59d6ee48'
+            widget: string
+          - hint: 'Original text: v.1.2, key: 6947c3d'
+            label: Text
+            name: 6947c3d
+            widget: string
+          - hint: 'Original text: TVL $, key: 4c7ef8e'
+            label: Text
+            name: 4c7ef8e
+            widget: string
+          - hint: 'Original text: 000,000.00, key: -7ef7d686'
+            label: Text
+            name: '-7ef7d686'
+            widget: string
+          - hint: 'Original text: 392K, key: 180b3f'
+            label: Text
+            name: 180b3f
+            widget: string
+          - hint: >-
+              Original text: Thank you — our team will respond promptly, key:
+              681be07e
+            label: Text
+            name: 681be07e
+            widget: string
+          - hint: 'Original text: Back, key: 1f7907'
+            label: Text
+            name: 1f7907
+            widget: string
+          - hint: 'Original text: Roadmap, key: -4b5115e4'
+            label: Text
+            name: '-4b5115e4'
+            widget: string
+          - hint: >-
+              Original text: Our roadmap to offer real yield for all, key:
+              448a98a6
+            label: Text
+            name: 448a98a6
+            widget: string
+          - hint: 'Original text: Get in Touch, key: -53f399f2'
+            label: Text
+            name: '-53f399f2'
+            widget: string
+          - hint: 'Original text: 2024, key: 177500'
+            label: Text
+            name: '177500'
+            widget: string
+          - hint: 'Original text: Seed Round, key: -6c17d8e1'
+            label: Text
+            name: '-6c17d8e1'
+            widget: string
+          - hint: >-
+              Original text:  - Capitalising on Volatility with Blockchain Index
+              Funds, key: 2a53a1b7
+            label: Text
+            name: 2a53a1b7
+            widget: string
+          - hint: >-
+              Original text: MEV Protection Implementation for On-Chain Trading
+              Engine using BloxRoute BDN, key: 6a779f74
+            label: Text
+            name: 6a779f74
+            widget: string
+          - hint: >-
+              Original text: CEX Market Order Integration Using Binance Convert
+              Feature, key: 546cfbab
+            label: Text
+            name: 546cfbab
+            widget: string
+          - hint: >-
+              Original text: Implementation of 1Inch Fusion for On-Chain Trading
+              Engine, key: 2e48637b
+            label: Text
+            name: 2e48637b
+            widget: string
+          - hint: 'Original text: Q1, key: a00'
+            label: Text
+            name: a00
+            widget: string
+          - hint: >-
+              Original text: Implementation of Zap Feature for Pools, key:
+              289e584
+            label: Text
+            name: '289e584'
+            widget: string
+          - hint: >-
+              Original text: Implementation Of a Referral Link System, key:
+              25c9a10c
+            label: Text
+            name: 25c9a10c
+            widget: string
+          - hint: >-
+              Original text: Implementation Of Leaderboard and Portfolio, key:
+              -594c28bf
+            label: Text
+            name: '-594c28bf'
+            widget: string
+          - hint: 'Original text: Q2, key: a01'
+            label: Text
+            name: a01
+            widget: string
+          - hint: 'Original text: Token Staking Implementation, key: -29bfa85e'
+            label: Text
+            name: '-29bfa85e'
+            widget: string
+          - hint: 'Original text: Implementation Of Auto Compounding, key: 4b457b21'
+            label: Text
+            name: 4b457b21
+            widget: string
+          - hint: >-
+              Original text: Implementation Of Trailing Market Order Strategies,
+              key: -342f6542
+            label: Text
+            name: '-342f6542'
+            widget: string
+          - hint: 'Original text: Q3, key: a02'
+            label: Text
+            name: a02
+            widget: string
+          - hint: 'Original text: Scheduled Launch, key: 11d14ec6'
+            label: Text
+            name: 11d14ec6
+            widget: string
+          - hint: >-
+              Original text: Implementation Of CEX Limit Order Strategies, key:
+              384648ad
+            label: Text
+            name: 384648ad
+            widget: string
+          - hint: >-
+              Original text: Implementation Of Trailing Limit Order Strategies,
+              key: -78a0912f
+            label: Text
+            name: '-78a0912f'
+            widget: string
+          - hint: 'Original text: Q4, key: a03'
+            label: Text
+            name: a03
+            widget: string
+          - hint: >-
+              Original text: Begin Development of Concentrated Liquidity Private
+              Pools, key: 3cb6d313
+            label: Text
+            name: 3cb6d313
+            widget: string
+          - hint: >-
+              Original text: Implementation of Trading Strategies for
+              Concentrated Liquidity Pools, key: 401515ef
+            label: Text
+            name: 401515ef
+            widget: string
+          - hint: 'Original text: 2025, key: 177501'
+            label: Text
+            name: '177501'
+            widget: string
+          - hint: >-
+              Original text: Implementation Of OrderBook Management System, key:
+              -50282c98
+            label: Text
+            name: '-50282c98'
+            widget: string
+          - hint: >-
+              Original text: Implementation Of OrderBook Smart Order Routing,
+              key: -46e1dcc7
+            label: Text
+            name: '-46e1dcc7'
+            widget: string
+          - hint: >-
+              Original text: Finish CL Strategy Development and Testing, key:
+              -2ac95c81
+            label: Text
+            name: '-2ac95c81'
+            widget: string
+          - hint: >-
+              Original text: Integration With More Centralized Exchanges, key:
+              548d8f38
+            label: Text
+            name: 548d8f38
+            widget: string
+          - hint: >-
+              Original text: Implementation of Centralized Exchange Aggregated
+              Routing, key: -64a0fa4e
+            label: Text
+            name: '-64a0fa4e'
+            widget: string
+          - hint: 'Original text: Distribution, key: -546c5d5c'
+            label: Text
+            name: '-546c5d5c'
+            widget: string
+          - hint: 'Original text: Yield & Fees Distribution Flow, key: -7781bfbc'
+            label: Text
+            name: '-7781bfbc'
+            widget: string
+          - hint: 'Original text: extracting yield, key: -2acf4192'
+            label: Text
+            name: '-2acf4192'
+            widget: string
+          - hint: >-
+              Original text: How does Private Pools Network work?, key:
+              -68b00b61
+            label: Text
+            name: '-68b00b61'
+            widget: string
+          - hint: >-
+              Original text: PPN generates revenue by extracting yield from
+              crypto asset volatility via arbitrage., key: -2367a748
+            label: Text
+            name: '-2367a748'
+            widget: string
+          - hint: 'Original text: step 1, key: -35307823'
+            label: Text
+            name: '-35307823'
+            widget: string
+          - hint: 'Original text: step 2, key: -35307822'
+            label: Text
+            name: '-35307822'
+            widget: string
+          - hint: 'Original text: step 3, key: -35307821'
+            label: Text
+            name: '-35307821'
+            widget: string
+          - hint: 'Original text: Select Index Strategy, key: -75595d3b'
+            label: Text
+            name: '-75595d3b'
+            widget: string
+          - hint: >-
+              Original text: User chooses which index they want to participate
+              in based off the asset exposure and performance they are seeking.,
+              key: 3b272189
+            label: Text
+            name: 3b272189
+            widget: text
+          - hint: 'Original text: Deposit Liquidity, key: -40b97d50'
+            label: Text
+            name: '-40b97d50'
+            widget: string
+          - hint: 'Original text: How it works, key: -5f2415c3'
+            label: Text
+            name: '-5f2415c3'
+            widget: string
+          - hint: 'Original text: Simplified user flow explanation, key: 3c34cb34'
+            label: Text
+            name: 3c34cb34
+            widget: string
+          - hint: >-
+              Original text: With over a decade of experience, we have a proven
+              track record of creating innovative and sustainable spaces that
+              enhance the lives of our clients. Our approach to design is
+              centered around collaboration and communication., key: 7004a265
+            label: Text
+            name: 7004a265
+            widget: text
+          - hint: >-
+              Original text: Private Pools Network (PPN) is an autonomous index
+              system enhancing liquidity by capitalizing on volatility. A novel
+              ecosystem challenging the status quo., key: 4c26455d
+            label: Text
+            name: 4c26455d
+            widget: text
+          - hint: 'Original text: A new paradigm of DeFi innovation, key: 95aa54e'
+            label: Text
+            name: 95aa54e
+            widget: string
+          - hint: 'Original text: Deposit Now, key: 5357fe14'
+            label: Text
+            name: 5357fe14
+            widget: string
+          - hint: >-
+              Original text: Before making any investment decisions, it is
+              essential to carefully evaluate your own risk tolerance, financial
+              situation, and investment objectives., key: 1656a2a8
+            label: Text
+            name: 1656a2a8
+            widget: text
+          - hint: 'Original text: Buy $PPN token, key: -1f61003'
+            label: Text
+            name: '-1f61003'
+            widget: string
+          - hint: >-
+              Original text: Investing in cryptocurrencies, including $PPN,
+              carries inherent risks, including the risk of loss of capital.
+              Read or Risk Disclosure Statement for more info., key: 10b7a1df
+            label: Text
+            name: 10b7a1df
+            widget: text
+          - hint: 'Original text: Invest, key: -7d28f3eb'
+            label: Text
+            name: '-7d28f3eb'
+            widget: string
+          - hint: 'Original text: Generate Real , key: -126dcc29'
+            label: Text
+            name: '-126dcc29'
+            widget: string
+          - hint: 'Original text: from Market Volatility, key: 2665cb93'
+            label: Text
+            name: 2665cb93
+            widget: string
+          - hint: 'Original text: PPN , key: 259392'
+            label: Text
+            name: '259392'
+            widget: string
+          - hint: >-
+              Original text: offers a new DeFi ecosystem for users, key:
+              2054d57d
+            label: Text
+            name: 2054d57d
+            widget: string
+          - hint: 'Original text: ETH USDT, key: -27fbb60b'
+            label: Text
+            name: '-27fbb60b'
+            widget: string
+          - hint: 'Original text: 28,102% APR, key: 252eae1b'
+            label: Text
+            name: 252eae1b
+            widget: string
+          - hint: 'Original text: AVAX, key: 1ed72c'
+            label: Text
+            name: 1ed72c
+            widget: string
+          - hint: 'Original text: 16,008% APR, key: 4a12fff7'
+            label: Text
+            name: 4a12fff7
+            widget: string
+          - hint: 'Original text: DAI DOGE, key: -7b463923'
+            label: Text
+            name: '-7b463923'
+            widget: string
+          - hint: 'Original text: 37,003% APR, key: 5f9d9b7d'
+            label: Text
+            name: 5f9d9b7d
+            widget: string
+          - hint: 'Original text: USDT VLX, key: 1d2234f0'
+            label: Text
+            name: 1d2234f0
+            widget: string
+          - hint: 'Original text: 8,005% APR, key: -523ede99'
+            label: Text
+            name: '-523ede99'
+            widget: string
+          - hint: 'Original text: Become a Market Maker of Arbitrage, key: -2e2cff98'
+            label: Text
+            name: '-2e2cff98'
+            widget: string
+          - hint: 'Original text: Bear Market, key: 59dcaa28'
+            label: Text
+            name: 59dcaa28
+            widget: string
+          - hint: 'Original text: agnostic, key: 66fb2422'
+            label: Text
+            name: 66fb2422
+            widget: string
+          - hint: 'Original text: Bull Market, key: -71e28c17'
+            label: Text
+            name: '-71e28c17'
+            widget: string
+          - hint: 'Original text: Deposit liquidity, key: 47d462d0'
+            label: Text
+            name: 47d462d0
+            widget: string
+          - hint: >-
+              Original text: PrivatePools Network profit from crypto market
+              volatility, ensuring consistent yields for liquidity providers —
+              in any market condition., key: -16029b8e
+            label: Text
+            name: '-16029b8e'
+            widget: text
+          - hint: 'Original text: Analytics, key: 1288bb66'
+            label: Text
+            name: 1288bb66
+            widget: string
+          - hint: >-
+              Original text: Holistic Protocol Performance Analysis, key:
+              -202c7ccd
+            label: Text
+            name: '-202c7ccd'
+            widget: string
+          - hint: 'Original text: 01, key: 601'
+            label: Text
+            name: '601'
+            widget: string
+          - hint: 'Original text: Performance Overview, key: -7fc57457'
+            label: Text
+            name: '-7fc57457'
+            widget: string
+          - hint: 'Original text: 02, key: 602'
+            label: Text
+            name: '602'
+            widget: string
+          - hint: 'Original text: Individual Pools Analytics, key: -45bef52a'
+            label: Text
+            name: '-45bef52a'
+            widget: string
+          - hint: 'Original text: 03, key: 603'
+            label: Text
+            name: '603'
+            widget: string
+          - hint: 'Original text: Portfolio Tracking, key: f868acf'
+            label: Text
+            name: f868acf
+            widget: string
+          - hint: 'Original text: ‍, key: 200d'
+            label: Text
+            name: 200d
+            widget: string
+          - hint: 'Original text: 17,071% APR, key: -5b49dc7c'
+            label: Text
+            name: '-5b49dc7c'
+            widget: string
+          - hint: 'Original text: 28,127% APR, key: -687ca048'
+            label: Text
+            name: '-687ca048'
+            widget: string
+          - hint: 'Original text: 8,071% APR, key: 19395db2'
+            label: Text
+            name: 19395db2
+            widget: string
+          - hint: 'Original text:  from Market, key: -43b2968e'
+            label: Text
+            name: '-43b2968e'
+            widget: string
+          - hint: 'Original text: Volatility, key: 4800045'
+            label: Text
+            name: '4800045'
+            widget: string
+          - hint: 'Original text: Waitlist, key: 1284e3b3'
+            label: Text
+            name: 1284e3b3
+            widget: string
+          - hint: 'Original text: Abitrage checks, key: 6484bbf2'
+            label: Text
+            name: 6484bbf2
+            widget: string
+          - hint: "Original text: Our PPN\_trading engine runs price deviation detection & profitability checks every 0.5 seconds on DEXs & CEXs , key: -16cafd5a"
+            label: Text
+            name: '-16cafd5a'
+            widget: text
+          - hint: >-
+              Original text: Our trading engine captures arbitrage
+              opportunities., key: -4c9f6ce4
+            label: Text
+            name: '-4c9f6ce4'
+            widget: string
+          - hint: 'Original text: Abitrage , key: -17980f39'
+            label: Text
+            name: '-17980f39'
+            widget: string
+          - hint: >-
+              Original text: Deviation detected and captured via private order
+              flow, circumventing competition, key: -3e998180
+            label: Text
+            name: '-3e998180'
+            widget: string
+          - hint: >-
+              Original text: Arbitrage opportunity executed, value extracted and
+              sent back to Index Pool., key: 58159eef
+            label: Text
+            name: 58159eef
+            widget: string
+          - hint: 'Original text: Rebalancing, key: 2da327a6'
+            label: Text
+            name: 2da327a6
+            widget: string
+          - hint: >-
+              Original text: Rebalancing within the PPN Index Pool is complete,
+              and yield is compounded back into the index, key: 259ae277
+            label: Text
+            name: 259ae277
+            widget: text
+          - hint: >-
+              Original text: 70% of the yield is redistributed back to the
+              Liquidity Providers according to our Yield Distribution Model.,
+              key: 5ceb54c9
+            label: Text
+            name: 5ceb54c9
+            widget: text
+          - hint: 'Original text: Arbitrage, key: -1e725b97'
+            label: Text
+            name: '-1e725b97'
+            widget: string
+          - hint: 'Original text:  with us or be , key: 5dcf1588'
+            label: Text
+            name: 5dcf1588
+            widget: string
+          - hint: 'Original text: Arbitraged, key: 5026e91b'
+            label: Text
+            name: 5026e91b
+            widget: string
+          - hint: 'Original text:  by us, key: 3c379ae7'
+            label: Text
+            name: 3c379ae7
+            widget: string
+          - hint: 'Original text: Select, deposit,, key: 27db7cde'
+            label: Text
+            name: 27db7cde
+            widget: string
+          - hint: 'Original text: and profit, key: 3b91bcad'
+            label: Text
+            name: 3b91bcad
+            widget: string
+          - hint: >-
+              Original text: Proceed to deposit your assets into the index of
+              your choice, key: 2625cb5d
+            label: Text
+            name: 2625cb5d
+            widget: string
+          - hint: 'Original text: Buy $PPN Token, key: -3b90023'
+            label: Text
+            name: '-3b90023'
+            widget: string
+          - hint: 'Original text: $X.XX, key: 224067a'
+            label: Text
+            name: 224067a
+            widget: string
+          - hint: 'Original text: X.XX%, key: 4ee528f'
+            label: Text
+            name: 4ee528f
+            widget: string
+          - hint: 'Original text: PPN Price, key: 251e98d7'
+            label: Text
+            name: 251e98d7
+            widget: string
+          - hint: 'Original text: $XXXM, key: 224a419'
+            label: Text
+            name: 224a419
+            widget: string
+          - hint: 'Original text: mkt.cap, key: 4316d47a'
+            label: Text
+            name: 4316d47a
+            widget: string
+          - hint: 'Original text: $XXM, key: 11b2a9'
+            label: Text
+            name: 11b2a9
+            widget: string
+          - hint: 'Original text: 24h volume, key: 742b2e14'
+            label: Text
+            name: 742b2e14
+            widget: string
+          - hint: 'Original text: $X.XXK, key: 425cc911'
+            label: Text
+            name: 425cc911
+            widget: string
+          - hint: 'Original text: Holders, key: -5bb47fd9'
+            label: Text
+            name: '-5bb47fd9'
+            widget: string
+          - hint: >-
+              Original text: Our PPN trading engine runsprice deviation
+              detection &profitability checks every 0.5seconds on DEXs & CEXs,
+              key: -6dd47dfa
+            label: Text
+            name: '-6dd47dfa'
+            widget: text
+          - hint: >-
+              Original text: Rebalancing within the PPNIndex Pool is complete,
+              andyield is compounded backinto the index, key: 3c67db83
+            label: Text
+            name: 3c67db83
+            widget: text
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: https://typescale.com/, key: 68f0803b'
+            label: Link
+            name: 68f0803b
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: /investor/, key: 61525348'
+            label: Link
+            name: '61525348'
+            widget: string
+          - hint: >-
+              Original link:
+              https://privatepoolsnetwork.docsend.com/view/y7mfypipz654xd2u,
+              key: -1610b1f6
+            label: Link
+            name: '-1610b1f6'
+            widget: string
+          - hint: >-
+              Original link: mailto:team@privatepools.network?subject=Contact,
+              key: 68e15f9f
+            label: Link
+            name: 68e15f9f
+            widget: string
+          - hint: >-
+              Original link: https://linktr.ee/privatepoolsnetwork, key:
+              -77fd2a2e
+            label: Link
+            name: '-77fd2a2e'
+            widget: string
+          - hint: >-
+              Original link:
+              https://twitter.com/hashtag/DeFi?src=hash&ref_src=twsrc%5Etfw,
+              key: d2942ed
+            label: Link
+            name: d2942ed
+            widget: string
+          - hint: >-
+              Original link:
+              https://twitter.com/PrivatePoolDeFi/status/1778728318197764272?ref_src=twsrc%5Etfw,
+              key: -46429829
+            label: Link
+            name: '-46429829'
+            widget: string
+          - hint: 'Original link: #formular, key: 61a608ef'
+            label: Link
+            name: 61a608ef
+            widget: string
+          - hint: 'Original link: https://twitter.com/PrivatePoolDeFi, key: -156ebad5'
+            label: Link
+            name: '-156ebad5'
+            widget: string
+          - hint: >-
+              Original link: https://medium.com/@privatepoolnetwork, key:
+              -516f509
+            label: Link
+            name: '-516f509'
+            widget: string
+          - hint: 'Original link: #Content-Block-1, key: -3359f126'
+            label: Link
+            name: '-3359f126'
+            widget: string
+          - hint: 'Original link: #Content-Block-2, key: -3359f125'
+            label: Link
+            name: '-3359f125'
+            widget: string
+          - hint: 'Original link: #Content-Block-3, key: -3359f124'
+            label: Link
+            name: '-3359f124'
+            widget: string
+          - hint: 'Original link: #value-proposition, key: -7fa1c549'
+            label: Link
+            name: '-7fa1c549'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: i2e58c7bd
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6109cd85
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '0'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 317f733b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 3bb2025
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2947be66'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-36cdac99'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-562beb33'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5ff97d1a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 6007949b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5ec37804
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-69deac82'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-596d8cf2'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-595f7571'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-59515df0'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
