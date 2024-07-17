@@ -867,14 +867,20 @@ collections:
             name: '-13d77019'
             widget: string
           - hint: >-
-              Original text: The Rise Of Points Farming in Crypto, key:
-              -21adcdb4
+              Original text: Private Pools Network: Harnessing Volatility with
+              Capital Efficient Crypto Indexes and Private Order Flow, key:
+              -f674e31
             label: Text
-            name: '-21adcdb4'
-            widget: string
-          - hint: "Original text: In this weeks thought leadership article, we take a deep dive into the \_emergence of the points farming system. We assess its origins, review \_its pros & cons, and dissect its effectiveness over predecessors., key: -5c8e68c2"
+            name: '-f674e31'
+            widget: text
+          - hint: >-
+              Original text: The decentralized finance space has stagnated with
+              repetitive development. The Private Pools Network (PPN) aims to
+              optimize liquidity order flow, addressing impermanent loss and
+              toxic order flow, and making these benefits accessible to the web3
+              community., key: -410979f8
             label: Text
-            name: '-5c8e68c2'
+            name: '-410979f8'
             widget: text
           - hint: >-
               Original text: A new ecosystem, purpose built to generate yield
@@ -1490,6 +1496,12 @@ collections:
             label: Link
             name: '-46429829'
             widget: string
+          - hint: >-
+              Original link: https://privatepools-shared-version.vercel.app/,
+              key: 48312801
+            label: Link
+            name: '48312801'
+            widget: string
           - hint: 'Original link: #formular, key: 61a608ef'
             label: Link
             name: 61a608ef
@@ -1497,6 +1509,13 @@ collections:
           - hint: 'Original link: https://twitter.com/PrivatePoolDeFi, key: -156ebad5'
             label: Link
             name: '-156ebad5'
+            widget: string
+          - hint: >-
+              Original link:
+              https://medium.com/@privatepoolnetwork/private-pools-network-harnessing-volatility-with-capital-efficient-crypto-indexes-and-private-bc12d2f4ee87,
+              key: -55d074de
+            label: Link
+            name: '-55d074de'
             widget: string
           - hint: >-
               Original link: https://medium.com/@privatepoolnetwork, key:
@@ -1594,7 +1613,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-2947be66'
+            name: '-37b1e2f2'
             widget: object
             fields:
               - name: url
