@@ -1518,10 +1518,10 @@ collections:
             name: '-55d074de'
             widget: string
           - hint: >-
-              Original link: https://medium.com/@privatepoolnetwork, key:
-              -516f509
+              Original link: https://medium.com/@privatepoolsnetwork, key:
+              2bf6eab2
             label: Link
-            name: '-516f509'
+            name: 2bf6eab2
             widget: string
           - hint: 'Original link: #Content-Block-1, key: -3359f126'
             label: Link
@@ -1538,6 +1538,12 @@ collections:
           - hint: 'Original link: #value-proposition, key: -7fa1c549'
             label: Link
             name: '-7fa1c549'
+            widget: string
+          - hint: >-
+              Original link: https://medium.com/@privatepoolnetwork, key:
+              -516f509
+            label: Link
+            name: '-516f509'
             widget: string
       - label: Images
         name: images
