@@ -1523,6 +1523,14 @@ collections:
             label: Link
             name: 2bf6eab2
             widget: string
+          - hint: 'Original link: https://discord.gg/EZJh3a5vDP, key: 2a11e92c'
+            label: Link
+            name: 2a11e92c
+            widget: string
+          - hint: 'Original link: https://t.me/PPNtelegram, key: -38a97b1f'
+            label: Link
+            name: '-38a97b1f'
+            widget: string
           - hint: 'Original link: #Content-Block-1, key: -3359f126'
             label: Link
             name: '-3359f126'
