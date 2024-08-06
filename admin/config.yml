@@ -793,19 +793,15 @@ collections:
             label: Text
             name: 1c0ba
             widget: string
+          - hint: 'Original text: Project Docs, key: 3e3e9722'
+            label: Text
+            name: 3e3e9722
+            widget: string
           - hint: >-
-              Original text: Participate in the initial stage of our , key:
-              -7d2c089
+              Original text: Private Pools Network Private Beta Application,
+              key: 44f322b5
             label: Text
-            name: '-7d2c089'
-            widget: string
-          - hint: 'Original text: PrivatePools, key: 449fa434'
-            label: Text
-            name: 449fa434
-            widget: string
-          - hint: 'Original text:  strategic investment round, key: 6b9e48e1'
-            label: Text
-            name: 6b9e48e1
+            name: 44f322b5
             widget: string
           - hint: 'Original text: Fill in the form, key: 37b460b1'
             label: Text
@@ -814,6 +810,28 @@ collections:
           - hint: 'Original text: Scroll down, key: -24f8f20b'
             label: Text
             name: '-24f8f20b'
+            widget: string
+          - hint: 'Original text: Required, key: -13947041'
+            label: Text
+            name: '-13947041'
+            widget: string
+          - hint: >-
+              Original text: Please provide a link to your Telegram profile so
+              we can contact you, key: -15dfffb
+            label: Text
+            name: '-15dfffb'
+            widget: string
+          - hint: >-
+              Original text: Please provide a Link to your Twitter account, key:
+              -56fc887a
+            label: Text
+            name: '-56fc887a'
+            widget: string
+          - hint: >-
+              Original text: How much in notional (USD) value are you wanting to
+              test our private beta pools with?, key: 35eaa041
+            label: Text
+            name: 35eaa041
             widget: string
           - hint: >-
               Original text: Using our email form, you acknowledge and accept
@@ -1309,9 +1327,9 @@ collections:
             label: Text
             name: '4800045'
             widget: string
-          - hint: 'Original text: Waitlist, key: 1284e3b3'
+          - hint: 'Original text: Beta Test Waitlist, key: 79c09551'
             label: Text
-            name: 1284e3b3
+            name: 79c09551
             widget: string
           - hint: 'Original text: Abitrage checks, key: 6484bbf2'
             label: Text
@@ -1495,6 +1513,10 @@ collections:
               key: -46429829
             label: Link
             name: '-46429829'
+            widget: string
+          - hint: 'Original link: https://docs.privatepools.network/, key: 61bcad7'
+            label: Link
+            name: 61bcad7
             widget: string
           - hint: >-
               Original link: https://privatepools-shared-version.vercel.app/,
