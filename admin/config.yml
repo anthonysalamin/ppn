@@ -1553,6 +1553,10 @@ collections:
             label: Link
             name: '-7a253bff'
             widget: string
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
           - hint: 'Original link: #Content-Block-1, key: -3359f126'
             label: Link
             name: '-3359f126'
