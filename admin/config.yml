@@ -923,14 +923,21 @@ collections:
             name: 180b3f
             widget: string
           - hint: >-
-              Original text: Thank you — our team will respond promptly, key:
-              681be07e
+              Original text: Thank you — Join our Discord to stay updated on
+              your beta application., key: -162ac9e0
             label: Text
-            name: 681be07e
+            name: '-162ac9e0'
             widget: string
-          - hint: 'Original text: Back, key: 1f7907'
+          - hint: >-
+              Original text: To onboard beta testers in group batches, please
+              join our Discord so we can reach out to you about your
+              application., key: 5ac38995
             label: Text
-            name: 1f7907
+            name: 5ac38995
+            widget: text
+          - hint: 'Original text: Join now, key: -4fca2d00'
+            label: Text
+            name: '-4fca2d00'
             widget: string
           - hint: 'Original text: Roadmap, key: -4b5115e4'
             label: Text
@@ -1552,10 +1559,6 @@ collections:
           - hint: 'Original link: https://t.me/+qPJyj3PhQrM0ZTY0, key: -7a253bff'
             label: Link
             name: '-7a253bff'
-            widget: string
-          - hint: 'Original link: /, key: 2f'
-            label: Link
-            name: 2f
             widget: string
           - hint: 'Original link: #Content-Block-1, key: -3359f126'
             label: Link
