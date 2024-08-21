@@ -45,7 +45,9 @@ a,a:focus,button:focus,input:focus,textarea:focus{outline:0 !important;outline-s
   <style>
 /* scroll bar */
 ::-webkit-scrollbar{width:4px;height:8px}::-webkit-scrollbar-track{background:var(--dark);border-radius:10px}::-webkit-scrollbar-thumb{border-radius:10px;background:var(--accent)}::-webkit-scrollbar-thumb:hover{background:#00C3DE}scrollbar-width:thin;scrollbar-color:var(--accent) var(--dark);-ms-overflow-style:none;scrollbar-width:thin;scrollbar-color:var(--accent) var(--dark);
-</style><!--  swiper.css  -->
+</style><!--  recaptcha  -->
+  <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+  <!--  swiper.css  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
 	/* onload hide popups */
@@ -360,7 +362,15 @@ build 13.04.24
               <div id="w-node-_7c7a2c10-35f5-b727-24a4-be3c60cf9e6a-6514af42" class="input-wrap"><input class="input w-input" maxlength="256" name="Value-in-USD" data-name="Value in USD" placeholder="Notional value (USD) *" type="text" id="Value-in-USD" required="">
                 <div id="w-node-e20be139-66ee-2049-d1a3-693d4388e220-6514af42" class="legend-input">{{ texts.35eaa041 }}</div>
               </div>
-              <div id="w-node-_6a1e5d54-5a54-7592-0163-fdc04b8231e8-6514af42" class="legend dark">{{ texts.6f7046a4 }}</div><input type="submit" data-wait="Please wait..." id="w-node-_02ea9711-eefb-90e0-b857-91ce6b0d443a-6514af42" class="submit-btn w-button" value="Submit application">
+              <div id="w-node-_6a1e5d54-5a54-7592-0163-fdc04b8231e8-6514af42" class="legend dark">{{ texts.6f7046a4 }}</div>
+              <div id="w-node-_53af8a96-a072-4399-8d80-556f7ec64d9d-6514af42" class="recaptcha__wrap">
+                <div class="recaptcha__age w-embed"><!--  Age  -->
+                  <input type="text" name="user_age" style="display:none;" tabindex="-1" autocomplete="off">
+                </div>
+                <div id="w-node-_53af8a96-a072-4399-8d80-556f7ec64d9f-6514af42" class="recaptcha__widget w-embed"><!--  challenge reCAPTCHA widget using usebasin sitekey  -->
+                  <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+                </div><input type="submit" data-wait="Please wait..." id="w-node-_53af8a96-a072-4399-8d80-556f7ec64da0-6514af42" class="submit-btn w-button" value="Submit application">
+              </div>
             </form>
             <div class="success-message w-form-done">
               <div>{{ texts.-36b8c0b6 }}</div>

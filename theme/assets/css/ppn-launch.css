@@ -3233,6 +3233,12 @@ blockquote {
   line-height: 1.5;
 }
 
+.recaptcha__wrap {
+  flex-flow: column;
+  width: 100%;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   body {
     font-size: 16px;
@@ -4182,7 +4188,11 @@ blockquote {
   grid-area: 4 / 1 / 5 / 3;
 }
 
-#w-node-_02ea9711-eefb-90e0-b857-91ce6b0d443a-6514af42 {
+#w-node-_53af8a96-a072-4399-8d80-556f7ec64d9d-6514af42 {
+  grid-area: span 1 / span 2 / span 1 / span 2;
+}
+
+#w-node-_53af8a96-a072-4399-8d80-556f7ec64da0-6514af42 {
   grid-area: 5 / 1 / 6 / 3;
 }
 
@@ -4334,7 +4344,7 @@ blockquote {
     grid-area: 4 / 1 / 5 / 2;
   }
 
-  #w-node-_02ea9711-eefb-90e0-b857-91ce6b0d443a-6514af42 {
+  #w-node-_53af8a96-a072-4399-8d80-556f7ec64da0-6514af42 {
     grid-area: 5 / 1 / 6 / 2;
   }
 

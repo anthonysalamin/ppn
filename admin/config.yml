@@ -751,9 +751,9 @@ collections:
             label: Text
             name: '-687da9da'
             widget: text
-          - hint: 'Original text: Investor Collateral, key: 7cccd2bf'
+          - hint: 'Original text: Protocol documents, key: -d559cb0'
             label: Text
-            name: 7cccd2bf
+            name: '-d559cb0'
             widget: string
           - hint: 'Original text: Team, key: 27b67d'
             label: Text
@@ -1217,6 +1217,10 @@ collections:
             label: Text
             name: 2054d57d
             widget: string
+          - hint: 'Original text: Investor Collateral, key: 7cccd2bf'
+            label: Text
+            name: 7cccd2bf
+            widget: string
           - hint: 'Original text: ETH USDT, key: -27fbb60b'
             label: Text
             name: '-27fbb60b'
@@ -1468,6 +1472,20 @@ collections:
             label: Text
             name: 3c67db83
             widget: text
+          - hint: 'Original text: Oups — reCAPTCHA needed, key: -767f514f'
+            label: Text
+            name: '-767f514f'
+            widget: string
+          - hint: >-
+              Original text: To combat bots and send the form please perform the
+              reCAPTCHA., key: 54ddee80
+            label: Text
+            name: 54ddee80
+            widget: string
+          - hint: 'Original text: Try again, key: 25aeb09b'
+            label: Text
+            name: 25aeb09b
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
