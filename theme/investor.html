@@ -45,23 +45,6 @@ a,a:focus,button:focus,input:focus,textarea:focus{outline:0 !important;outline-s
   <style>
 /* scroll bar */
 ::-webkit-scrollbar{width:4px;height:8px}::-webkit-scrollbar-track{background:var(--dark);border-radius:10px}::-webkit-scrollbar-thumb{border-radius:10px;background:var(--accent)}::-webkit-scrollbar-thumb:hover{background:#00C3DE}scrollbar-width:thin;scrollbar-color:var(--accent) var(--dark);-ms-overflow-style:none;scrollbar-width:thin;scrollbar-color:var(--accent) var(--dark);
-</style><!--  recaptcha  -->
-  <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
-  <!--  swiper.css  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <style>
-	/* onload hide popups */
-  .popup_bg,
-  .popup_content,
-  .popup_close {
-    opacity: 0;
-  }
-  .popup_item {
-    display: none;
-  }
-  .popup_item.active {
-    display: block;
-  }
 </style>
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
@@ -365,10 +348,7 @@ build 13.04.24
               <div id="w-node-_6a1e5d54-5a54-7592-0163-fdc04b8231e8-6514af42" class="legend dark">{{ texts.6f7046a4 }}</div>
               <div id="w-node-_53af8a96-a072-4399-8d80-556f7ec64d9d-6514af42" class="recaptcha__wrap">
                 <div class="recaptcha__age w-embed"><!--  Age  -->
-                  <input type="text" name="user_age" style="display:none;" tabindex="-1" autocomplete="off">
-                </div>
-                <div id="w-node-_53af8a96-a072-4399-8d80-556f7ec64d9f-6514af42" class="recaptcha__widget w-embed"><!--  challenge reCAPTCHA widget using usebasin sitekey  -->
-                  <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+                  <input type="text" name="user_age" tabindex="-1" autocomplete="off">
                 </div><input type="submit" data-wait="Please wait..." id="w-node-_53af8a96-a072-4399-8d80-556f7ec64da0-6514af42" class="submit-btn w-button" value="Submit application">
               </div>
             </form>
@@ -745,12 +725,7 @@ document.addEventListener("DOMContentLoaded",()=>{const footerLinks=document.que
  * build 04.04.24 @11:21
 */ 
 document.addEventListener("DOMContentLoaded",()=>{const position="left";const distance="1.5rem";const rgb="220, 236, 248";progressInjectCSS(position,distance,rgb);progressInjectHTML();showScrollProgress()});function progressInjectCSS(position,distance,rgb){const css=`.progress-wrap{--indicator-progress-color:rgba(${ rgb },1);--indicator-slide-color:rgba(${ rgb },0.1);--indicator-font:"Unicons";--indicator-content:"\\e84b";--indicator-hover:white --indicator-position:1.25rem}@font-face{font-family:"Unicons";src:url("https://assets-global.website-files.com/61a0f086f2b1f289503a4957/6329d8e0a1790e3283ae2504_unicons.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}.progress-wrap{position:fixed;mix-blend-mode:difference;${ position }:${ distance };bottom:${ distance };height:46px;width:46px;cursor:pointer;display:none;border-radius:50px;box-shadow:inset 0 0 0 2px var(--indicator-slide-color);z-index:10000;opacity:0;visibility:hidden;transform:translateY(15px);transition:all 200ms linear}.progress-wrap.active-progress{display:block;opacity:1;visibility:visible;transform:translateY(0)}.progress-wrap::after,.progress-wrap::before{position:absolute;font-family:var(--indicator-font);content:var(--indicator-content);text-align:center;line-height:46px;font-size:24px;left:0;top:0;height:46px;width:46px;cursor:pointer;display:block;transition:all 200ms linear}.progress-wrap::after{color:var(--indicator-progress-color);z-index:1}.progress-wrap:hover::before{color:var(--indicator-hover);transform:scale(1.0);transform-origin:center}.progress-wrap:hover::after{transform:scale(1.15);transform-origin:center}.progress-wrap svg path{fill:none}.progress-wrap svg.progress-circle path{stroke:var(--indicator-progress-color);stroke-width:4;box-sizing:border-box;transition:all 200ms linear}`;const style=document.createElement("style");style.innerHTML=css;document.head.appendChild(style)}function progressInjectHTML(){const scrollProgressHTML=`<div class="progress-wrap"><svg class="progress-circle svg-content"height="100%"viewBox="-1 -1 102 102"width="100%"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div>`;const div=document.createElement("div");div.innerHTML=scrollProgressHTML;document.body.prepend(div)}function showScrollProgress(){if(!document.querySelector(".progress-wrap")){return}const progressPath=document.querySelector(".progress-wrap path");const pathLength=progressPath.getTotalLength();progressPath.style.transition="none";progressPath.style.strokeDasharray=`${ pathLength } ${ pathLength }`;progressPath.style.strokeDashoffset=pathLength;progressPath.getBoundingClientRect();progressPath.style.transition="stroke-dashoffset 10ms linear";const updateProgress=()=>{const scroll=window.pageYOffset||document.documentElement.scrollTop;const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;const progress=pathLength-(scroll*pathLength)/height;progressPath.style.strokeDashoffset=progress};updateProgress();window.addEventListener("scroll",updateProgress,{passive:true});const offset=50;const duration=550;window.addEventListener("scroll",()=>{if(window.pageYOffset>offset){document.querySelector(".progress-wrap").classList.add("active-progress")}else{document.querySelector(".progress-wrap").classList.remove("active-progress")}},{passive:true});document.querySelector(".progress-wrap").addEventListener("click",(event)=>{event.preventDefault();scrollToTop(duration);return false});function scrollToTop(duration){const start=window.pageYOffset||document.documentElement.scrollTop;const startTime=performance.now();function scrollStep(timestamp){const currentTime=timestamp||performance.now();const elapsedTime=currentTime-startTime;const scrollTo=Math.max(start-(start*elapsedTime)/duration,0);window.scrollTo(0,scrollTo);if(elapsedTime<duration){window.requestAnimationFrame(scrollStep)}}window.requestAnimationFrame(scrollStep)}}
-</script><!--  swiper.js  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!--  particlesjs 2.2.3  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!--  vivus.js  -->
-  <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+</script>
   <script>
 /*
  * PORTFOLIO | udesly redirect v1
@@ -782,166 +757,6 @@ function observeFormDisplay(form, successURL) {
   });
   observer.observe(form, { attributes: true });
 }
-</script>
-  <script>
-/*
- * P | marketmaker v4
- * build: 09.05.24 @15:51
- * dependency: vivus.js
- * doc: https://github.com/maxwellito/vivus
- */
-document.addEventListener("DOMContentLoaded", () => {
-  const svg = document.querySelector("#marketmaker-svg");
-  const style = `#step-1,#step-2,#step-3,#step-4,#step-5,#step-6{transform-box:fill-box !important;transform-origin:center !important;content:"";position:absolute;opacity:0.5;animation:2s cubic-bezier(0.29, 0, 0, 1) infinite blinkystep;animation-delay:1s}@keyframes blinkystep{0%{transform:scale(0);opacity:1}100%{transform:scale(2.5);opacity:0;border-color:red;background-color:transparent;border-width:2px}}#trading-logo{animation:pulse 600ms infinite;transform-box:fill-box !important;transform-origin:center !important}#trading-logo:hover{animation:pulseExcited 400ms infinite;transform-box:fill-box !important;transform-origin:center !important}@keyframes pulse{0%{transform:scale(1)}15%{transform:scale(1.065)}25%{transform:scale(1)}75%{transform:scale(1.105)}}@keyframes pulseExcited{0%{transform:scale(1)}15%{transform:scale(1.125)}25%{transform:scale(1)}75%{transform:scale(1.125)}}#blue-line{fill:none;stroke:#00e0ff;stroke-dasharray:4 16 !important;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;animation:blue-dash-animation 20s linear infinite}@keyframes blue-dash-animation{to{stroke-dashoffset:-2000}}#green-line{fill:none;stroke:#0dd15d;stroke-dasharray:4 16 !important;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;animation:green-dash-animation 20s linear infinite}@keyframes green-dash-animation{to{stroke-dashoffset:2000}}`;
-  if (!svg) return;
-  handleDashedLines(svg);
-  initMarketMakerVivus(svg);
-  injectStylesIntoDefs(svg, style);
-});
-// no vivus animation on dashedlines
-function handleDashedLines(svg) {
-  const blueLine = svg.querySelector("#blue-line");
-  const greenLine = svg.querySelector("#green-line");
-  blueLine.setAttribute("data-ignore", "true");
-  greenLine.setAttribute("data-ignore", "true");
-}
-// helper inject styles
-function injectStylesIntoDefs(svg, style) {
-  const defs = svg.querySelector("defs");
-  const styling = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "style"
-  );
-  styling.setAttribute("type", "text/css");
-  styling.textContent = style;
-  defs.appendChild(styling);
-}
-function initMarketMakerVivus(svg) {
-  // vivus setup
-  const vivusAnimation = new Vivus(svg, {
-    start: "manual",
-    duration: 100,
-    type: "delayed",
-    animTimingFunction: Vivus.EASE_OUT
-  });
-  // definition rotation trading & external liquidity
-  gsap.set(["#rotating-external", "#rotating-trading"], { opacity: 0 });
-  function animateRotation(elementId) {
-    gsap
-      .timeline({ repeat: -1 })
-      .to(elementId, {
-        opacity: 1,
-        duration: 0.9,
-        ease: "power2.out"
-      })
-      .to(elementId, {
-        rotation: 180,
-        duration: 1.5,
-        ease: "elastic.inOut(1,0.6)", // power2.out
-        repeat: -1,
-        transformOrigin: "center"
-      });
-  }
-  // gsap setup
-  gsap.registerPlugin(ScrollTrigger);
-  function playVivusOnEnterViewport(svg) {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: svg,
-        start: "top 50%",
-        end: "bottom 20%",
-        once: true
-      }
-    });
-    tl.fromTo(
-      svg,
-      { opacity: 0 }, // Initial state
-      {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        onComplete: () => {
-          vivusAnimation.play(1);
-          animateRotation("#rotating-external");
-          animateRotation("#rotating-trading");
-        }
-      }
-    );
-  }
-  playVivusOnEnterViewport(svg);
-} // end initMarketMakerVivus(svg)
-</script>
-  <script>
-/*
- * PPN | particles
- * dependency: particlesjs.js
- * build 15.04.24
- */
-document.addEventListener("DOMContentLoaded",()=>{if(!document.querySelector(".background-particles")){return}initParticles()});function initParticles(){const color=["#02031c","#00e0ff","#02031c"];const particlesAmount=140;Particles.init({selector:".background-particles",color:color,connectParticles:true,maxParticles:particlesAmount,responsive:[{breakpoint:768,options:{color:color,maxParticles:particlesAmount/3.5,connectParticles:true}}]})}
-</script>
-  <script>
-/*
- * PP | tvl animation v1
- * dependency: gsap.js
- * build 30.04.24
- */
- /*
-document.addEventListener("DOMContentLoaded",()=>{const targetElement=document.querySelector("#tvl");animateToTen(targetElement,4);});function parseNumberString(numberString){if(typeof numberString!=="string"){return NaN}const numberWithoutCommas=numberString.replace(/,/g,"");const number=parseFloat(numberWithoutCommas);return number.toFixed(2)}function formatNumberWithCommas(number){return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")}function animateToTen(targetElement,duration){const offset=11;const initialNumber=parseFloat(parseNumberString(targetElement.dataset.tvl));const spanNumber=targetElement;const targetNumber=initialNumber;let currentNumber=initialNumber-offset;const incrementValue=1.11;const animateStep=(timestamp)=>{const progress=Math.min(1,(timestamp-startTime)/(duration*1000));currentNumber=initialNumber-offset+easeOut(progress)*(targetNumber-(initialNumber-offset));const formattedNumber=formatNumberWithCommas(currentNumber.toFixed(2));spanNumber.innerText=formattedNumber;if(progress<1){requestAnimationFrame(animateStep)}};const easeOut=(t)=>{return 1-Math.pow(1-t,3)};let startTime=null;const startAnimation=(timestamp)=>{startTime=timestamp;requestAnimationFrame(animateStep)};requestAnimationFrame(startAnimation)}
-*/
-</script>
-  <script>
-/*
- * PP | logo animation v.2
- * dependency: gsap.js
- * build 27.04.24 @16:23
- */
-document.addEventListener("DOMContentLoaded",()=>{const options={delay:1000,color:`#00e0ff`,svg:document.querySelector(`#svg-parallax`),pathLeft:document.querySelector('[data-id="parallax-path-left"]'),pathRight:document.querySelector('[data-id="parallax-path-right"]'),duration:3.5,offsetBottom:0.95,ease:"power4.out"};if(!options.svg){return}setTimeout(initLogoAnimation(options),options.delay)});function initLogoAnimation(options){gsap.to(options.pathLeft,{y:0,ease:options.ease,duration:1.85,delay:0});gsap.to(options.pathRight,{y:0,ease:options.ease,duration:3.25,delay:0});gsap.to("#stop-a-bottom",{duration:options.duration,ease:options.ease,attr:{offset:options.offsetBottom,"stop-color":options.color}});gsap.to("#stop-b-bottom",{duration:options.duration,ease:options.ease,attr:{offset:options.offsetBottom,"stop-color":options.color}})}
-</script>
-  <script>
-/*
- * PP | schemas v.2
- * build: 27.04.24 @13:29
- */
-document.addEventListener("DOMContentLoaded",animateShapes);function animateShapes(){gsap.registerPlugin(ScrollTrigger);const svgs=document.querySelectorAll("#social .schema");svgs.forEach((svg)=>{const shapes=svg.querySelectorAll("rect, circle");shapes.forEach((shape,index)=>{animateShape(shape,index*0.1)})})}function animateShape(shape,stagger){const svg=shape.closest(".schema");if(window.getComputedStyle(svg).getPropertyValue("visibility")==="hidden"){return;}shape.style.strokeDashoffset=0;const length=shape.getTotalLength();shape.style.strokeDasharray=length;shape.style.strokeDashoffset=length;gsap.to(shape,{strokeDashoffset:0,duration:2,ease:"back.inOut",scrollTrigger:{trigger:svg,start:"top center",once:true},delay:stagger})}
-</script>
-  <script>
-/*
- * PPN | opportunities stagger reveal
- * dependencies: gsap.js + ScrollTrigger.js
- * build 26.04.2024 @12:11
- */
-document.addEventListener("DOMContentLoaded",()=>{const trigger=document.querySelector("#oppourtunities");const targets=trigger.querySelectorAll(".faq__item");if(!trigger){return}initStaggerReveal(trigger,targets)});function initStaggerReveal(trigger,targets){gsap.set(targets,{opacity:0,y: +80});function revealTargets(){targets.forEach((target,index)=>{gsap.to(target,{opacity:1,y:0,duration:1.5,delay:index*0.25,ease:"power2.out"})})}gsap.registerPlugin(ScrollTrigger);ScrollTrigger.create({trigger:trigger,start:"top center",onEnter:revealTargets})}
-</script>
-  <script>
-/*
- * PPN | numbers animation
- * build 08.04.24 @20:46
- */
-document.addEventListener("DOMContentLoaded",initNumberAnimation);function initNumberAnimation(){const elements=document.querySelectorAll(".number-counter:not(.animated)");if(!elements.length>0){return}elements.forEach((element)=>{animateNumberOnce(element);element.classList.add("animated")});function animateNumberOnce(element){const easing="slow(0.7,0.7,false)";const target= +element.getAttribute("data-target-number");let current=0;const duration=4;gsap.registerPlugin(ScrollTrigger);ScrollTrigger.create({trigger:element,start:"top bottom",onEnter:()=>{gsap.to(element,{duration:duration,innerText:target,roundProps:"innerText",ease:easing })},once:true })}}
-</script>
-  <script>
-/*
- * PPN | FAQ expand/collapse
- * dependency: gsap.JS
- * build 05.04.2024 @15:19
- */
-document.addEventListener("DOMContentLoaded",initFAQ);function initFAQ(){const QUESTION=".faq__question";const ANSWER=".faq__answer";const ICON=".icon-plus";const questions=document.querySelectorAll(QUESTION);if(questions.length===0){return;}gsap.set(ANSWER,{height:0,overflow:"hidden",duration:0});questions.forEach((question)=>{let isOpen=false;question.addEventListener("click",()=>{const icon=question.querySelector(ICON);const answer=question.nextElementSibling;isOpen?collapseAnswer(answer,icon):expandAnswer(answer,icon);isOpen=!isOpen})})}function expandAnswer(answer,icon){gsap.set(answer,{height:"auto"});const height=answer.clientHeight;gsap.from(answer,{height:0,duration:0.3,ease:"ease-in"});gsap.to(icon,{rotationZ:45,duration:0.3,ease:"ease-out"})}function collapseAnswer(answer,icon){gsap.to(answer,{height:0,duration:0.3,ease:"ease-out"});gsap.to(icon,{rotationZ:0,duration:0.3,ease:"ease-in"})}
-</script>
-  <script>
-/*
- * PPN | team reveal stagger
- * dependencies: gsap.js + ScrollTrigger.js
- * build 04.04.2024 @15:37
-*/
-const swiper=document.querySelector(".swiper");const slides=swiper.querySelectorAll(".swiper-slide");gsap.set(slides,{opacity:0,y: +60});function animateSlides(){slides.forEach((slide,index)=>{gsap.to(slide,{opacity:1,y:0,duration:1,delay:index*0.15,ease:"power2.out"})})}gsap.registerPlugin(ScrollTrigger);ScrollTrigger.create({trigger:".swiper",start:"top center",onEnter:animateSlides});
-</script>
-  <script>
-/*
- * PPN | team slider
- * dependencies: GSAP 3.12.5
- * build 04.04.2024
-*/
-const teamSwiper=new Swiper(".swiper.is-team",{slidesPerView:"auto",keyboard:true,direction:"horizontal",loop:false,speed:800,mousewheel:{forceToAxis:true},touchEventsTarget:"container",freeMode:true});let myTimeout;teamSwiper.on("progress",function(e){clearTimeout(myTimeout);$(".team_photo-height").addClass("scaled");$(".cursor_dot").addClass("hide");myTimeout=setTimeout(function(){$(".team_photo-height").removeClass("scaled")},100)});$(document).on("mousemove",function(){$(".cursor_dot").removeClass("hide")});$(".swiper.is-team").on("mouseenter",function(){$(".cursor_dot").addClass("show")}).on("mouseleave",function(){$(".cursor_dot").removeClass("show")});$(".team_link").on("mouseenter",function(){$(".cursor_dot").addClass("small")}).on("mouseleave",function(){$(".cursor_dot").removeClass("small")});function getDifference(cardImg,popupImg){let cardWidth=cardImg.innerWidth();let cardHeight=cardImg.innerHeight();let offsetLeft=cardImg.offset().left-popupImg.offset().left;let offsetTop=cardImg.offset().top-popupImg.offset().top;return[offsetLeft,offsetTop,cardWidth,cardHeight]}$(".team_link").on("click",function(){$('html, body').css('overflow','hidden');let myIndex=$(this).parent().index();let cardImg=$(this).find(".image");let popupImg=$(".popup_item").eq(myIndex).find(".image");$(".popup_item").removeClass("active");$(".popup_item").eq(myIndex).addClass("active");$(".popup").css("display","block");cardImg.css("opacity","0");$("body").addClass("no-scroll");$("body").addClass("popup-open");let transformValue=getDifference(cardImg,popupImg);gsap.fromTo(popupImg,{x:transformValue[0],y:transformValue[1],width:transformValue[2],height:transformValue[3]},{x:0,y:0,width:"100%",height:"100%",duration:0.6,ease:"power2.inOut"});gsap.to(".popup_bg, .popup_close",{opacity:1,duration:0.3,delay:0.3,ease:"power2.inOut"});gsap.to(".popup_content",{opacity:1,duration:0.3,delay:0.3,ease:"power2.inOut"})});$(".popup_close").on("click",function(){let myIndex=$(".popup_item.active").index();let popupImg=$(".popup_item.active .image");let cardImg=$(".team_link").eq(myIndex).find(".image");let transformValue=getDifference(cardImg,popupImg);$("body").removeClass("popup-open");function closePopup(){$('html, body').css('overflow','visible');cardImg.css("opacity","1");$(".popup").css("display","none");popupImg.removeAttr("style");$("body").removeClass("no-scroll")}gsap.fromTo(popupImg,{x:0,y:0,width:"100%",height:"100%"},{x:transformValue[0],y:transformValue[1],width:transformValue[2],height:transformValue[3],onComplete:closePopup,duration:0.6,ease:"power3.inOut"});gsap.to(".popup_bg, .popup_content, .popup_close",{opacity:0,duration:0.3,ease:"power3.inOut"})});
 </script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

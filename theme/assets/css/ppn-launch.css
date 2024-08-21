@@ -3239,6 +3239,14 @@ blockquote {
   display: flex;
 }
 
+.recaptcha__age {
+  display: none;
+}
+
+.recaptcha__widget {
+  height: 100%;
+}
+
 @media screen and (max-width: 991px) {
   body {
     font-size: 16px;
