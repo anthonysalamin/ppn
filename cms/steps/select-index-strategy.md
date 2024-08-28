@@ -6,7 +6,7 @@ f_step-number: '01'
 title: Select → Index Strategy
 f_step-image:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/662dfca315b645c24d337bfb_thumb-select-v3.svg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/662dfca315b645c24d337bfb_thumb-select-v3.svg
   alt: null
 slug: select-index-strategy
 updated-on: '2024-05-31T09:05:22.126Z'

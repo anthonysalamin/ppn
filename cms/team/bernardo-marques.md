@@ -3,7 +3,7 @@ f_title: Co-Founder, CEO
 title: Bernardo Marques
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa690898_bernardo-v2.jpg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/66162235ccb46588aa690898_bernardo-v2.jpg
   alt: null
 slug: bernardo-marques
 updated-on: '2024-04-10T03:50:42.895Z'

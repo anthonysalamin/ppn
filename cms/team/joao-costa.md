@@ -4,7 +4,7 @@ title: Joao Costa
 slug: joao-costa
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa690899_joao-v2.jpg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/66162235ccb46588aa690899_joao-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:52:23.319Z'
 created-on: '2022-06-19T22:22:44.401Z'

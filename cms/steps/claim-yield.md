@@ -7,7 +7,7 @@ title: Claim → Yield
 slug: claim-yield
 f_step-image:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/662e0090cd13a2a497d1b162_thumb-profit-v3.svg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/662e0090cd13a2a497d1b162_thumb-profit-v3.svg
   alt: null
 updated-on: '2024-05-31T09:04:58.554Z'
 created-on: '2024-04-24T06:22:30.648Z'

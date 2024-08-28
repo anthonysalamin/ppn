@@ -4,7 +4,7 @@ title: Helder Lourenco
 slug: helder-lourenco
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089a_helder-v2.jpg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/66162235ccb46588aa69089a_helder-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:51:43.365Z'
 created-on: '2022-06-19T22:22:44.455Z'

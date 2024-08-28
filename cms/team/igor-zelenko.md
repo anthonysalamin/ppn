@@ -4,7 +4,7 @@ title: Igor Zelenko
 slug: igor-zelenko
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089c_igor-v2.jpg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/66162235ccb46588aa69089c_igor-v2.jpg
   alt: null
 updated-on: '2024-04-10T13:36:19.883Z'
 created-on: '2022-06-19T22:22:44.340Z'

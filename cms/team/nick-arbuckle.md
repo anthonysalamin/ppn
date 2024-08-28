@@ -4,7 +4,7 @@ title: Nick Arbuckle
 slug: nick-arbuckle
 f_photo:
   url: >-
-    https://uploads-ssl.webflow.com/66162235ccb46588aa690894/66162235ccb46588aa69089b_nick-v2.jpg
+    https://cdn.prod.website-files.com/66162235ccb46588aa690894/66162235ccb46588aa69089b_nick-v2.jpg
   alt: null
 updated-on: '2024-04-10T03:50:10.146Z'
 created-on: '2022-06-19T22:22:44.388Z'
