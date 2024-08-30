@@ -15,13 +15,6 @@
   --dark-lighter: #080930;
 }
 
-.w-layout-blockcontainer {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 .w-layout-grid {
   grid-row-gap: 16px;
   grid-column-gap: 16px;
@@ -29,18 +22,6 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
-}
-
-@media screen and (max-width: 991px) {
-  .w-layout-blockcontainer {
-    max-width: 728px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .w-layout-blockcontainer {
-    max-width: none;
-  }
 }
 
 body {
@@ -487,57 +468,6 @@ blockquote {
 
 .popup_close:hover {
   transform: scale(.9);
-}
-
-.team__collection-item {
-  border-bottom: 1px solid #1e192726;
-  justify-content: space-between;
-  padding: 16px;
-  display: flex;
-}
-
-.team__name {
-  text-align: right;
-  text-transform: uppercase;
-  order: 1;
-  width: 50%;
-  font-weight: 700;
-}
-
-.team__title {
-  width: 17%;
-}
-
-.team__img-wrapper {
-  width: 30%;
-  height: 100%;
-  margin-left: 35%;
-  position: absolute;
-  inset: 0% auto auto 0%;
-}
-
-.team__collection-list {
-  position: relative;
-}
-
-.team__img-sticky {
-  align-items: center;
-  height: 0;
-  display: flex;
-  position: sticky;
-  top: 50vh;
-}
-
-.section-fake {
-  height: 100vh;
-}
-
-.img.rounded {
-  border-radius: 8px;
-}
-
-.empty-state.hide {
-  display: none;
 }
 
 .container {
@@ -1274,7 +1204,7 @@ blockquote {
   color: var(--dark);
   border-radius: 4px;
   width: 100%;
-  height: 44px;
+  height: 60px;
   font-weight: 500;
 }
 
@@ -1337,13 +1267,13 @@ blockquote {
   cursor: progress;
 }
 
-.success-message {
+._w-form-done {
   background-color: var(--accent);
   color: var(--dark);
   border-radius: 8px;
 }
 
-.error-message {
+._w-form-fail {
   background-color: var(--warning);
   color: var(--grey);
   border-radius: 8px;
@@ -1905,10 +1835,6 @@ blockquote {
   overflow: hidden;
 }
 
-.section-3 {
-  position: relative;
-}
-
 .service-list-parent {
   cursor: pointer;
   position: relative;
@@ -2054,24 +1980,8 @@ blockquote {
   font-size: .4rem;
 }
 
-.container-medium {
-  width: 100%;
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-medium.quote {
-  max-width: 68rem;
-}
-
 .text-align-center {
   text-align: center;
-}
-
-.heading-quote {
-  text-transform: uppercase;
-  font-size: 2.5rem;
 }
 
 .img-cover {
@@ -3204,14 +3114,6 @@ blockquote {
   background-color: var(--accent);
 }
 
-.section-4 {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-}
-
 .div-block-8 {
   display: flex;
 }
@@ -3233,18 +3135,14 @@ blockquote {
   line-height: 1.5;
 }
 
-.recaptcha__wrap {
+.submit__wrap {
   flex-flow: column;
   width: 100%;
   display: flex;
 }
 
-.recaptcha__age {
-  display: none;
-}
-
-.recaptcha__widget {
-  height: 100%;
+.age {
+  height: 0%;
 }
 
 @media screen and (max-width: 991px) {
@@ -3394,14 +3292,6 @@ blockquote {
   }
 
   .h3.service, .h3-rel.service {
-    font-size: 1.8rem;
-  }
-
-  .container-medium.quote {
-    width: 95%;
-  }
-
-  .heading-quote {
     font-size: 1.8rem;
   }
 
@@ -3817,10 +3707,6 @@ blockquote {
     font-size: 1.6rem;
   }
 
-  .heading-quote {
-    font-size: 1.2rem;
-  }
-
   .home-about-content {
     width: 100%;
     min-height: 20rem;
@@ -3990,39 +3876,6 @@ blockquote {
     flex-flow: column;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-
-  .team__collection-item {
-    width: 50%;
-    display: block;
-  }
-
-  .team__name {
-    text-align: left;
-    width: auto;
-  }
-
-  .team__title {
-    width: auto;
-  }
-
-  .team__img-wrapper {
-    width: auto;
-    height: auto;
-    margin-bottom: 16px;
-    margin-left: 0%;
-    position: relative;
-  }
-
-  .team__collection-list {
-    flex-wrap: wrap;
-    display: flex;
-  }
-
-  .team__img-sticky {
-    height: auto;
-    position: relative;
-    top: 0;
   }
 
   .container {
@@ -4220,7 +4073,7 @@ blockquote {
   justify-self: end;
 }
 
-#w-node-_300255b5-4b1e-e893-923c-71701448b293-5d342ccb, #w-node-f8f358bd-a22b-8f12-d5ce-3fb7ce3e6b99-ce3e6b97 {
+#w-node-_300255b5-4b1e-e893-923c-71701448b293-5d342ccb {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 

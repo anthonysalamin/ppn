@@ -341,24 +341,6 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: No items found., key: 3d503d2b'
-            label: Text
-            name: 3d503d2b
-            widget: string
-          - hint: 'Original text: first name family name, key: 6a1fdf22'
-            label: Text
-            name: 6a1fdf22
-            widget: string
-          - hint: 'Original text: position, key: 2c929929'
-            label: Text
-            name: 2c929929
-            widget: string
-          - hint: >-
-              Original text: This is some text inside of a div block., key:
-              7635fb4f
-            label: Text
-            name: 7635fb4f
-            widget: string
           - hint: 'Original text: https://typescale.com/, key: 68f0803b'
             label: Text
             name: 68f0803b
@@ -777,6 +759,10 @@ collections:
             label: Text
             name: 6168a353
             widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
           - hint: 'Original text: Get in touch, key: -5230a9d2'
             label: Text
             name: '-5230a9d2'
@@ -848,9 +834,11 @@ collections:
             label: Text
             name: '-36b8c0b6'
             widget: string
-          - hint: 'Original text: Oops, error., key: -6bd48d63'
+          - hint: >-
+              Original text: Oops, something went wrong - try again., key:
+              -3d77f4b8
             label: Text
-            name: '-6bd48d63'
+            name: '-3d77f4b8'
             widget: string
           - hint: 'Original text: Social, key: -6c12fc73'
             label: Text
@@ -1154,21 +1142,6 @@ collections:
             label: Text
             name: 3c34cb34
             widget: string
-          - hint: >-
-              Original text: With over a decade of experience, we have a proven
-              track record of creating innovative and sustainable spaces that
-              enhance the lives of our clients. Our approach to design is
-              centered around collaboration and communication., key: 7004a265
-            label: Text
-            name: 7004a265
-            widget: text
-          - hint: >-
-              Original text: Private Pools Network (PPN) is an autonomous index
-              system enhancing liquidity by capitalizing on volatility. A novel
-              ecosystem challenging the status quo., key: 4c26455d
-            label: Text
-            name: 4c26455d
-            widget: text
           - hint: 'Original text: A new paradigm of DeFi innovation, key: 95aa54e'
             label: Text
             name: 95aa54e
@@ -1195,10 +1168,6 @@ collections:
             label: Text
             name: 10b7a1df
             widget: text
-          - hint: 'Original text: Invest, key: -7d28f3eb'
-            label: Text
-            name: '-7d28f3eb'
-            widget: string
           - hint: 'Original text: Generate Real , key: -126dcc29'
             label: Text
             name: '-126dcc29'
@@ -1459,19 +1428,6 @@ collections:
             label: Text
             name: '-5bb47fd9'
             widget: string
-          - hint: >-
-              Original text: Our PPN trading engine runsprice deviation
-              detection &profitability checks every 0.5seconds on DEXs & CEXs,
-              key: -6dd47dfa
-            label: Text
-            name: '-6dd47dfa'
-            widget: text
-          - hint: >-
-              Original text: Rebalancing within the PPNIndex Pool is complete,
-              andyield is compounded backinto the index, key: 3c67db83
-            label: Text
-            name: 3c67db83
-            widget: text
           - hint: 'Original text: Oups — reCAPTCHA needed, key: -767f514f'
             label: Text
             name: '-767f514f'
@@ -1636,19 +1592,6 @@ collections:
                 required: false
           - label: Image
             name: '0'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 317f733b
             widget: object
             fields:
               - name: url
